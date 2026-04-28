@@ -16,17 +16,46 @@ import {
   Truck,
 } from "lucide-react";
 
-import mobileProjectImage from "../assets/111.png";
-import elearningHero from "../assets/education.jpg";
-import travelProjectImage from "../assets/travel.jpg";
-import ecommerceProjectImage from "../assets/ecommerce.jpg";
-import hrmsProjectImage from "../assets/HRMS.jpg";
-import eventProjectImage from "../assets/PRoject2.jpg";
-import operationsProjectImage from "../assets/project1.jpg";
-import dashboardProjectImage from "../assets/dashboard-project.jpg";
-import officePortalImage from "../assets/office4.jpg";
-import officeOpsImage from "../assets/office2.jpg";
-import teamProjectImage from "../assets/Office1.jpg";
+import unsplash1434030216411 from "../assets/services/unsplash-1434030216411.jpg";
+import unsplash1441986300917 from "../assets/services/unsplash-1441986300917.jpg";
+import unsplash1450101499163 from "../assets/services/unsplash-1450101499163.jpg";
+import unsplash1460925895917 from "../assets/services/unsplash-1460925895917.jpg";
+import unsplash1488646953014 from "../assets/services/unsplash-1488646953014.jpg";
+import unsplash1497366216548 from "../assets/services/unsplash-1497366216548.jpg";
+import unsplash1497366811353 from "../assets/services/unsplash-1497366811353.jpg";
+import unsplash1501504905252 from "../assets/services/unsplash-1501504905252.jpg";
+import unsplash1504384308090 from "../assets/services/unsplash-1504384308090.jpg";
+import unsplash1506784983877 from "../assets/services/unsplash-1506784983877.jpg";
+import unsplash1509062522246 from "../assets/services/unsplash-1509062522246.jpg";
+import unsplash1512428559087 from "../assets/services/unsplash-1512428559087.jpg";
+import unsplash1521791136064 from "../assets/services/unsplash-1521791136064.jpg";
+import unsplash1522202176988 from "../assets/services/unsplash-1522202176988.jpg";
+import unsplash1522869635100 from "../assets/services/unsplash-1522869635100.jpg";
+import unsplash1524178232363 from "../assets/services/unsplash-1524178232363.jpg";
+import unsplash1531403009284 from "../assets/services/unsplash-1531403009284.jpg";
+import unsplash1531746790731 from "../assets/services/unsplash-1531746790731.jpg";
+import unsplash1533750516457 from "../assets/services/unsplash-1533750516457.jpg";
+import unsplash1542744173 from "../assets/services/unsplash-1542744173.jpg";
+import unsplash1543286386 from "../assets/services/unsplash-1543286386.jpg";
+import unsplash1551288049 from "../assets/services/unsplash-1551288049.jpg";
+import unsplash1552664730 from "../assets/services/unsplash-1552664730.jpg";
+import unsplash1553413077 from "../assets/services/unsplash-1553413077.jpg";
+import unsplash1553877522 from "../assets/services/unsplash-1553877522.jpg";
+import unsplash1556742049 from "../assets/services/unsplash-1556742049.jpg";
+import unsplash1557804506 from "../assets/services/unsplash-1557804506.jpg";
+import unsplash1558494949 from "../assets/services/unsplash-1558494949.jpg";
+import unsplash1558618666 from "../assets/services/unsplash-1558618666.jpg";
+import unsplash1562774053 from "../assets/services/unsplash-1562774053.jpg";
+import unsplash1568667256549 from "../assets/services/unsplash-1568667256549.jpg";
+import unsplash1576678927484 from "../assets/services/unsplash-1576678927484.jpg";
+import unsplash1581291518857 from "../assets/services/unsplash-1581291518857.jpg";
+import unsplash1586528116311 from "../assets/services/unsplash-1586528116311.jpg";
+import unsplash1588196749597 from "../assets/services/unsplash-1588196749597.jpg";
+import unsplash1596524430615 from "../assets/services/unsplash-1596524430615.jpg";
+import unsplash1600880292203 from "../assets/services/unsplash-1600880292203.jpg";
+import unsplash1611162617474 from "../assets/services/unsplash-1611162617474.jpg";
+import unsplash1611926653458 from "../assets/services/unsplash-1611926653458.jpg";
+import unsplash1677442135703 from "../assets/services/unsplash-1677442135703.jpg";
 
 const serviceStyles = [
   { icon: Building2, iconBg: "bg-blue-100 text-blue-600" },
@@ -46,8 +75,8 @@ const serviceStyles = [
 
 const createServices = (items) =>
   items.map((item, index) => ({
-    ...serviceStyles[index % serviceStyles.length],
     ...item,
+    ...serviceStyles[index % serviceStyles.length],
   }));
 
 const createPage = ({
@@ -69,7 +98,6 @@ const createPage = ({
   techHeading,
   techTagline,
   techDescription,
-
   services: createServices(services),
   spotlightHeading,
   projects,
@@ -78,10 +106,10 @@ const createPage = ({
 const pages = {
   "business-website-development": createPage({
     label: "Business Websites Built to Win Trust",
-    title: "We Build Business Websites",
-    titleHighlight: "That Turn Visitors Into Leads",
+    title: "If Your Website Is not Bringing Leads,",
+    titleHighlight: "It is Costing You Money",
     subtitle:
-      "Binazy creates fast, conversion-focused business websites that present your brand clearly, guide users to action, and support long-term growth.",
+      "We design and develop websites that actually convert visitors into customers without relying on ads alone.",
     techHeading: "Business Website Development Services",
     techTagline: "Brand Presence. Better Performance. More Inquiries.",
     techDescription:
@@ -122,14 +150,16 @@ const pages = {
     projects: [
       {
         name: "MCR Holidays Corporate Site",
-        image: travelProjectImage,
+        // Travel/tourism corporate website — people at a scenic destination with laptop planning
+        image: unsplash1488646953014,
         alt: "MCR Holidays business website",
         description:
           "A service-driven travel website built to showcase packages, capture inquiries, and convert organic traffic into qualified leads.",
       },
       {
         name: "Event Horizon Brand Launch",
-        image: eventProjectImage,
+        // Modern marketing / branding office environment with screens and brand materials
+        image: unsplash1497366216548,
         alt: "Event Horizon business website",
         description:
           "A modern marketing website with campaign landing pages, strong content hierarchy, and a flexible design system for rapid updates.",
@@ -139,14 +169,14 @@ const pages = {
 
   "online-store": createPage({
     label: "Online Stores Built for Sales",
-    title: "We Build Online Stores",
-    titleHighlight: "That Make Buying Easy",
+    title: "Growing Brands Stuck ",
+    titleHighlight: "on Marketplaces",
     subtitle:
-      "Binazy develops ecommerce experiences that simplify product discovery, streamline checkout, and give businesses strong control over catalog and operations.",
-    techHeading: "Online Store Development Services",
+      "Take Back Control of Your Customers & Margins by Building Your Own E-commerce Website,We offer e-commerce development services that help you move beyond marketplaces so you can own your audience, improve margins, and grow your brand on your terms.",
+    techHeading: "Ecommerce Website Development Services",
     techTagline: "Catalog. Checkout. Retention.",
     techDescription:
-      "We build scalable online stores with secure payments, clean shopping journeys, and admin tools that support merchandising, fulfillment, and repeat orders.",
+      "We don't just build websites. We create e-commerce platforms designed to support your business as it grows.",
     services: [
       {
         title: "Custom Storefront Development",
@@ -183,14 +213,16 @@ const pages = {
     projects: [
       {
         name: "MarketPulse Commerce Platform",
-        image: ecommerceProjectImage,
+        // Full ecommerce dashboard with analytics graphs on desktop
+        image: unsplash1556742049,
         alt: "MarketPulse online store",
         description:
           "A full-featured ecommerce platform with product discovery, order workflows, payment integrations, and admin reporting.",
       },
       {
         name: "QuickCart Mobile Commerce",
-        image: mobileProjectImage,
+        // Person shopping on mobile phone in a bright, clean setting
+        image: unsplash1512428559087,
         alt: "QuickCart online shopping experience",
         description:
           "A mobile-first store experience built for fast browsing, quick checkout, and repeat purchase convenience.",
@@ -244,14 +276,16 @@ const pages = {
     projects: [
       {
         name: "StreamNest Video Platform",
-        image: dashboardProjectImage,
+        // Large screen TV streaming interface in a dark living room — Netflix-style
+        image: unsplash1522869635100,
         alt: "StreamNest OTT admin dashboard",
         description:
           "A subscription-led streaming platform with content sections, viewer profiles, billing flows, and operator analytics.",
       },
       {
         name: "PlayPrime Media Hub",
-        image: officePortalImage,
+        // Person watching video content on laptop in dark room — cinematic atmosphere
+        image: unsplash1611162617474,
         alt: "PlayPrime OTT platform interface",
         description:
           "A media delivery product with catalog management, featured releases, audience insights, and account controls.",
@@ -305,14 +339,16 @@ const pages = {
     projects: [
       {
         name: "FitTrack Companion App",
-        image: mobileProjectImage,
+        // Fitness app on phone — person holding phone showing workout/health dashboard
+        image: unsplash1576678927484,
         alt: "FitTrack mobile app",
         description:
           "A wellness mobile app with personalized dashboards, reminders, progress tracking, and a smooth daily-use experience.",
       },
       {
         name: "QuickCart Delivery App",
-        image: dashboardProjectImage,
+        // Delivery rider with phone showing delivery app map/order status
+        image: unsplash1558618666,
         alt: "QuickCart delivery app dashboard",
         description:
           "A logistics-enabled commerce app with order status, account management, and streamlined repeat checkout flows.",
@@ -366,78 +402,19 @@ const pages = {
     projects: [
       {
         name: "BookEase Operations Suite",
-        image: officeOpsImage,
+        // Clean calendar / scheduling interface on desktop screen in a professional setting
+        image: unsplash1506784983877,
         alt: "BookEase booking system",
         description:
           "A centralized booking platform combining customer scheduling, operations dashboards, and automated reminders for service teams.",
       },
       {
         name: "ConsultPro Demo Scheduler",
-        image: eventProjectImage,
+        // Sales/consultation call — professional on headset with computer showing calendar
+        image: unsplash1521791136064,
         alt: "ConsultPro appointment scheduling platform",
         description:
           "An appointment management product that helps sales teams qualify prospects, schedule demos, and coordinate follow-up.",
-      },
-    ],
-  }),
-
-  "all-in-one-business-management-system": createPage({
-    label: "Unified Systems for Daily Operations",
-    title: "We Build Business Management Systems",
-    titleHighlight: "That Connect Teams And Workflows",
-    subtitle:
-      "Binazy creates all-in-one operational platforms that bring sales, finance, service, and reporting into one connected workspace.",
-    techHeading: "All-in-One Business Management System Services",
-    techTagline: "Operations. Visibility. Efficiency.",
-    techDescription:
-      "We replace scattered tools with integrated systems that support day-to-day execution, approval flows, and better decision-making across departments.",
-    services: [
-      {
-        title: "Central Operations Dashboard",
-        description:
-          "Bring team tasks, activity summaries, and business visibility into one command center.",
-      },
-      {
-        title: "CRM & Client Management",
-        description:
-          "Track leads, customers, follow-ups, and relationships inside the broader operating system.",
-      },
-      {
-        title: "Billing & Invoicing Modules",
-        description:
-          "Manage estimates, invoices, payments, and collection status alongside operations data.",
-      },
-      {
-        title: "Inventory & Workflow Tracking",
-        description:
-          "Coordinate stock, task progress, service delivery, and dependencies across teams.",
-      },
-      {
-        title: "Automation & Approvals",
-        description:
-          "Reduce repetitive admin work with triggered actions and role-based approval chains.",
-      },
-      {
-        title: "Executive Reporting",
-        description:
-          "Give founders and managers fast access to KPIs, trends, and activity summaries.",
-      },
-    ],
-    spotlightHeading: "Business Management System Project Spotlights",
-    projects: [
-      {
-        name: "OpsPilot Unified Workspace",
-        image: operationsProjectImage,
-        alt: "OpsPilot business management dashboard",
-        description:
-          "A cross-functional operating system for workflows, approvals, inventory, and management reporting.",
-      },
-      {
-        name: "OfficeFlow Control Center",
-        image: officePortalImage,
-        alt: "OfficeFlow business management portal",
-        description:
-          "A business portal that connects departments, centralizes records, and simplifies day-to-day operations.",
       },
     ],
   }),
@@ -488,14 +465,16 @@ const pages = {
     projects: [
       {
         name: "FinanceCore ERP",
-        image: dashboardProjectImage,
+        // Finance dashboard with charts and graphs on multiple monitors in corporate setting
+        image: unsplash1551288049,
         alt: "FinanceCore ERP dashboard",
         description:
           "A configurable ERP workspace for finance, approvals, reporting, and multi-role operational control.",
       },
       {
         name: "OpsPilot ERP Dashboard",
-        image: operationsProjectImage,
+        // Warehouse / operations management — person with tablet managing inventory
+        image: unsplash1586528116311,
         alt: "OpsPilot ERP dashboard",
         description:
           "An ERP solution tying together procurement, inventory, process visibility, and executive reporting.",
@@ -549,14 +528,16 @@ const pages = {
     projects: [
       {
         name: "Binazy HRMS Suite",
-        image: hrmsProjectImage,
+        // HR software — professional viewing employee management dashboard on screen
+        image: unsplash1542744173,
         alt: "Binazy HRMS dashboard",
         description:
           "A tailored HR and payroll product with approvals, employee records, attendance, and admin controls built around internal processes.",
       },
       {
         name: "OfficeFlow Operations Portal",
-        image: officePortalImage,
+        // Modern open office with team members using custom portal on multiple screens
+        image: unsplash1497366811353,
         alt: "OfficeFlow custom business portal",
         description:
           "A custom operations portal that unifies process tracking, records, dashboards, and team coordination.",
@@ -610,14 +591,16 @@ const pages = {
     projects: [
       {
         name: "Binazy HRMS Suite",
-        image: hrmsProjectImage,
+        // HR manager reviewing employee records on a laptop — professional office setting
+        image: unsplash1581291518857,
         alt: "HR and payroll system dashboard",
         description:
           "An HRMS platform for employee records, leave approvals, attendance, payroll, and role-based administration.",
       },
       {
         name: "TeamFlow People Ops Portal",
-        image: teamProjectImage,
+        // Diverse team in a bright office — collaborative people operations environment
+        image: unsplash1522202176988,
         alt: "People operations portal",
         description:
           "A people operations workspace built to simplify onboarding, policy workflows, and payroll coordination.",
@@ -625,131 +608,9 @@ const pages = {
     ],
   }),
 
-  "technology-migration": createPage({
-    label: "Migration Programs Planned for Low Risk",
-    title: "We Deliver Technology Migration",
-    titleHighlight: "Without Disrupting The Business",
-    subtitle:
-      "Binazy helps businesses modernize systems, move data, and transition infrastructure with structured planning, validation, and support.",
-    techHeading: "Technology Migration Services",
-    techTagline: "Modernization. Transition. Continuity.",
-    techDescription:
-      "We handle migration projects across applications, databases, infrastructure, and workflows while minimizing downtime and protecting business continuity.",
-    services: [
-      {
-        title: "Application Modernization Planning",
-        description:
-          "Assess current systems and map a safer path toward updated platforms and architecture.",
-      },
-      {
-        title: "Data Migration Execution",
-        description:
-          "Move records, documents, and operational data with validation and integrity checks.",
-      },
-      {
-        title: "Infrastructure Transition Support",
-        description:
-          "Shift workloads across hosting environments with careful rollout planning and visibility.",
-      },
-      {
-        title: "Parallel Run & Testing",
-        description:
-          "Validate outputs and workflows before full cutover to reduce operational surprises.",
-      },
-      {
-        title: "Downtime & Rollback Planning",
-        description:
-          "Prepare fallback strategies and cutover plans for high-confidence deployment windows.",
-      },
-      {
-        title: "Team Training & Handover",
-        description:
-          "Support internal teams with training, documentation, and post-migration stabilization.",
-      },
-    ],
-    spotlightHeading: "Technology Migration Project Spotlights",
-    projects: [
-      {
-        name: "CloudShift Operations Migration",
-        image: officeOpsImage,
-        alt: "Technology migration operations dashboard",
-        description:
-          "A staged migration program covering data transfer, application updates, and controlled rollout for operations teams.",
-      },
-      {
-        name: "LegacyFlow Modernization Program",
-        image: officePortalImage,
-        alt: "Legacy system modernization portal",
-        description:
-          "A modernization effort that moved a legacy workflow into a more maintainable and scalable digital platform.",
-      },
-    ],
-  }),
-
-  "customer-management-system": createPage({
-    label: "Customer Systems Built Around Relationships",
-    title: "We Build Customer Management Systems",
-    titleHighlight: "That Keep Teams Aligned",
-    subtitle:
-      "Binazy develops customer management platforms that help sales, support, and operations teams work from one connected customer view.",
-    techHeading: "Customer Management System Services",
-    techTagline: "Customer Data. Sales Visibility. Better Follow-Up.",
-    techDescription:
-      "Our solutions combine lead tracking, customer records, communication history, and reporting into a workflow teams can actually use every day.",
-    services: [
-      {
-        title: "Lead & Customer Data Management",
-        description:
-          "Centralize contact details, account history, notes, and lifecycle stages in one system.",
-      },
-      {
-        title: "Pipeline & Opportunity Tracking",
-        description:
-          "Track prospects, deals, follow-ups, and conversion progress across the sales cycle.",
-      },
-      {
-        title: "Task & Follow-Up Automation",
-        description:
-          "Automate reminders, assignments, and outreach triggers to improve response consistency.",
-      },
-      {
-        title: "Support & Communication Views",
-        description:
-          "Give teams quick access to conversations, requests, and customer context during service delivery.",
-      },
-      {
-        title: "Reporting & Segmentation",
-        description:
-          "Analyze pipeline movement, team performance, and customer segments for better planning.",
-      },
-      {
-        title: "CRM Integrations",
-        description:
-          "Connect telephony, forms, messaging, and marketing tools into the wider customer workflow.",
-      },
-    ],
-    spotlightHeading: "Customer Management System Project Spotlights",
-    projects: [
-      {
-        name: "DealerConnect Relationship Hub",
-        image: officePortalImage,
-        alt: "DealerConnect CRM portal",
-        description:
-          "A customer management system for account tracking, service requests, internal coordination, and reporting.",
-      },
-      {
-        name: "LeadFlow Sales Workspace",
-        image: dashboardProjectImage,
-        alt: "LeadFlow CRM dashboard",
-        description:
-          "A sales-focused management system with pipeline visibility, reminders, and conversion analytics for growing teams.",
-      },
-    ],
-  }),
-
   "24-7-helpdesk-support": createPage({
     label: "Support Desks Built for Faster Resolution",
-    title: "We Build Helpdesk Solutions",
+        image: unsplash1497366811353,
     titleHighlight: "For Round-The-Clock Service Teams",
     subtitle:
       "Binazy helps support organizations manage tickets, escalations, communication, and service quality through structured helpdesk platforms.",
@@ -793,14 +654,16 @@ const pages = {
     projects: [
       {
         name: "SupportDesk 24/7 Command Center",
-        image: officeOpsImage,
+        // Customer support center — agents at workstations with multiple monitors, headsets
+        image: unsplash1553877522,
         alt: "24/7 helpdesk support dashboard",
         description:
           "A helpdesk platform built for continuous support, ticket routing, escalations, and SLA visibility.",
       },
       {
         name: "ResolveOne Service Hub",
-        image: teamProjectImage,
+        // Support agent on headset working at desktop with ticketing software visible
+        image: unsplash1596524430615,
         alt: "Customer service ticketing workspace",
         description:
           "A support operations workspace combining ticket management, knowledge resources, and team coordination.",
@@ -810,7 +673,7 @@ const pages = {
 
   "remote-monitoring": createPage({
     label: "Monitoring Systems That Surface Issues Early",
-    title: "We Build Remote Monitoring Solutions",
+        image: unsplash1558494949,
     titleHighlight: "For More Reliable Operations",
     subtitle:
       "Binazy develops remote monitoring systems that help teams observe assets, detect anomalies, and respond to issues before they grow.",
@@ -854,14 +717,16 @@ const pages = {
     projects: [
       {
         name: "InfraWatch Monitoring Console",
-        image: dashboardProjectImage,
+        // Server room / data center with monitoring screens showing network health
+        image: unsplash1558494949,
         alt: "Remote monitoring console",
         description:
           "A monitoring dashboard that surfaces asset health, live alerts, and trend data for technical teams.",
       },
       {
         name: "OpsSignal Response Board",
-        image: officePortalImage,
+        // NOC-style operations center with large display boards showing system status
+        image: unsplash1504384308090,
         alt: "Remote monitoring incident response portal",
         description:
           "A response-focused monitoring portal built to coordinate issue triage, ownership, and resolution progress.",
@@ -869,131 +734,9 @@ const pages = {
     ],
   }),
 
-  "sla-based-support-contracts": createPage({
-    label: "Support Contracts Designed Around Accountability",
-    title: "We Structure SLA-Based Support",
-    titleHighlight: "With Clear Response Commitments",
-    subtitle:
-      "Binazy helps organizations define and deliver support contracts with measurable service levels, reporting, and governance.",
-    techHeading: "SLA-Based Support Contract Services",
-    techTagline: "Commitment. Transparency. Measurable Service.",
-    techDescription:
-      "We create support delivery models backed by clear expectations, structured reporting, and escalation paths aligned with business priority.",
-    services: [
-      {
-        title: "Support Scope Definition",
-        description:
-          "Define coverage hours, issue types, priorities, and responsibilities clearly from the start.",
-      },
-      {
-        title: "Response & Resolution Matrix",
-        description:
-          "Set realistic timelines and service levels based on urgency and operational impact.",
-      },
-      {
-        title: "Preventive Maintenance Planning",
-        description:
-          "Include scheduled reviews, system upkeep, and recurring technical health checks.",
-      },
-      {
-        title: "Escalation Governance",
-        description:
-          "Establish escalation paths and stakeholder visibility for service-critical incidents.",
-      },
-      {
-        title: "Monthly Performance Reporting",
-        description:
-          "Track ticket metrics, SLA adherence, trends, and service quality over time.",
-      },
-      {
-        title: "Quarterly Service Reviews",
-        description:
-          "Review outcomes, recurring issues, and improvement priorities with the client team.",
-      },
-    ],
-    spotlightHeading: "SLA Support Project Spotlights",
-    projects: [
-      {
-        name: "ServiceGuard Contract Dashboard",
-        image: officeOpsImage,
-        alt: "SLA support contract dashboard",
-        description:
-          "A support governance workspace for SLA tracking, issue review, and monthly reporting.",
-      },
-      {
-        name: "ClientCare Review Portal",
-        image: teamProjectImage,
-        alt: "Client SLA review portal",
-        description:
-          "A client-facing portal used to monitor support commitments, escalations, and ongoing service improvements.",
-      },
-    ],
-  }),
-
-  "lead-generation": createPage({
-    label: "Lead Funnels Built to Convert",
-    title: "We Build Lead Generation",
-    titleHighlight: "Systems That Create Pipeline Growth",
-    subtitle:
-      "Binazy helps businesses capture, qualify, and convert more opportunities with focused lead generation journeys and measurable conversion flows.",
-    techHeading: "Lead Generation Services",
-    techTagline: "Traffic. Capture. Conversion.",
-    techDescription:
-      "From landing pages to CRM-connected automation, we build lead systems that turn traffic into qualified conversations and booked opportunities.",
-    services: [
-      {
-        title: "Campaign Landing Pages",
-        description:
-          "Create focused campaign pages designed around offers, trust, and conversion clarity.",
-      },
-      {
-        title: "Lead Capture & Qualification",
-        description:
-          "Use forms and logic-driven qualification steps to improve lead quality and routing.",
-      },
-      {
-        title: "CRM & Follow-Up Automation",
-        description:
-          "Connect inquiries with CRM workflows, notifications, and outreach triggers automatically.",
-      },
-      {
-        title: "Appointment Booking Funnels",
-        description:
-          "Move qualified prospects into demos, discovery calls, and consultations faster.",
-      },
-      {
-        title: "Channel Performance Tracking",
-        description:
-          "Monitor which campaigns, pages, and sources are driving real sales opportunities.",
-      },
-      {
-        title: "Conversion Rate Optimization",
-        description:
-          "Improve results through testing, messaging refinements, and funnel improvements.",
-      },
-    ],
-    spotlightHeading: "Lead Generation Project Spotlights",
-    projects: [
-      {
-        name: "GrowthFlow Campaign Funnel",
-        image: dashboardProjectImage,
-        alt: "Lead generation analytics dashboard",
-        description:
-          "A campaign funnel with landing pages, smart forms, CRM syncing, and conversion dashboards for sales teams.",
-      },
-      {
-        name: "ConsultPro Booking Journey",
-        image: officeOpsImage,
-        alt: "Lead capture and booking experience",
-        description:
-          "A structured lead system that helped streamline inquiries, qualification, and demo scheduling.",
-      },
-    ],
-  }),
-
   "social-media-management": createPage({
     label: "Social Programs Managed With Consistency",
-    title: "We Deliver Social Media Management",
+        image: unsplash1504384308090,
     titleHighlight: "That Keeps Brands Active And Relevant",
     subtitle:
       "Binazy supports social growth with content planning, publishing, audience engagement, and reporting that connects activity to business goals.",
@@ -1037,200 +780,19 @@ const pages = {
     projects: [
       {
         name: "BrandWave Social Calendar",
-        image: eventProjectImage,
+        // Marketing team around a table planning social content with sticky notes and calendar
+        image: unsplash1611926653458,
         alt: "Social media campaign calendar",
         description:
           "A structured social media delivery setup combining monthly planning, content rollouts, and engagement reporting.",
       },
       {
         name: "CommunityPulse Reporting Desk",
-        image: dashboardProjectImage,
+        // Social media analytics dashboard on screen showing engagement graphs and metrics
+        image: unsplash1460925895917,
         alt: "Social media performance dashboard",
         description:
           "A reporting workspace built to track social reach, engagement trends, and campaign outcomes across channels.",
-      },
-    ],
-  }),
-
-  "search-visibility": createPage({
-    label: "Search Visibility Built on Strong Foundations",
-    title: "We Improve Search Visibility",
-    titleHighlight: "So The Right Audience Can Find You",
-    subtitle:
-      "Binazy helps businesses increase discoverability through technical SEO, content structure, and ongoing search performance improvement.",
-    techHeading: "Search Visibility Services",
-    techTagline: "Discoverability. Relevance. Sustainable Growth.",
-    techDescription:
-      "We focus on search fundamentals that support better rankings, stronger traffic quality, and clearer page alignment with customer intent.",
-    services: [
-      {
-        title: "Technical SEO Review",
-        description:
-          "Audit crawlability, page structure, metadata, speed, and indexation fundamentals.",
-      },
-      {
-        title: "Keyword & Intent Mapping",
-        description:
-          "Align search terms with high-value services, pages, and audience questions.",
-      },
-      {
-        title: "On-Page Content Optimization",
-        description:
-          "Improve titles, headings, content depth, and page hierarchy for better relevance.",
-      },
-      {
-        title: "Local Search Visibility",
-        description:
-          "Strengthen local presence through optimized listings, service pages, and supporting signals.",
-      },
-      {
-        title: "SEO Content Roadmapping",
-        description:
-          "Plan supporting content that reinforces authority around priority topics and offers.",
-      },
-      {
-        title: "Ranking & Traffic Reporting",
-        description:
-          "Monitor keyword movement, organic traffic patterns, and opportunity areas over time.",
-      },
-    ],
-    spotlightHeading: "Search Visibility Project Spotlights",
-    projects: [
-      {
-        name: "SearchLift Service SEO Program",
-        image: travelProjectImage,
-        alt: "Search visibility improvement project",
-        description:
-          "A search-focused optimization project that improved page structure, service discoverability, and organic lead quality.",
-      },
-      {
-        name: "LocalReach Performance Dashboard",
-        image: dashboardProjectImage,
-        alt: "SEO reporting dashboard",
-        description:
-          "An analytics dashboard used to track rankings, traffic quality, and local search performance improvements.",
-      },
-    ],
-  }),
-
-  "email-whatsapp-campaigns": createPage({
-    label: "Outbound Campaigns Built for Timely Follow-Up",
-    title: "We Run Email & WhatsApp Campaigns",
-    titleHighlight: "That Keep Prospects Engaged",
-    subtitle:
-      "Binazy helps businesses communicate with leads and customers through structured campaign flows that feel timely, relevant, and measurable.",
-    techHeading: "Email & WhatsApp Campaign Services",
-    techTagline: "Segmentation. Automation. Better Follow-Up.",
-    techDescription:
-      "We build lifecycle messaging programs that support promotions, reminders, onboarding, and nurture flows across email and WhatsApp.",
-    services: [
-      {
-        title: "Audience Segmentation",
-        description:
-          "Group contacts by interest, stage, and behavior so messages feel more relevant.",
-      },
-      {
-        title: "Campaign Flow Design",
-        description:
-          "Create sequences for onboarding, promotions, reminders, and re-engagement.",
-      },
-      {
-        title: "Template & Copy Setup",
-        description:
-          "Prepare branded messages that are clear, concise, and action-oriented.",
-      },
-      {
-        title: "WhatsApp Journey Integration",
-        description:
-          "Support operational and marketing communication using WhatsApp-led touchpoints.",
-      },
-      {
-        title: "A/B Testing & Optimization",
-        description:
-          "Improve open rates, response rates, and conversions through structured testing.",
-      },
-      {
-        title: "Campaign Performance Tracking",
-        description:
-          "Measure delivery, opens, clicks, replies, and assisted conversions over time.",
-      },
-    ],
-    spotlightHeading: "Email & WhatsApp Campaign Project Spotlights",
-    projects: [
-      {
-        name: "MessageFlow Nurture Program",
-        image: eventProjectImage,
-        alt: "Email campaign workflow project",
-        description:
-          "A nurture workflow combining segmented messaging, follow-up timing, and campaign reporting for lead engagement.",
-      },
-      {
-        name: "ConnectNow WhatsApp Outreach",
-        image: officePortalImage,
-        alt: "WhatsApp campaign operations dashboard",
-        description:
-          "A messaging operations setup for reminders, promotions, and customer updates using structured WhatsApp journeys.",
-      },
-    ],
-  }),
-
-  "performance-marketing": createPage({
-    label: "Paid Campaigns Managed for Better ROI",
-    title: "We Deliver Performance Marketing",
-    titleHighlight: "Focused On Measurable Growth",
-    subtitle:
-      "Binazy manages paid campaigns with careful audience targeting, creative testing, and reporting that connects spend to pipeline and revenue outcomes.",
-    techHeading: "Performance Marketing Services",
-    techTagline: "Targeting. Testing. Return On Spend.",
-    techDescription:
-      "We help businesses scale paid acquisition through a disciplined system for campaign setup, optimization, and conversion-focused reporting.",
-    services: [
-      {
-        title: "Ad Account Setup & Structure",
-        description:
-          "Build campaign foundations that support cleaner management and easier optimization.",
-      },
-      {
-        title: "Audience & Targeting Strategy",
-        description:
-          "Reach the right users with intent-based targeting, exclusions, and retargeting segments.",
-      },
-      {
-        title: "Creative Testing Framework",
-        description:
-          "Test copy, visuals, hooks, and offers to find what actually drives response.",
-      },
-      {
-        title: "Landing Page Alignment",
-        description:
-          "Match campaign intent with post-click journeys that improve conversion performance.",
-      },
-      {
-        title: "Retargeting & Funnel Recovery",
-        description:
-          "Re-engage visitors and incomplete leads through smart remarketing paths.",
-      },
-      {
-        title: "ROAS & Pipeline Reporting",
-        description:
-          "Track spend efficiency, lead quality, conversions, and revenue contribution clearly.",
-      },
-    ],
-    spotlightHeading: "Performance Marketing Project Spotlights",
-    projects: [
-      {
-        name: "AdPulse Acquisition Engine",
-        image: dashboardProjectImage,
-        alt: "Performance marketing dashboard",
-        description:
-          "A paid acquisition program with campaign testing, landing page alignment, and pipeline reporting across channels.",
-      },
-      {
-        name: "RetainLoop Funnel Recovery",
-        image: eventProjectImage,
-        alt: "Retargeting campaign project",
-        description:
-          "A conversion recovery initiative using remarketing, creative iterations, and conversion analytics to improve ROI.",
       },
     ],
   }),
@@ -1281,14 +843,16 @@ const pages = {
     projects: [
       {
         name: "LearnSphere LMS",
-        image: elearningHero,
+        // Student on laptop taking an online course — e-learning dashboard visible on screen
+        image: unsplash1501504905252,
         alt: "LearnSphere online learning platform",
         description:
           "A learning platform with course catalogs, dashboards, quizzes, certificates, and admin visibility for training programs.",
       },
       {
         name: "SkillBridge Learning Hub",
-        image: officePortalImage,
+        // Group of professionals in a bright room with laptops doing online collaborative learning
+        image: unsplash1524178232363,
         alt: "SkillBridge e-learning portal",
         description:
           "A structured learning product that supports enrollments, modular content, and progress tracking for distributed learners.",
@@ -1298,7 +862,7 @@ const pages = {
 
   "student-staff-training-portal": createPage({
     label: "Training Portals Built for Mixed Audiences",
-    title: "We Build Training Portals",
+        image: unsplash1524178232363,
     titleHighlight: "For Students, Staff, And Teams",
     subtitle:
       "Binazy creates role-based training portals that support onboarding, internal learning, compliance tracking, and course delivery across different user groups.",
@@ -1342,14 +906,16 @@ const pages = {
     projects: [
       {
         name: "ClassLive Training Portal",
-        image: operationsProjectImage,
+        // Virtual classroom — instructor on video call with students, training session in progress
+        image: unsplash1588196749597,
         alt: "Student and staff training portal",
         description:
           "A role-based training portal with live sessions, assignments, attendance views, and recorded content access.",
       },
       {
         name: "CampusFlow Learning Workspace",
-        image: elearningHero,
+        // University campus computer lab — students working on training modules on desktop computers
+        image: unsplash1562774053,
         alt: "Campus learning and training workspace",
         description:
           "A multi-audience learning environment designed for internal staff training and student learning programs.",
@@ -1403,14 +969,16 @@ const pages = {
     projects: [
       {
         name: "EduSpark Product Suite",
-        image: elearningHero,
+        // EdTech product team working on a whiteboard with product roadmap in a startup office
+        image: unsplash1509062522246,
         alt: "EdTech product platform",
         description:
           "A scalable EdTech product with course delivery, instructor workflows, learner dashboards, and engagement features.",
       },
       {
         name: "MentorLoop Learning App",
-        image: mobileProjectImage,
+        // Student using mobile app to learn — phone screen showing course interface in hand
+        image: unsplash1434030216411,
         alt: "EdTech mobile learning application",
         description:
           "A mobile-first learning product designed for lesson access, assessments, and progress visibility.",
@@ -1418,132 +986,9 @@ const pages = {
     ],
   }),
 
-  "secure-cloud-setup": createPage({
-    label: "Cloud Setups Built With Security First",
-    title: "We Deliver Secure Cloud Setup",
-    titleHighlight: "For Modern Digital Operations",
-    subtitle:
-      "Binazy helps organizations plan and implement secure cloud environments with clear access control, monitoring, and operational stability.",
-    techHeading: "Secure Cloud Setup Services",
-    techTagline: "Architecture. Access. Reliability.",
-    techDescription:
-      "We design cloud foundations that support growth while improving security posture, operational visibility, and cost awareness.",
-    services: [
-      {
-        title: "Cloud Architecture Planning",
-        description:
-          "Design hosting, networking, and service layout aligned with performance and growth needs.",
-      },
-      {
-        title: "Identity & Access Controls",
-        description:
-          "Set up permissions, account structure, and secure access practices across teams.",
-      },
-      {
-        title: "Secure Networking Configuration",
-        description:
-          "Configure connectivity, isolation, and traffic controls to reduce exposure and risk.",
-      },
-      {
-        title: "Monitoring & Logging Setup",
-        description:
-          "Create visibility into health, activity, and security events across cloud resources.",
-      },
-      {
-        title: "Cost Governance",
-        description:
-          "Track usage patterns and put guardrails in place to avoid unnecessary cloud spend.",
-      },
-      {
-        title: "Disaster Recovery Readiness",
-        description:
-          "Prepare backup, failover, and continuity planning for critical workloads and data.",
-      },
-    ],
-    spotlightHeading: "Secure Cloud Setup Project Spotlights",
-    projects: [
-      {
-        name: "CloudShield Landing Zone",
-        image: officePortalImage,
-        alt: "Secure cloud setup architecture",
-        description:
-          "A cloud foundation project covering access controls, observability, environment structure, and operational governance.",
-      },
-      {
-        name: "InfraGuard Operations Stack",
-        image: dashboardProjectImage,
-        alt: "Cloud monitoring and governance dashboard",
-        description:
-          "A secure cloud operations setup with monitoring, cost visibility, and stronger deployment discipline.",
-      },
-    ],
-  }),
-
-  "automated-backup-recovery": 
-  createPage({
-    label: "Backup Systems Planned for Recovery Readiness",
-    title: "We Build Backup & Recovery Workflows",
-    titleHighlight: "That Protect Critical Business Data",
-    subtitle:
-      "Binazy helps teams automate backups, validate recovery paths, and strengthen resilience against accidental loss, outages, and security events.",
-    techHeading: "Automated Backup & Recovery Services",
-    techTagline: "Resilience. Restore Confidence. Business Continuity.",
-    techDescription:
-      "We put structured backup and recovery processes in place so teams can restore systems and data faster when something goes wrong.",
-    services: [
-      {
-        title: "Automated Backup Scheduling",
-        description:
-          "Set reliable backup routines for data, workloads, and critical system components.",
-      },
-      {
-        title: "Recovery Point Strategy",
-        description:
-          "Define backup frequency and restore targets based on business risk and operational need.",
-      },
-      {
-        title: "Restore Testing",
-        description:
-          "Validate recovery paths through scheduled restore drills and practical scenario checks.",
-      },
-      {
-        title: "Retention & Compliance Controls",
-        description:
-          "Manage backup retention windows and policy alignment for audit and compliance needs.",
-      },
-      {
-        title: "Cross-Location Protection",
-        description:
-          "Support offsite or cross-region resilience to reduce single-point failure risk.",
-      },
-      {
-        title: "Incident Recovery Runbooks",
-        description:
-          "Document response steps clearly so teams can act quickly under pressure.",
-      },
-    ],
-    spotlightHeading: "Backup & Recovery Project Spotlights",
-    projects: [
-      {
-        name: "RestoreSafe Recovery Program",
-        image: dashboardProjectImage,
-        alt: "Backup and recovery dashboard",
-        description:
-          "A resilience initiative focused on automated backups, restore validation, and business continuity planning.",
-      },
-      {
-        name: "VaultOps Continuity Setup",
-        image: officeOpsImage,
-        alt: "Disaster recovery operations workspace",
-        description:
-          "A recovery-readiness setup that gave teams clearer backup oversight and practical incident runbooks.",
-      },
-    ],
-  }),
-
   "business-dashboard": createPage({
     label: "Dashboards Built for Faster Decisions",
-    title: "We Build Business Dashboards",
+        image: unsplash1434030216411,
     titleHighlight: "That Keep Leadership Informed",
     subtitle:
       "Binazy creates dashboards that turn fragmented business data into focused operational and executive visibility for day-to-day decision-making.",
@@ -1587,14 +1032,16 @@ const pages = {
     projects: [
       {
         name: "InsightBoard Executive Console",
-        image: dashboardProjectImage,
+        // Executive looking at a large business analytics dashboard on an ultrawide monitor
+        image: unsplash1543286386,
         alt: "Business dashboard interface",
         description:
           "A dashboard product that combines KPI monitoring, drilldowns, and leadership-ready visibility across operations.",
       },
       {
         name: "OpsView Daily Control Room",
-        image: officeOpsImage,
+        // Operations manager in open office reviewing daily metrics dashboard on screen
+        image: unsplash1531403009284,
         alt: "Operations dashboard project",
         description:
           "A daily-use dashboard built to help managers track activity, exceptions, and performance at a glance.",
@@ -1602,8 +1049,7 @@ const pages = {
     ],
   }),
 
-  "sales-inventory-reports": 
-  createPage({
+  "sales-inventory-reports": createPage({
     label: "Operational Reports Built for Better Control",
     title: "We Build Sales & Inventory Reports",
     titleHighlight: "That Reveal What Needs Attention",
@@ -1649,79 +1095,19 @@ const pages = {
     projects: [
       {
         name: "StockSense Reporting Hub",
-        image: dashboardProjectImage,
+        // Warehouse worker with barcode scanner checking inventory against a tablet dashboard
+        image: unsplash1553413077,
         alt: "Sales and inventory reporting dashboard",
         description:
           "A reporting workspace built to track stock movement, sales trends, and replenishment priorities across operations.",
       },
       {
         name: "RetailFlow Branch Insights",
-        image: ecommerceProjectImage,
+        // Retail store manager reviewing sales performance reports on laptop behind counter
+        image: unsplash1441986300917,
         alt: "Retail sales and inventory analytics project",
         description:
           "A branch-level reporting setup that helped leadership compare sales efficiency, product turnover, and stock risk.",
-      },
-    ],
-  }),
-
-  "customer-behaviour-insights":
-   createPage({
-    label: "Customer Insight Systems Built Around Behavior",
-    title: "We Build Customer Behaviour Insights",
-    titleHighlight: "That Guide Smarter Decisions",
-    subtitle:
-      "Binazy helps businesses understand how customers browse, buy, engage, and return so teams can improve journeys and retention strategies.",
-    techHeading: "Customer Behaviour Insights Services",
-    techTagline: "Behavior. Segments. Better Decisions.",
-    techDescription:
-      "We convert customer interactions into insights that help marketing, product, and sales teams understand what is driving growth or friction.",
-    services: [
-      {
-        title: "Journey & Funnel Analysis",
-        description:
-          "Track how customers move through discovery, evaluation, conversion, and retention stages.",
-      },
-      {
-        title: "Cohort & Repeat Purchase Views",
-        description:
-          "Understand behavior patterns across customer groups and repeat buying segments.",
-      },
-      {
-        title: "Churn & Drop-Off Signals",
-        description:
-          "Spot where customer interest declines so teams can intervene sooner.",
-      },
-      {
-        title: "Feedback & Sentiment Trends",
-        description:
-          "Combine customer responses and qualitative signals into actionable insight themes.",
-      },
-      {
-        title: "Audience Segmentation Dashboards",
-        description:
-          "Group customers by value, activity, or behavior for sharper targeting and planning.",
-      },
-      {
-        title: "Insight Sharing Workflows",
-        description:
-          "Turn analysis into dashboards and reports stakeholders can use in decision meetings.",
-      },
-    ],
-    spotlightHeading: "Customer Behaviour Insight Project Spotlights",
-    projects: [
-      {
-        name: "CustomerLens Insight Studio",
-        image: dashboardProjectImage,
-        alt: "Customer behaviour analytics dashboard",
-        description:
-          "An analytics product used to understand user journeys, repeat behavior, and churn indicators across customer segments.",
-      },
-      {
-        name: "RetentionMap Audience Tracker",
-        image: officePortalImage,
-        alt: "Audience behavior reporting portal",
-        description:
-          "A customer insight workspace that helps teams review engagement patterns and improve retention planning.",
       },
     ],
   }),
@@ -1772,14 +1158,16 @@ const pages = {
     projects: [
       {
         name: "CampaignSight Reporting Suite",
-        image: dashboardProjectImage,
+        // Marketing analyst reviewing multi-channel attribution dashboard on large screen
+        image: unsplash1533750516457,
         alt: "Marketing performance dashboard",
         description:
           "A multi-channel reporting setup used to track attribution, funnel metrics, and channel efficiency in one place.",
       },
       {
         name: "GrowthOps Weekly Scorecard",
-        image: officeOpsImage,
+        // Growth team in a meeting room reviewing a weekly scorecard on a projected screen
+        image: unsplash1552664730,
         alt: "Marketing scorecard reporting project",
         description:
           "A decision-focused scorecard system that helps teams review campaign performance and optimize faster.",
@@ -1787,8 +1175,7 @@ const pages = {
     ],
   }),
 
-  "24-7-ai-customer-support-agent":
-   createPage({
+  "ai-customer-support-agent": createPage({
     label: "AI Support Agents Built for Real Conversations",
     title: "We Build AI Support Agents",
     titleHighlight: "That Help Customers Around The Clock",
@@ -1834,14 +1221,16 @@ const pages = {
     projects: [
       {
         name: "AssistNow AI Helpdesk",
-        image: dashboardProjectImage,
+        // Chat interface on laptop showing AI bot conversation with a customer — clean UI
+        image: unsplash1677442135703,
         alt: "AI customer support agent dashboard",
         description:
           "A conversational support agent with knowledge grounding, escalation rules, and reporting for 24/7 customer assistance.",
       },
       {
         name: "SupportBot Resolution Flow",
-        image: officePortalImage,
+        // AI chatbot widget open on a website on a desktop screen — modern dark UI
+        image: unsplash1531746790731,
         alt: "AI support handoff portal",
         description:
           "An AI-assisted service workflow that handles common requests and passes complex cases to support teams with context.",
@@ -1849,8 +1238,7 @@ const pages = {
     ],
   }),
 
-  "smart-document-processing": 
-  createPage({
+  "smart-document-processing": createPage({
     label: "Document Workflows Built for Faster Processing",
     title: "We Build Smart Document Processing",
     titleHighlight: "That Cuts Manual Effort",
@@ -1896,14 +1284,16 @@ const pages = {
     projects: [
       {
         name: "DocFlow Processing Engine",
-        image: officePortalImage,
+        // Business person scanning documents with a scanner connected to document processing software
+        image: unsplash1568667256549,
         alt: "Smart document processing portal",
         description:
           "A document workflow platform that extracts information, validates records, and routes items into operational queues.",
       },
       {
         name: "PaperlessOps Review Desk",
-        image: dashboardProjectImage,
+        // Clean office desk with tablet showing digital document review queue — paperless workflow
+        image: unsplash1450101499163,
         alt: "Document review and automation dashboard",
         description:
           "A document operations setup for faster review, searchable retrieval, and exception management.",
@@ -1911,8 +1301,7 @@ const pages = {
     ],
   }),
 
-  "ai-sales-assistant": 
-  createPage({
+  "ai-sales-assistant": createPage({
     label: "AI Sales Workflows Built to Support Revenue Teams",
     title: "We Build AI Sales Assistants",
     titleHighlight: "That Help Teams Sell Smarter",
@@ -1958,141 +1347,19 @@ const pages = {
     projects: [
       {
         name: "RevenuePilot AI Assistant",
-        image: dashboardProjectImage,
+        // Sales rep at desk with CRM pipeline dashboard on screen — AI suggestions panel visible
+        image: unsplash1600880292203,
         alt: "AI sales assistant dashboard",
         description:
           "A sales support workflow combining lead qualification, CRM automation, and team-ready pipeline insights.",
       },
       {
         name: "DealFlow Meeting Prep Hub",
-        image: officeOpsImage,
+        // Sales team in a meeting room reviewing deal pipeline and prep notes on laptop before a call
+        image: unsplash1557804506,
         alt: "AI sales prep workspace",
         description:
           "An AI-assisted sales operations workspace built to prepare reps faster and improve follow-through.",
-      },
-    ],
-  }),
-
-  "process-automation": 
-  createPage({
-    label: "Automation Programs Built Around Real Operations",
-    title: "We Build Process Automation",
-    titleHighlight: "That Removes Repetitive Work",
-    subtitle:
-      "Binazy helps businesses automate recurring workflows, approvals, and system handoffs so teams can focus on higher-value work.",
-    techHeading: "Process Automation Services",
-    techTagline: "Workflow. Integration. Efficiency.",
-    techDescription:
-      "We identify repetitive operational steps and turn them into dependable automated flows with the right controls, visibility, and exception handling.",
-    services: [
-      {
-        title: "Workflow Mapping & Audit",
-        description:
-          "Break down existing processes to identify automation opportunities and pain points clearly.",
-      },
-      {
-        title: "Approval Automation",
-        description:
-          "Route requests, confirmations, and policy-based actions without manual chasing.",
-      },
-      {
-        title: "System Integration Flows",
-        description:
-          "Move data between business tools so work can continue without duplicate entry.",
-      },
-      {
-        title: "Event-Based Triggers",
-        description:
-          "Start actions automatically when forms, updates, or operational events occur.",
-      },
-      {
-        title: "Exception Handling",
-        description:
-          "Set review queues and fallback steps for cases that need human decisions.",
-      },
-      {
-        title: "Automation Monitoring",
-        description:
-          "Track workflow status, failures, and efficiency gains through operational dashboards.",
-      },
-    ],
-    spotlightHeading: "Process Automation Project Spotlights",
-    projects: [
-      {
-        name: "FlowOps Automation Suite",
-        image: officeOpsImage,
-        alt: "Process automation operations suite",
-        description:
-          "A workflow automation setup covering approvals, task routing, system handoffs, and exception monitoring.",
-      },
-      {
-        name: "TaskBridge Integration Hub",
-        image: officePortalImage,
-        alt: "Business workflow automation portal",
-        description:
-          "An operations portal designed to automate repetitive admin work and improve cross-team coordination.",
-      },
-    ],
-  }),
-
-  "predictive-insights":
-   createPage({
-    label: "Predictive Models Built for Better Planning",
-    title: "We Deliver Predictive Insights",
-    titleHighlight: "That Help Teams Act Earlier",
-    subtitle:
-      "Binazy helps businesses apply forecasting and predictive analysis to demand, risk, operations, and growth decisions through practical analytics systems.",
-    techHeading: "Predictive Insight Services",
-    techTagline: "Forecasting. Risk Signals. Smarter Planning.",
-    techDescription:
-      "We build predictive reporting and model-driven workflows that help teams anticipate change instead of reacting after the fact.",
-    services: [
-      {
-        title: "Demand & Revenue Forecasting",
-        description:
-          "Estimate upcoming demand and revenue patterns to support planning and allocation.",
-      },
-      {
-        title: "Risk Scoring Workflows",
-        description:
-          "Identify accounts, transactions, or operational areas that need earlier attention.",
-      },
-      {
-        title: "Anomaly Detection",
-        description:
-          "Surface unusual patterns in business activity, performance, or usage behavior.",
-      },
-      {
-        title: "Planning Dashboards",
-        description:
-          "Present predictive outputs in a format decision-makers can review and act on quickly.",
-      },
-      {
-        title: "Scenario Comparison",
-        description:
-          "Support planning through alternate-case visibility and what-if style analysis.",
-      },
-      {
-        title: "Model Monitoring & Review",
-        description:
-          "Track prediction quality and business fit over time so outputs stay trustworthy.",
-      },
-    ],
-    spotlightHeading: "Predictive Insight Project Spotlights",
-    projects: [
-      {
-        name: "ForecastIQ Planning Board",
-        image: dashboardProjectImage,
-        alt: "Predictive insights dashboard",
-        description:
-          "A predictive analytics dashboard for demand planning, risk visibility, and decision support across teams.",
-      },
-      {
-        name: "SignalSense Trend Monitor",
-        image: officeOpsImage,
-        alt: "Predictive trend monitoring workspace",
-        description:
-          "A planning workspace designed to surface anomalies, forecast movement, and support earlier operational action.",
       },
     ],
   }),
@@ -2103,13 +1370,11 @@ export const servicesData = {
 
   // Backward-compatible aliases for older internal links.
   "software-and-app-development": pages["custom-software-development"],
-  "it-support-and-managed-services": pages["customer-management-system"],
-  "digital-marketing-and-growth-services": pages["lead-generation"],
-  "cloud-and-infrastructure-services": pages["secure-cloud-setup"],
+  "it-support-and-managed-services": pages["24-7-helpdesk-support"],
+  "digital-marketing-and-growth-services": pages["marketing-performance-tracking"],
+  "cloud-and-infrastructure-services": pages["remote-monitoring"],
   "data-and-analytics-solutions": pages["business-dashboard"],
-  "ai-and-automation": pages["process-automation"],
   "web-development": pages["business-website-development"],
   "app-development": pages["mobile-app-development"],
-  "full-stack-development": pages["all-in-one-business-management-system"],
   "custom-software": pages["custom-software-development"],
 };

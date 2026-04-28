@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import purposePurpose from "@/assets/purpose-purpose.jpg";
+import purposeVision from "@/assets/purpose-vision.jpg";
+import purposeValues from "@/assets/purpose-values.jpg";
 
 const PurposeCard = ({ title, description, image, points }) => {
   return (
@@ -49,8 +52,7 @@ const CompanyTabsSection = () => {
       title: "Creating Digital Success with Innovation",
       description:
         "At Binazy, our purpose is to help businesses grow through powerful digital solutions. We build websites, mobile apps, and scalable software that solve real problems.\n\nWe believe technology should create opportunities, improve experiences, and help brands move faster in the digital world.",
-      image:
-        "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80",
+      image: purposePurpose,
     },
     {
       id: "vision",
@@ -58,8 +60,7 @@ const CompanyTabsSection = () => {
       title: "Building the Future of Digital Business",
       description:
         "Our vision is to become a trusted technology partner for startups and growing companies worldwide.\n\nWe aim to create modern products, smart systems, and impactful experiences that help businesses lead in their industries.",
-      image:
-        "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80",
+      image: purposeVision,
     },
     {
       id: "values",
@@ -74,8 +75,7 @@ const CompanyTabsSection = () => {
         "Quality Without Compromise",
         "Growth Together",
       ],
-      image:
-        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80",
+      image: purposeValues,
     },
   ];
 

@@ -1,10 +1,13 @@
 import React from "react";
-import Aboutus from "../../../assets/Aboutus.jpg";
+import Aboutus from "@/assets/Aboutus.jpg";
+import aboutClients from "@/assets/about-clients.jpg";
+import aboutInnovation from "@/assets/about-innovation.jpg";
+import aboutCommunity from "@/assets/about-community.jpg";
 
 const AboutHeader = () => {
   return (
     <>
-      <section className="relative w-full min-h-[560px] sm:min-h-[620px] lg:h-[60vh] lg:min-h-175 overflow-hidden flex items-center pt-24 pb-16 sm:pt-28 sm:pb-20 lg:py-0">
+      <section className="relative w-full min-h-140 sm:min-h-155 lg:h-[60vh] lg:min-h-175 overflow-hidden flex items-center pt-24 pb-16 sm:pt-28 sm:pb-20 lg:py-0">
         {/* Background Image */}
         <img
           src={Aboutus}
@@ -90,16 +93,16 @@ const items = [
   {
     title: "To Our Clients",
     desc: "We deliver reliable websites, apps, and digital solutions that help businesses scale faster, improve efficiency, and stay ahead in a competitive market.",
-    img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=900&q=80",
+    img: aboutClients,
   },
   {
     title: "To Innovation",
     desc: "We embrace modern technology, creative thinking, and smart strategies to build future-ready digital products for every business need.",
-    img: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=80",
+    img: aboutInnovation,
   },
   {
     title: "To Our Community",
     desc: "We believe in building trust, supporting growth, and creating positive impact through technology-driven opportunities and meaningful partnerships.",
-    img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=900&q=80",
+    img: aboutCommunity,
   },
 ];

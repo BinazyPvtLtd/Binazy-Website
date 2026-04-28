@@ -3,7 +3,6 @@ import { useForm } from "react-hook-form";
 import { Mail, Phone, MapPin, CheckCircle, AlertCircle } from "lucide-react";
 import Navbar from "../components/common/Navbar";
 import FAQSection from "@/components/common/FAQSection";
-import { contactFaqs } from "../data/faqData";
 import Footer from "../components/common/Footer";
 import SocialLinks from "../components/common/SocialLinks";
 
@@ -389,7 +388,7 @@ const ContactPage = () => {
             </div>
           </div>
         </section>
-        <FAQSection faqs={contactFaqs} title="Frequently Asked Questions" />
+        <FAQSection  />
       </main>
 
       <Footer />

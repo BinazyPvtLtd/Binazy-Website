@@ -1,32 +1,44 @@
 import { Link } from "react-router-dom";
-import Logo from "../../assets/BinazyLogo.jpg";
+import Logo from "@/assets/BinazyLogo.jpg";
 import React from "react";
 import SocialLinks from "./SocialLinks";
 
 const footerLinks = {
   Services: [
-    { label: "Website Development", to: "/services/web-development" },
-    { label: "Mobile App Development", to: "/services/app-development" },
-    { label: "Full Stack Development", to: "/services/full-stack-development" },
-    { label: "Custom Development", to: "/services/custom-software" },
+    {
+      label: "Business Website",
+      to: "/services/business-website-development",
+    },
+    { label: "Mobile App Development", to: "/services/mobile-app-development" },
+    {
+      label: "ERP System Development",
+      to: "/services/erp-system-development",
+    },
+    {
+      label: "Custom Software Development",
+      to: "/services/custom-software-development",
+    },
   ],
   Industries: [
     { label: "Healthcare", to: "/industries/healthcare" },
-    { label: "E-learning", to: "/industries/education" },
+    { label: "Education", to: "/industries/education" },
     { label: "Fintech", to: "/industries/fintech" },
     { label: "Real Estate", to: "/industries/real-estate" },
+  ],
+  Locations: [
+    { label: "Australia", to: "/locations/australia" },
+    { label: "Qatar", to: "/locations/qatar" },
+    { label: "UAE", to: "/locations/uae" },
+    { label: "Saudi Arabia", to: "/locations/saudi-arabia" },
   ],
   Pages: [
     { label: "Home", to: "/" },
     { label: "About Us", to: "/about" },
-    { label: "Services", to: "/services/web-development" },
+    { label: "Services", to: "/services/business-website-development" },
+    { label: "Industries", to: "/industries/real-estate" },
+    { label: "Locations", to: "/locations/australia" },
+    { label: "Blog", to: "/blog" },
     { label: "Contact Us", to: "/contact-us" },
-  ],
-  "Quick Links": [
-    { label: "Why Choose Us", to: "/" },
-    { label: "Solutions", to: "/services/custom-software" },
-    { label: "Technologies", to: "/about" },
-    { label: "Industries", to: "/industries" },
   ],
 };
 

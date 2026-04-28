@@ -9,7 +9,7 @@ import StatsSection from "../components/common/StatsSection";
 import ImageGallery from "../components/core/about/ImageGallery";
 import Founder from "../components/core/about/Founder";
 import FAQSection from "@/components/common/FAQSection";
-import { aboutFaqs } from "../data/faqData";
+
 
 const About = () => {
   return (
@@ -25,7 +25,7 @@ const About = () => {
         <StatsSection />
         <ImageGallery />
         <Founder />
-        <FAQSection faqs={aboutFaqs} />
+        <FAQSection />
       </main>
 
       <Footer />

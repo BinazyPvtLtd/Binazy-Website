@@ -1,31 +1,36 @@
 import React from "react";
 import { useState } from "react";
+import digitalJourneyHealthcare from "@/assets/digital-journey-healthcare.jpg";
+import digitalJourneyElearning from "@/assets/digital-journey-elearning.jpg";
+import digitalJourneyEcommerce from "@/assets/digital-journey-ecommerce.jpg";
+import digitalJourneyFintech from "@/assets/digital-journey-fintech.jpg";
+import digitalJourneyRealEstateTravel from "@/assets/digital-journey-realestate-travel.jpg";
 
 const items = [
   {
     title: "Healthcare Solutions",
     desc: "We build secure healthcare platforms with appointment booking, telemedicine, patient management, and seamless digital experiences.",
-    img: "https://plus.unsplash.com/premium_photo-1666299237067-5054e72e4776?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    img: digitalJourneyHealthcare,
   },
   {
     title: "E-Learning Platforms",
     desc: "Create modern learning systems with live classes, course management, student dashboards, and engaging online education tools.",
-    img: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+    img: digitalJourneyElearning,
   },
   {
     title: "E-Commerce Development",
     desc: "Launch high-converting online stores with secure payments, inventory systems, fast checkout, and scalable shopping experiences.",
-    img: "https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1200&q=80",
+    img: digitalJourneyEcommerce,
   },
   {
     title: "FinTech Applications",
     desc: "Develop trusted fintech solutions with digital wallets, payment gateways, analytics dashboards, and secure transactions.",
-    img: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80",
+    img: digitalJourneyFintech,
   },
   {
     title: "Real Estate & Travel Solutions",
     desc: "Build smart real estate and travel platforms with property listings, booking systems, CRM tools, and customer portals.",
-    img: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=80",
+    img: digitalJourneyRealEstateTravel,
   },
 ];
 
@@ -50,7 +55,7 @@ const DigitalJourney = () => {
         </div>
 
         {/* Content */}
-        <div className="grid lg:grid-cols-2 gap-10 items-stretch min-h-[600px]">
+        <div className="grid lg:grid-cols-2 gap-10 items-stretch min-h-150">
           {/* Left Side */}
           <div className="space-y-1 flex flex-col justify-center h-full">
             {items.map((item, index) => (
@@ -90,7 +95,7 @@ const DigitalJourney = () => {
 
           {/* Right Side */}
           <div className="h-full">
-            <div className="relative w-full h-1/2 min-h-[500px]">
+            <div className="relative w-full h-1/2 min-h-125">
               <div className="absolute top-0 left-8 w-full h-full bg-white/50 rounded-xl scale-95"></div>
               <div className="absolute top-4 left-4 w-full h-full bg-white/70 rounded-xl scale-100"></div>
 

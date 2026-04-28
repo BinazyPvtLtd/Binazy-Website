@@ -1,5 +1,5 @@
 import React from "react";
-import FeaturesImg from "../../../assets/FeaturesImg.jpg";
+import FeaturesImg from "@/assets/FeaturesImg.jpg";
 import { Link } from "react-router-dom";
 
 const Features = () => {
@@ -54,7 +54,7 @@ const Features = () => {
               <img
                 src={FeaturesImg}
                 alt="Team collaborating on a digital product"
-                className="w-full h-[500px] object-cover"
+                className="w-full h-125 object-cover"
               />
             </div>
           </div>

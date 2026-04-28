@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Check, Users, Code2, ShieldCheck } from "lucide-react";
-import whyusss from "../../../assets/whyusss.jpg";
+import whyusss from "@/assets/whyusss.jpg";
+import whyChoiceTech from "@/assets/why-choice-tech.jpg";
+import whyChoiceGrowth from "@/assets/why-choice-growth.jpg";
 
 const features = [
   {
@@ -45,14 +47,14 @@ const highlights = [
     bg: "bg-brand-700",
     title: "Expert Developers, Quality Output",
     desc: "Clean, efficient code with reliable performance.",
-    img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=80",
+    img: whyChoiceTech,
   },
   {
     icon: <ShieldCheck className="w-6 h-6 text-white" />,
     bg: "bg-brand-800",
     title: "Consistency & Reliability",
     desc: "Stable, secure, and dependable long-term solutions.",
-    img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80",
+    img: whyChoiceGrowth,
   },
 ];
 

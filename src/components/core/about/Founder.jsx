@@ -1,5 +1,6 @@
 import React from "react";
 import { Quote } from "lucide-react";
+import founderPortrait from "@/assets/founder-portrait.jpg";
 
 const Founder = () => {
   return (
@@ -10,9 +11,9 @@ const Founder = () => {
           <div className="relative">
             <div>
               <img
-                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=900&q=80"
+                src={founderPortrait}
                 alt="Binazy Founder"
-                className="w-full h-[500px] object-cover hover: transition duration-500"
+                className="w-full h-125 object-cover hover: transition duration-500"
               />
             </div>
           </div>
@@ -29,7 +30,7 @@ const Founder = () => {
               </blockquote>
 
               <div className="flex items-center gap-4">
-                <div className="w-14 h-[2px] bg-blue-300"></div>
+                <div className="w-14 h-0.5 bg-blue-300"></div>
                 <p className="text-lg text-white/80">
                   Shaikh Ismaiel, Founder & CEO
                 </p>

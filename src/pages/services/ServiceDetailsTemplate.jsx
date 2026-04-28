@@ -1,7 +1,6 @@
 import Navbar from "../../components/common/Navbar";
 import Footer from "../../components/common/Footer";
 import FAQSection from "@/components/common/FAQSection";
-import StatsSection from "@/components/common/StatsSection";
 import WhyChooseSection from "@/components/common/WhyChooseSection";
 
 const ServiceDetailsTemplate = ({
@@ -20,7 +19,7 @@ const ServiceDetailsTemplate = ({
       <Navbar />
       <main id="main-content">
         {/* HERO SECTION */}
-       <section className="bg-[#0f2070]  text-white">
+        <section className="bg-[#0f2070]  text-white">
           <div className="section-container pt-28 pb-16 sm:pt-32 sm:pb-20 lg:pt-40 lg:pb-24">
             <div className="max-w-4xl">
               <h1 className="mt-6 text-4xl font-bold leading-[1.02] tracking-tight sm:text-5xl lg:text-7xl">
@@ -101,9 +100,6 @@ const ServiceDetailsTemplate = ({
             </div>
           </div>
         </section>
-
-        {/* STATS SECTION */}
-        <StatsSection />
 
         {/* WHY CHOOSE US */}
         <WhyChooseSection />

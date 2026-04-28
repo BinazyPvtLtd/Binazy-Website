@@ -4,35 +4,47 @@ import Footer from "../../components/common/Footer";
 import FAQSection from "@/components/common/FAQSection";
 import StatsSection from "@/components/common/StatsSection";
 import WhyChooseSection from "@/components/common/WhyChooseSection";
+import industryRealEstateOne from "@/assets/industry-realestate-1.jpg";
+import industryEcommerceOne from "@/assets/industry-ecommerce-1.jpg";
+import industryEcommerceTwo from "@/assets/industry-ecommerce-2.jpg";
+import industryHealthcareOne from "@/assets/industry-healthcare-1.jpg";
+import industryHealthcareTwo from "@/assets/industry-healthcare-2.jpg";
+import industryFintechOne from "@/assets/industry-fintech-1.jpg";
+import industryTravelOne from "@/assets/industry-travel-1.jpg";
+import industryTravelTwo from "@/assets/industry-travel-2.jpg";
+import industryManufacturingOne from "@/assets/industry-manufacturing-1.jpg";
+import industryManufacturingTwo from "@/assets/industry-manufacturing-2.jpg";
+import industryEducationOne from "@/assets/digital-journey-elearning.jpg";
+import industryEducationTwo from "@/assets/digital-journey-elearning.jpg";
 
 const industrySolutionImages = {
   "real estate": [
-    "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80",
+    industryRealEstateOne,
+    industryRealEstateOne,
   ],
   education: [
-    "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+    industryEducationOne,
+    industryEducationTwo,
   ],
   ecommerce: [
-    "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1200&q=80",
+    industryEcommerceOne,
+    industryEcommerceTwo,
   ],
   healthcare: [
-    "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1200&q=80",
+    industryHealthcareOne,
+    industryHealthcareTwo,
   ],
   fintech: [
-    "https://images.unsplash.com/photo-1559526324-593bc073d938?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80",
+    industryFintechOne,
+    industryFintechOne,
   ],
   travel: [
-    "https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1200&q=80",
+    industryTravelOne,
+    industryTravelTwo,
   ],
   manufacturing: [
-    "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1567789884554-0b844b597180?auto=format&fit=crop&w=1200&q=80",
+    industryManufacturingOne,
+    industryManufacturingTwo,
   ],
 };
 
@@ -62,6 +74,7 @@ export default function IndustryDetailsTemplate({
   solutions,
 }) {
   return (
+    
     <div className="min-h-screen overflow-x-hidden bg-background">
       <Navbar />
 
@@ -185,14 +198,14 @@ export default function IndustryDetailsTemplate({
                       {String(index + 1).padStart(2, "0")}
                     </div>
 
-                    <div className="relative min-h-[300px] sm:min-h-[340px]">
+                    <div className="relative min-h-75 sm:min-h-[340px]">
                       <img
                         src={solutionImage}
                         alt={solution.title}
                         className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 group-focus-visible:scale-105"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/45 to-slate-950/10" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#08123a]/95 via-[#08123a]/65 to-[#08123a]/25 opacity-0 transition-opacity duration-300 md:group-hover:opacity-100 md:group-focus-visible:opacity-100" />
+                      <div className="absolute inset-0 bg-linear-to-t from-slate-950 via-slate-950/45 to-slate-950/10" />
+                      <div className="absolute inset-0 bg-linear-to-t from-[#08123a]/95 via-[#08123a]/65 to-[#08123a]/25 opacity-0 transition-opacity duration-300 md:group-hover:opacity-100 md:group-focus-visible:opacity-100" />
 
                       <div className="relative z-10 flex h-full flex-col justify-between p-6 sm:p-7">
                         <div

@@ -5,15 +5,8 @@ import {
   X,
   ChevronDown,
   ChevronRight,
-  Laptop,
-  Factory,
-  Plane,
-  Building2,
-  Wallet,
-  HeartPulse,
-  Store,
 } from "lucide-react";
-import Logo from "../../assets/BinazyLogo.jpg";
+import Logo from "@/assets/BinazyLogo.jpg";
 
 const navLinks = [
   { to: "/", label: "Home" },
@@ -23,7 +16,30 @@ const navLinks = [
 const NAVBAR_THEME_CLASS =
   "bg-brand-950/95 backdrop-blur-xl border-b border-white/10 shadow-lg shadow-slate-950/10";
 
-  
+// locations menu
+
+const locationMenu = [
+  {
+    id: "australia",
+    title: "Australia",
+    to: "/locations/australia",
+  },
+  {
+    id: "qatar",
+    title: "Qatar",
+    to: "/locations/qatar",
+  },
+  {
+    id: "uae",
+    title: "UAE",
+    to: "/locations/uae",
+  },
+  {
+    id: "saudi",
+    title: "Saudi Arabia",
+    to: "/locations/saudi-arabia",
+  },
+];
 /* SERVICES MENU */
 
 const servicesMenu = [
@@ -37,7 +53,7 @@ const servicesMenu = [
         to: "/services/business-website-development",
       },
       {
-        name: "Online Store",
+        name: "Ecommerce Webiste",
         to: "/services/online-store",
       },
       {
@@ -52,10 +68,7 @@ const servicesMenu = [
         name: "Booking & Appointment System",
         to: "/services/booking-appointment-system",
       },
-      {
-        name: "All-in-one Business Management System",
-        to: "/services/all-in-one-business-management-system",
-      },
+
       {
         name: "ERP System Development",
         to: "/services/erp-system-development",
@@ -75,14 +88,7 @@ const servicesMenu = [
         name: "HR & Payroll System",
         to: "/services/hr-payroll-system",
       },
-      {
-        name: "Technology Migration",
-        to: "/services/technology-migration",
-      },
-      {
-        name: "Customer Management System",
-        to: "/services/customer-management-system",
-      },
+
       {
         name: "24/7 Helpdesk Support",
         to: "/services/24-7-helpdesk-support",
@@ -90,37 +96,6 @@ const servicesMenu = [
       {
         name: "Remote Monitoring",
         to: "/services/remote-monitoring",
-      },
-      {
-        name: "SLA-based Support Contracts",
-        to: "/services/sla-based-support-contracts",
-      },
-    ],
-  },
-
-  {
-    id: "digital-marketing-and-growth-services",
-    title: "Digital Marketing & Growth Services",
-    links: [
-      {
-        name: "Lead Generation",
-        to: "/services/lead-generation",
-      },
-      {
-        name: "Social Media Management",
-        to: "/services/social-media-management",
-      },
-      {
-        name: "Search Visibility",
-        to: "/services/search-visibility",
-      },
-      {
-        name: "Email & WhatsApp Campaigns",
-        to: "/services/email-whatsapp-campaigns",
-      },
-      {
-        name: "Performance Marketing",
-        to: "/services/performance-marketing",
       },
     ],
   },
@@ -141,20 +116,12 @@ const servicesMenu = [
         name: "EdTech Product",
         to: "/services/edtech-product",
       },
-      {
-        name: "Secure Cloud Setup",
-        to: "/services/secure-cloud-setup",
-      },
-      {
-        name: "Automated Backup & Recovery",
-        to: "/services/automated-backup-recovery",
-      },
     ],
   },
 
   {
     id: "data-and-analytics-solutions",
-    title: "Data & Analytics",
+    title: "Data Analytics & AI Automation ",
     links: [
       {
         name: "Business Dashboard",
@@ -164,24 +131,14 @@ const servicesMenu = [
         name: "Sales & Inventory Reports",
         to: "/services/sales-inventory-reports",
       },
-      {
-        name: "Customer Behaviour Insights",
-        to: "/services/customer-behaviour-insights",
-      },
+
       {
         name: "Marketing Performance Tracking",
         to: "/services/marketing-performance-tracking",
       },
-    ],
-  },
-
-  {
-    id: "ai-and-automation",
-    title: "AI & Automation",
-    links: [
       {
         name: "24/7 AI Customer Support Agent",
-        to: "/services/24-7-ai-customer-support-agent",
+        to: "/services/ai-customer-support-agent",
       },
       {
         name: "Smart Document Processing",
@@ -191,78 +148,53 @@ const servicesMenu = [
         name: "AI Sales Assistant",
         to: "/services/ai-sales-assistant",
       },
-      {
-        name: "Process Automation",
-        to: "/services/process-automation",
-      },
-      {
-        name: "Predictive Insights",
-        to: "/services/predictive-insights",
-      },
     ],
   },
 ];
 
-/* INDUSTRIES MENU */
 const industriesMenu = [
   {
-    title: "Consumer Platforms",
-    links: [
-      {
-        name: "Real Estate",
-        desc: "Property portals, CRMs, and broker workflows",
-        icon: Building2,
-        to: "/industries/real-estate",
-      },
-      {
-        name: "eCommerce",
-        desc: "Storefronts, marketplace systems, and loyalty tools",
-        icon: Store,
-        to: "/industries/ecommerce",
-      },
-      {
-        name: "Tour & Travel",
-        desc: "Booking engines and travel management platforms",
-        icon: Plane,
-        to: "/industries/travel",
-      },
-    ],
+    id: "real-estate",
+    title: "Real Estate",
+    to: "/industries/real-estate",
   },
   {
-    title: "Regulated Solutions",
-    links: [
-      {
-        name: "Healthcare",
-        desc: "Patient platforms, hospital systems, and telehealth",
-        icon: HeartPulse,
-        to: "/industries/healthcare",
-      },
-      {
-        name: "Fintech",
-        desc: "Payments, banking experiences, and compliance tools",
-        icon: Wallet,
-        to: "/industries/fintech",
-      },
-    ],
+    id: "ecommerce",
+    title: "eCommerce",
+    to: "/industries/ecommerce",
   },
   {
-    title: "Growth & Operations",
-    links: [
-      {
-        name: "E-Learning",
-        desc: "LMS products, virtual classrooms, and student portals",
-        icon: Laptop,
-        to: "/industries/education",
-      },
-      {
-        name: "Manufacturing",
-        desc: "ERP, logistics, and production optimization systems",
-        icon: Factory,
-        to: "/industries/manufacturing",
-      },
-    ],
+    id: "travel",
+    title: "Tour & Travel",
+    to: "/industries/travel",
+  },
+  {
+    id: "healthcare",
+    title: "Healthcare",
+    to: "/industries/healthcare",
+  },
+  {
+    id: "fintech",
+    title: "Fintech",
+    to: "/industries/fintech",
+  },
+  {
+    id: "education",
+    title: "E-Learning",
+    to: "/industries/education",
+  },
+  {
+    id: "manufacturing",
+    title: "Manufacturing",
+    to: "/industries/manufacturing",
   },
 ];
+
+// const locationMenu = [
+//   { name: "Melbourne",
+//     path: "/locations/melbourne"
+//   }
+//   ];
 
 function ServicesMegaMenu({ currentPath, data, id, onNavigate }) {
   const [activeSection, setActiveSection] = useState(null);
@@ -347,57 +279,6 @@ function ServicesMegaMenu({ currentPath, data, id, onNavigate }) {
   );
 }
 
-function IndustriesMegaMenu({ currentPath, data, id, onNavigate }) {
-  return (
-    <div
-      id={id}
-      className="absolute top-full left-1/2 -translate-x-1/2 pt-4 z-50"
-      aria-label="Industries menu">
-      <div className="w-[calc(100vw-2rem)] max-w-275 max-h-[calc(100vh-5.5rem)] overflow-y-auto bg-white rounded-2xl shadow-2xl p-6 xl:p-10 border border-gray-100">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 xl:gap-10">
-          {data.map((section, index) => (
-            <div key={index} className="min-w-0">
-              <h3 className="text-lg xl:text-xl font-bold text-black mb-4 xl:mb-6">
-                {section.title}
-              </h3>
-
-              <div className="space-y-3">
-                {section.links.map((item, itemIndex) => {
-                  const Icon = item.icon;
-
-                  return (
-                    <Link
-                      key={itemIndex}
-                      to={item.to}
-                      onClick={onNavigate}
-                      aria-current={
-                        currentPath === item.to ? "page" : undefined
-                      }
-                      className="flex min-w-0 gap-3 xl:gap-4 rounded-xl border border-gray-100 p-3 hover:border-brand-200 hover:bg-gray-50 transition-all group focus-visible:border-brand-300 focus-visible:bg-brand-50">
-                      <div className="w-10 h-10 xl:w-12 xl:h-12 rounded-xl bg-gray-100 flex items-center justify-center shrink-0">
-                        <Icon className="w-5 h-5 text-gray-700" />
-                      </div>
-
-                      <div className="min-w-0">
-                        <h4 className="font-semibold text-gray-900 group-hover:text-brand-600">
-                          {item.name}
-                        </h4>
-                        <p className="text-sm text-gray-500 mt-1">
-                          {item.desc}
-                        </p>
-                      </div>
-                    </Link>
-                  );
-                })}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
-
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeMega, setActiveMega] = useState(null);
@@ -440,6 +321,12 @@ const Navbar = () => {
     setActiveMega(null);
   };
 
+  const isNavLinkActive = (to) => {
+    if (to === "/") return location.pathname === "/";
+    if (to === "/blog") return location.pathname.startsWith("/blog");
+    return location.pathname === to;
+  };
+
   return (
     <nav
       aria-label="Primary navigation"
@@ -469,9 +356,9 @@ const Navbar = () => {
             <Link
               key={link.to}
               to={link.to}
-              aria-current={location.pathname === link.to ? "page" : undefined}
+              aria-current={isNavLinkActive(link.to) ? "page" : undefined}
               className={`text-sm px-3 xl:px-4 py-2 rounded-lg transition ${
-                location.pathname === link.to
+                isNavLinkActive(link.to)
                   ? "bg-white/10 text-white"
                   : "text-white/80 hover:text-white hover:bg-white/10"
               }`}>
@@ -517,7 +404,7 @@ const Navbar = () => {
             )}
           </div>
 
-          {/* Desktop industries mega menu trigger */}
+          {/* Desktop industries dropdown trigger */}
           <div
             className="relative cursor-pointer"
             onMouseEnter={() => setActiveMega("industries")}
@@ -546,14 +433,101 @@ const Navbar = () => {
             </button>
 
             {activeMega === "industries" && (
-              <IndustriesMegaMenu
-                currentPath={location.pathname}
-                data={industriesMenu}
+              <div
                 id="industries-mega-menu"
-                onNavigate={closeAllMenus}
-              />
+                className="absolute top-full left-1/2 -translate-x-1/2 pt-4 z-50"
+                aria-label="Industries menu">
+                <div className="min-w-48 overflow-visible rounded-2xl border border-gray-100 bg-white p-3 shadow-2xl">
+                  <div className="space-y-1">
+                    {industriesMenu.map((item) => (
+                      <Link
+                        key={item.id}
+                        to={item.to}
+                        onClick={closeAllMenus}
+                        aria-current={
+                          location.pathname === item.to ? "page" : undefined
+                        }
+                        className={`block rounded-xl px-3 py-2.5 text-sm transition ${
+                          location.pathname === item.to
+                            ? "bg-brand-50 text-brand-700"
+                            : "text-slate-700 hover:bg-slate-50 hover:text-brand-600"
+                        }`}>
+                        {item.title}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
             )}
           </div>
+
+          {/* Desktop locations dropdown trigger */}
+          <div
+            className="relative cursor-pointer"
+            onMouseEnter={() => setActiveMega("locations")}
+            onMouseLeave={() => setActiveMega(null)}
+            onFocus={() => setActiveMega("locations")}
+            onBlur={closeMegaOnBlur}
+            onKeyDown={closeMegaOnEscape}>
+            <button
+              type="button"
+              aria-haspopup="true"
+              aria-expanded={activeMega === "locations"}
+              aria-controls="locations-dropdown"
+              onClick={() => setActiveMega("locations")}
+              className={`text-sm px-3 xl:px-4 py-2 rounded-lg transition flex items-center gap-1 ${
+                location.pathname.startsWith("/locations")
+                  ? "bg-white/10 text-white"
+                  : "text-white/80 hover:text-white hover:bg-white/10"
+              }`}>
+              Locations
+              <ChevronDown
+                aria-hidden="true"
+                className={`w-4 h-4 transition ${
+                  activeMega === "locations" ? "rotate-180" : ""
+                }`}
+              />
+            </button>
+
+            {activeMega === "locations" && (
+              <div
+                id="locations-dropdown"
+                className="absolute top-full left-1/2 -translate-x-1/2 pt-4 z-50"
+                aria-label="Locations menu">
+                <div className="min-w-48 overflow-visible rounded-2xl border border-gray-100 bg-white p-3 shadow-2xl">
+                  <div className="space-y-1">
+                    {locationMenu.map((item) => (
+                      <Link
+                        key={item.id}
+                        to={item.to}
+                        onClick={closeAllMenus}
+                        aria-current={
+                          location.pathname === item.to ? "page" : undefined
+                        }
+                        className={`block rounded-xl px-3 py-2.5 text-sm transition ${
+                          location.pathname === item.to
+                            ? "bg-brand-50 text-brand-700"
+                            : "text-slate-700 hover:bg-slate-50 hover:text-brand-600"
+                        }`}>
+                        {item.title}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+
+          <Link
+            to="/blog"
+            aria-current={isNavLinkActive("/blog") ? "page" : undefined}
+            className={`text-sm px-3 xl:px-4 py-2 rounded-lg transition ${
+              isNavLinkActive("/blog")
+                ? "bg-white/10 text-white"
+                : "text-white/80 hover:text-white hover:bg-white/10"
+            }`}>
+            Blog
+          </Link>
 
           {/* <Link
             to="/contact-us"
@@ -726,29 +700,72 @@ const Navbar = () => {
                 <div
                   id="mobile-industries-menu"
                   className="pl-3 sm:pl-4 pt-2 flex flex-col gap-2">
-                  {industriesMenu.map((section, i) => (
-                    <div key={i}>
-                      <p className="text-white font-semibold py-2">
-                        {section.title}
-                      </p>
-
-                      {section.links.map((item, j) => (
-                        <Link
-                          key={j}
-                          to={item.to}
-                          onClick={closeAllMenus}
-                          aria-current={
-                            location.pathname === item.to ? "page" : undefined
-                          }
-                          className="block text-white/70 text-sm py-1">
-                          {item.name}
-                        </Link>
-                      ))}
-                    </div>
+                  {industriesMenu.map((item) => (
+                    <Link
+                      key={item.id}
+                      to={item.to}
+                      onClick={closeAllMenus}
+                      aria-current={
+                        location.pathname === item.to ? "page" : undefined
+                      }
+                      className="block text-white/70 text-sm py-1">
+                      {item.title}
+                    </Link>
                   ))}
                 </div>
               )}
             </div>
+
+            {/* Mobile locations accordion */}
+            <div>
+              <button
+                type="button"
+                onClick={() =>
+                  setMobileDropdown(
+                    mobileDropdown === "locations" ? null : "locations",
+                  )
+                }
+                aria-controls="mobile-locations-menu"
+                aria-expanded={mobileDropdown === "locations"}
+                className="w-full text-white py-2 flex items-center justify-between text-left">
+                Locations
+                <ChevronDown
+                  aria-hidden="true"
+                  className={`w-4 h-4 transition ${
+                    mobileDropdown === "locations" ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+
+              {mobileDropdown === "locations" && (
+                <div
+                  id="mobile-locations-menu"
+                  className="pl-3 sm:pl-4 pt-2 flex flex-col gap-2">
+                  {locationMenu.map((item) => (
+                    <Link
+                      key={item.id}
+                      to={item.to}
+                      onClick={closeAllMenus}
+                      aria-current={
+                        location.pathname === item.to ? "page" : undefined
+                      }
+                      className="block text-white/70 text-sm py-1">
+                      {item.title}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <Link
+              to="/blog"
+              onClick={closeAllMenus}
+              aria-current={
+                location.pathname.startsWith("/blog") ? "page" : undefined
+              }
+              className="text-white py-2">
+              Blog
+            </Link>
 
             <Link
               to="/contact-us"

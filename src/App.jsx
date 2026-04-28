@@ -6,6 +6,9 @@ import ContactPage from "./pages/ContactPage";
 import NotFound from "./pages/NotFound";
 import ServiceDetailsPage from "./pages/services/ServiceDetailsPage";
 import IndustryDetailsPage from "./pages/industries/IndustryDetailsPage";
+import LocationDetailsPage from "@/pages/Locations/LocationDetailPage";
+import BlogPage from "@/pages/blog/BlogPage";
+import BlogDetailsPage from "@/pages/blog/BlogDetailsPage";
 
 const App = () => {
   return (
@@ -13,6 +16,8 @@ const App = () => {
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact-us" element={<ContactPage />} />
+      <Route path="/blog" element={<BlogPage />} />
+      <Route path="/blog/:blogId" element={<BlogDetailsPage />} />
 
       {/* Dynamic service routes */}
       <Route path="/services/:serviceId" element={<ServiceDetailsPage />} />
@@ -39,6 +44,15 @@ const App = () => {
       <Route
         path="/industries/elearning"
         element={<Navigate to="/industries/education" replace />}
+      />
+
+      {/* Dynamic location routes */}
+      <Route path="/locations/:locationId" element={<LocationDetailsPage />} />
+
+      {/* Default location redirect */}
+      <Route
+        path="/locations"
+        element={<Navigate to="/locations/australia" replace />}
       />
 
       <Route path="*" element={<NotFound />} />

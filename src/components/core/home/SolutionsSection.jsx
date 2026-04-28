@@ -1,26 +1,34 @@
+import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import solutionSoftwareApp from "@/assets/solutions-software-app.jpg";
+import solutionItSupport from "@/assets/solutions-it-support.jpg";
+import solutionCloud from "@/assets/solutions-cloud.jpg";
+import solutionAnalyticsAi from "@/assets/solutions-analytics-ai.jpg";
 
 const services = [
-  
   {
-    title: "Lead Generation",
-    desc: "Data-driven strategies to attract and convert high-quality leads, fueling your sales pipeline and business growth.",
-    img: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=900&q=80",
+    title: "Software & App Development",
+    desc: "Software & app development solutions designed to streamline operations, enhance user experiences.",
+    img: solutionSoftwareApp,
+    to: "/services/custom-software-development",
   },
   {
-    title: "Web Development",
-    desc: "Modern, high-performance websites and web applications built for growth, speed, and seamless user experiences.",
-    img: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=900&q=80",
+    title: "IT Support & Managed Services",
+    desc: "Reliable IT support and managed services built to improve security.",
+    img: solutionItSupport,
+    to: "/services/24-7-helpdesk-support",
   },
   {
-    title: "Mobile App Development",
-    desc: "Custom Android and iOS mobile apps designed to engage users and scale with your business needs.",
-    img: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=900&q=80",
+    title: "Cloud & Infrastructure Services",
+    desc: "Secure, scalable cloud and infrastructure services built to optimize performance.",
+    img: solutionCloud,
+    to: "/services/remote-monitoring",
   },
   {
-    title: "UI/UX Design",
-    desc: "User-focused interfaces and premium digital experiences that improve conversions and customer satisfaction.",
-    img: "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=900&q=80",
+    title: "Data Analytics & AI Automation",
+    desc: "Data analytics and AI automation solutions built to uncover insights, streamline workflows.",
+    img: solutionAnalyticsAi,
+    to: "/services/business-dashboard",
   },
 ];
 
@@ -52,7 +60,7 @@ export default function SolutionsSection() {
             {services.map((item, index) => (
               <div
                 key={index}
-                className="group relative bg-brand-900 p-7 md:p-8 min-h-[230px] md:min-h-[520px] overflow-hidden transition-all duration-500 hover:bg-brand-50">
+                className="group relative bg-brand-900 p-7 md:p-8 min-h-57.5 md:min-h-130 overflow-hidden transition-all duration-500 hover:bg-brand-50">
                 {/* Content */}
                 <div className="relative z-10">
                   <h3 className="text-white group-hover:text-brand-700 text-2xl md:text-3xl font-semibold tracking-tight leading-snug mb-5">
@@ -78,11 +86,12 @@ export default function SolutionsSection() {
                 </div>
 
                 {/* Arrow */}
-                <span
-                  aria-hidden="true"
-                  className="absolute bottom-6 left-7 w-10 h-10 md:w-14 md:h-14 rounded-full bg-white/30 group-hover:bg-white/70 flex items-center justify-center transition-all duration-300">
+                <Link
+                  to={item.to}
+                  aria-label={`Explore ${item.title}`}
+                  className="absolute bottom-6 left-7 z-20 w-10 h-10 md:w-14 md:h-14 rounded-full bg-white/30 group-hover:bg-white/70 flex items-center justify-center transition-all duration-300 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/70">
                   <ArrowRight className="w-4 h-4 md:w-5 md:h-5 text-white group-hover:text-brand-700" />
-                </span>
+                </Link>
               </div>
             ))}
           </div>

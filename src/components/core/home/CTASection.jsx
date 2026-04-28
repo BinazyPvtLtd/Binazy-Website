@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import CTA from "../../../assets/CTA.jpg";
+import CTA from "@/assets/CTA.jpg";
 
 const CTASection = () => {
   return (

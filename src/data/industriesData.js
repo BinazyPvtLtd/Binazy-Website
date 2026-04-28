@@ -18,20 +18,20 @@ import {
   Wallet,
 } from "lucide-react";
 
-import realestateHero from "../assets/realestate.jpg";
-import educationHero from "../assets/education.jpg";
-import ecommerceHero from "../assets/ecommerce.jpg";
-import healthcareHero from "../assets/healthcare.jpg";
-import fintechHero from "../assets/fintech.jpg";
-import travelHero from "../assets/travel.jpg";
-import manufacturingHero from "../assets/manufacturing.jpg";
-import hrmsProjectImage from "../assets/HRMS.jpg";
-import eventProjectImage from "../assets/PRoject2.jpg";
-import operationsProjectImage from "../assets/project1.jpg";
-import dashboardProjectImage from "../assets/dashboard-project.jpg";
-import officePortalImage from "../assets/office4.jpg";
-import officeOpsImage from "../assets/office2.jpg";
-import office3Image from "../assets/office 3.jpg";
+import realestateHero from "@/assets/realestate.jpg";
+import educationHero from "@/assets/education.jpg";
+import ecommerceHero from "@/assets/ecommerce.jpg";
+import healthcareHero from "@/assets/healthcare.jpg";
+import fintechHero from "@/assets/fintech.jpg";
+import travelHero from "@/assets/travel.jpg";
+import manufacturingHero from "@/assets/manufacturing.jpg";
+import hrmsProjectImage from "@/assets/HRMS.jpg";
+import eventProjectImage from "@/assets/PRoject2.jpg";
+import operationsProjectImage from "@/assets/project1.jpg";
+import dashboardProjectImage from "@/assets/dashboard-project.jpg";
+import officePortalImage from "@/assets/office4.jpg";
+import officeOpsImage from "@/assets/office2.jpg";
+import office3Image from "@/assets/office 3.jpg";
 
 export const industriesData = {
   "real-estate": {

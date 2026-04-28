@@ -1,6 +1,6 @@
 import React from "react";
 import { ArrowUpRight, Bot, CircleDollarSign, Rocket } from "lucide-react";
-import whyus from "../../assets/whyus.jpg";
+import whyus from "@/assets/whyus.jpg";
 
 export default function WhyChooseSection() {
   const points = [
@@ -31,7 +31,7 @@ export default function WhyChooseSection() {
             </p>
 
             <h2 className="mt-4 max-w-2xl text-3xl font-bold leading-tight tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
-              Why Choose Binazy as Your Web Application Development Partner
+              Why Choose Binazy as Your Digital Partner
             </h2>
 
             <p className="mt-5 max-w-xl text-sm leading-7 text-slate-600 sm:text-base">

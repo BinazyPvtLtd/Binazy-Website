@@ -2,6 +2,11 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { ArrowRight } from "lucide-react";
 import { Autoplay, Navigation } from "swiper/modules";
+import portfolioBrightTech from "@/assets/portfolio-brighttech.jpg";
+import portfolioUrbanStyle from "@/assets/portfolio-urbanstyle.jpg";
+import portfolioQuickServe from "@/assets/portfolio-quickserve.jpg";
+import portfolioPrimeWorks from "@/assets/portfolio-primeworks.jpg";
+import portfolioSkillNest from "@/assets/portfolio-skillnest.jpg";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -12,32 +17,32 @@ export default function ProjectPortfolio() {
       title: "Website Development for BrightTech Solutions",
       desc: "We created a modern business website for BrightTech Solutions with responsive design, fast loading speed, and lead generation features.",
       projectType: "Web Application",
-      img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80",
+      img: portfolioBrightTech,
     },
     {
       title: "E-Commerce Store for UrbanStyle",
       desc: "We developed an online store for UrbanStyle with secure payments, product management, and a smooth shopping experience.",
       projectType: "Mobile Application",
-      img: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=900&q=80",
+      img: portfolioUrbanStyle,
     },
     {
       title: "Mobile App for QuickServe",
       projectType: "Mobile Application",
       desc: "We built a user-friendly mobile app for QuickServe with booking features, notifications, and real-time updates.",
-      img: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=900&q=80",
+      img: portfolioQuickServe,
     },
     {
       title: "Business Software for PrimeWorks",
       projectType: "SaaS Platform",
       desc: "We delivered custom software for PrimeWorks to manage daily operations, team workflow, and reporting systems.",
-      img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80",
+      img: portfolioPrimeWorks,
     },
     {
       title: "Learning Platform for SkillNest",
 
       desc: "We developed an online learning platform for SkillNest with course management, student dashboards, and secure login systems.",
       projectType: "Learning Management System",
-      img: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=900&q=80",
+      img: portfolioSkillNest,
     },
   ];
 

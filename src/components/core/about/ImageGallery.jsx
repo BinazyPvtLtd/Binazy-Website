@@ -1,5 +1,5 @@
 import React from 'react'
-import OFFICE from "../../../assets/OFFICE.jpg";
+import OFFICE from "@/assets/OFFICE.jpg";
 
 const ImageGallery = () => {
   return (
@@ -17,7 +17,7 @@ const ImageGallery = () => {
         <div className="relative group overflow-hidden rounded-[2rem] shadow-2xl">
           <img 
             src={OFFICE} 
-            className="w-full h-[400px] md:h-auto object-cover md:object-contain rounded-[2rem] transition-transform duration-1000 group-hover:scale-105" 
+            className="w-full h-100 md:h-auto object-cover md:object-contain rounded-[2rem] transition-transform duration-1000 group-hover:scale-105" 
             alt="Binazy Office" 
           />
         </div>
