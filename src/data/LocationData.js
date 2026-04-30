@@ -96,7 +96,7 @@ export const locationData = {
       "West Bay",
       "Msheireb Downtown",
       "Al Sadd",
-      "The Pearl-Qatar",
+      "The Pearl-Qatar", 
       "Lusail City",
       "Bin Mahmoud",
       "Al Dafna",
