@@ -9,54 +9,48 @@ import IndustryDetailsPage from "./pages/industries/IndustryDetailsPage";
 import LocationDetailsPage from "@/pages/Locations/LocationDetailPage";
 import BlogPage from "@/pages/blog/BlogPage";
 import BlogDetailsPage from "@/pages/blog/BlogDetailsPage";
+import ScrollToTop from "./components/ScrollToTop";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 
 const App = () => {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/contact-us" element={<ContactPage />} />
-      <Route path="/blog" element={<BlogPage />} />
-      <Route path="/blog/:blogId" element={<BlogDetailsPage />} />
-
-      {/* Dynamic service routes */}
-      <Route path="/services/:serviceId" element={<ServiceDetailsPage />} />
-
-      {/* Redirect old service URL */}
-      <Route
-        path="/services/web-app-development"
-        element={<Navigate to="/services/web-development" replace />}
-      />
-
-      {/* Dynamic industry routes */}
-      <Route
-        path="/industries/:industriesId"
-        element={<IndustryDetailsPage />}
-      />
-
-      {/* Industries base route redirect */}
-      <Route
-        path="/industries"
-        element={<Navigate to="/industries/real-estate" replace />}
-      />
-
-      {/* Redirect old industry URL */}
-      <Route
-        path="/industries/elearning"
-        element={<Navigate to="/industries/education" replace />}
-      />
-
-      {/* Dynamic location routes */}
-      <Route path="/locations/:locationId" element={<LocationDetailsPage />} />
-
-      {/* Default location redirect */}
-      <Route
-        path="/locations"
-        element={<Navigate to="/locations/australia" replace />}
-      />
-
-      <Route path="*" element={<NotFound />} />
-    </Routes>
+    <>
+      <ScrollToTop />
+      <ScrollToTopButton />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact-us" element={<ContactPage />} />
+        <Route path="/blog" element={<BlogPage />} />
+        <Route path="/blog/:blogId" element={<BlogDetailsPage />} />
+        <Route path="/services/:serviceId" element={<ServiceDetailsPage />} />
+        <Route
+          path="/services/web-app-development"
+          element={<Navigate to="/services/web-development" replace />}
+        />
+        <Route
+          path="/industries/:industriesId"
+          element={<IndustryDetailsPage />}
+        />
+        <Route
+          path="/industries"
+          element={<Navigate to="/industries/real-estate" replace />}
+        />
+        <Route
+          path="/industries/elearning"
+          element={<Navigate to="/industries/education" replace />}
+        />
+        <Route
+          path="/locations/:locationId"
+          element={<LocationDetailsPage />}
+        />
+        <Route
+          path="/locations"
+          element={<Navigate to="/locations/australia" replace />}
+        />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </>
   );
 };
 
