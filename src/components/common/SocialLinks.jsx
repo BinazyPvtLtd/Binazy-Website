@@ -41,7 +41,7 @@ const socialLinks = [
   },
   {
     label: "Instagram",
-    href: "https://www.instagram.com/binazy.in?igsh=MXFuOXZ1bDl4Z2ltZA==",
+    href: "https://www.instagram.com/binazy.in/",
     icon: InstagramIcon,
     iconClassName:
       "bg-[linear-gradient(135deg,#f58529,#feda77,#dd2a7b,#8134af,#515bd4)] text-white",
