@@ -15,13 +15,53 @@ export default defineConfig({
     sitemap({
       hostname: "https://binazy.org",
       routes: [
+        // Static pages
         "/",
         "/about",
-        "/services",
+        "/contact-us",
         "/blog",
-        "/industries",
-        "/locations",
-        "/contact",
+
+        // Blog posts
+        "/blog/why-growing-businesses-need-better-websites",
+        "/blog/ecommerce-development-build-your-own-online-store",
+        "/blog/custom-ott-app-development-build-your-streaming-platform",
+
+        // Services
+        "/services/business-website-development",
+        "/services/online-store",
+        "/services/ott-platform-development",
+        "/services/mobile-app-development",
+        "/services/booking-appointment-system",
+        "/services/erp-system-development",
+        "/services/custom-software-development",
+        "/services/hr-payroll-system",
+        "/services/24-7-helpdesk-support",
+        "/services/remote-monitoring",
+        "/services/social-media-management",
+        "/services/online-learning-platform",
+        "/services/student-staff-training-portal",
+        "/services/edtech-product",
+        "/services/business-dashboard",
+        "/services/sales-inventory-reports",
+        "/services/marketing-performance-tracking",
+        "/services/ai-customer-support-agent",
+        "/services/smart-document-processing",
+        "/services/ai-sales-assistant",
+
+        // Industries
+        "/industries/real-estate",
+        "/industries/education",
+        "/industries/ecommerce",
+        "/industries/healthcare",
+        "/industries/fintech",
+        "/industries/travel",
+        "/industries/manufacturing",
+
+        // Locations
+        "/locations/australia",
+        "/locations/qatar",
+        "/locations/uae",
+        "/locations/saudi-arabia",
       ],
     }),
   ],
