@@ -3,19 +3,19 @@ import React from "react";
 const StatsSection = () => {
   const stats = [
     {
-      number: "50+",
-      label: "Expert Team Members",
-      desc: "Since 2020, our team has expanded steadily with strong industry expertise.",
+      number: "2+",
+      label: "Years of Experience",
+      desc: "Delivering reliable IT solutions and consultancy services with growing expertise since our inception.",
     },
     {
-      number: "450+",
+      number: "70+",
       label: "Projects Delivered",
-      desc: "Successful projects delivered across multiple industries and sectors.",
+      desc: "Successful projects delivered across multiple industries and sectors from Lucknow and beyond.",
     },
     {
-      number: "200+",
-      label: "Global Clients",
-      desc: "Trusted clients continue to choose our services worldwide.",
+      number: "60+",
+      label: "Happy Clients",
+      desc: "Trusted clients continue to choose Binazy for reliable IT solutions and consultancy services.",
     },
   ];
 
@@ -24,7 +24,9 @@ const StatsSection = () => {
       <div className="section-container">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-12">
           {stats.map((item, index) => (
-            <div key={index} className="relative overflow-hidden rounded-2xl p-6 sm:p-8 lg:p-10 group">
+            <div
+              key={index}
+              className="relative overflow-hidden rounded-2xl p-6 sm:p-8 lg:p-10 group">
               {/* Decorative Accent */}
 
               <div className="relative z-10">

@@ -20,7 +20,16 @@ import unsplash1434030216411 from "../assets/services/unsplash-1434030216411.jpg
 import unsplash1441986300917 from "../assets/services/unsplash-1441986300917.jpg";
 import unsplash1450101499163 from "../assets/services/unsplash-1450101499163.jpg";
 import unsplash1460925895917 from "../assets/services/unsplash-1460925895917.jpg";
-import unsplash1488646953014 from "../assets/services/unsplash-1488646953014.jpg";
+import business1 from "../assets/business1.png";
+import business2 from "../assets/business2.png";
+import ecommerce1 from "../assets/ecommerce1.png";
+import ecommerce2 from "../assets/ecommerce2.png";
+import ott1 from "../assets/ott1.png";
+import ott2 from "../assets/ott2.png";
+import collaby from "../assets/collaby.png";
+import app22 from "../assets/app22.png";
+import booking1 from "../assets/booking1.png";
+import booking2 from "../assets/booking2.png";
 import unsplash1497366216548 from "../assets/services/unsplash-1497366216548.jpg";
 import unsplash1497366811353 from "../assets/services/unsplash-1497366811353.jpg";
 import unsplash1501504905252 from "../assets/services/unsplash-1501504905252.jpg";
@@ -41,7 +50,6 @@ import unsplash1551288049 from "../assets/services/unsplash-1551288049.jpg";
 import unsplash1552664730 from "../assets/services/unsplash-1552664730.jpg";
 import unsplash1553413077 from "../assets/services/unsplash-1553413077.jpg";
 import unsplash1553877522 from "../assets/services/unsplash-1553877522.jpg";
-import unsplash1556742049 from "../assets/services/unsplash-1556742049.jpg";
 import unsplash1557804506 from "../assets/services/unsplash-1557804506.jpg";
 import unsplash1558494949 from "../assets/services/unsplash-1558494949.jpg";
 import unsplash1558618666 from "../assets/services/unsplash-1558618666.jpg";
@@ -149,20 +157,18 @@ const pages = {
     spotlightHeading: "Business Website Project Spotlights",
     projects: [
       {
-        name: "MCR Holidays Corporate Site",
-        // Travel/tourism corporate website — people at a scenic destination with laptop planning
-        image: unsplash1488646953014,
+        name: "FreelanceHub",
+        image: business1,
         alt: "MCR Holidays business website",
         description:
-          "A service-driven travel website built to showcase packages, capture inquiries, and convert organic traffic into qualified leads.",
+          "FreelanceHub is a modern freelancer marketplace that connects skilled professionals with clients to get work done efficiently It enables users to post jobs, hire talent, collaborate in real time, and manage secure payments—all in one platform.",
       },
       {
-        name: "Event Horizon Brand Launch",
-        // Modern marketing / branding office environment with screens and brand materials
-        image: unsplash1497366216548,
+        name: "CityConnect",
+        image: business2,
         alt: "Event Horizon business website",
         description:
-          "A modern marketing website with campaign landing pages, strong content hierarchy, and a flexible design system for rapid updates.",
+          "A Local Business Listing platform connects users with nearby services, helping them discover trusted businesses based on location, ratings, and reviews.It allows businesses to showcase their offerings while enabling customers to search, compare, and contact them in one place.",
       },
     ],
   }),
@@ -212,20 +218,18 @@ const pages = {
     spotlightHeading: "Online Store Project Spotlights",
     projects: [
       {
-        name: "MarketPulse Commerce Platform",
-        // Full ecommerce dashboard with analytics graphs on desktop
-        image: unsplash1556742049,
+        name: "ShopSphere",
+        image: ecommerce1,
         alt: "MarketPulse online store",
         description:
-          "A full-featured ecommerce platform with product discovery, order workflows, payment integrations, and admin reporting.",
+          "A modern eCommerce platform that delivers seamless shopping with intuitive design and fast performance. Users can browse products, manage carts, and complete secure purchases effortlessly.",
       },
       {
-        name: "QuickCart Mobile Commerce",
-        // Person shopping on mobile phone in a bright, clean setting
-        image: unsplash1512428559087,
+        name: "CartNest",
+        image: ecommerce2,
         alt: "QuickCart online shopping experience",
         description:
-          "A mobile-first store experience built for fast browsing, quick checkout, and repeat purchase convenience.",
+          "An intuitive eCommerce platform designed for smooth browsing, quick checkout, and personalized shopping experiences,Built to connect users with quality products through a fast, responsive, and user-friendly interface.",
       },
     ],
   }),
@@ -275,17 +279,15 @@ const pages = {
     spotlightHeading: "OTT Platform Project Spotlights",
     projects: [
       {
-        name: "StreamNest Video Platform",
-        // Large screen TV streaming interface in a dark living room — Netflix-style
-        image: unsplash1522869635100,
+        name: "StreamFlix",
+        image: ott1,
         alt: "StreamNest OTT admin dashboard",
         description:
-          "A subscription-led streaming platform with content sections, viewer profiles, billing flows, and operator analytics.",
+          "A modern OTT streaming platform that delivers personalized entertainment with smart recommendations and seamless user experience.Users can explore movies, web series, and live TV with features like watchlists, multi-profile support, and high-quality streaming across devices.",
       },
       {
-        name: "PlayPrime Media Hub",
-        // Person watching video content on laptop in dark room — cinematic atmosphere
-        image: unsplash1611162617474,
+        name: "Livecreen",
+        image: ott2,
         alt: "PlayPrime OTT platform interface",
         description:
           "A media delivery product with catalog management, featured releases, audience insights, and account controls.",
@@ -338,20 +340,18 @@ const pages = {
     spotlightHeading: "Mobile App Project Spotlights",
     projects: [
       {
-        name: "FitTrack Companion App",
-        // Fitness app on phone — person holding phone showing workout/health dashboard
-        image: unsplash1576678927484,
+        name: "Collaby",
+        image: collaby,
         alt: "FitTrack mobile app",
         description:
-          "A wellness mobile app with personalized dashboards, reminders, progress tracking, and a smooth daily-use experience.",
+          "A collaboration platform that connects Instagram creators with businesses for seamless brand partnerships and campaigns.It enables smart matching, in-app communication, and secure deal management to help both creators and brands grow together",
       },
       {
-        name: "QuickCart Delivery App",
-        // Delivery rider with phone showing delivery app map/order status
-        image: unsplash1558618666,
+        name: "Tasklow",
+        image: app22,
         alt: "QuickCart delivery app dashboard",
         description:
-          "A logistics-enabled commerce app with order status, account management, and streamlined repeat checkout flows.",
+          "A smart productivity mobile app designed to help users manage tasks, set goals, and track daily progress efficiently.Features include reminders, priority tracking, and a clean interface for seamless task organization.",
       },
     ],
   }),
@@ -401,20 +401,18 @@ const pages = {
     spotlightHeading: "Booking System Project Spotlights",
     projects: [
       {
-        name: "BookEase Operations Suite",
-        // Clean calendar / scheduling interface on desktop screen in a professional setting
-        image: unsplash1506784983877,
-        alt: "BookEase booking system",
+        name: "BookEase",
+        image: booking1,
+        alt: "SlotSync booking and scheduling platform",
         description:
-          "A centralized booking platform combining customer scheduling, operations dashboards, and automated reminders for service teams.",
+          "A user-friendly booking system that simplifies searching, comparing, and reserving hotels or services in real time.It provides secure payments, smart filters, and a smooth experience for quick and hassle-free bookings.",
       },
       {
-        name: "ConsultPro Demo Scheduler",
-        // Sales/consultation call — professional on headset with computer showing calendar
-        image: unsplash1521791136064,
-        alt: "ConsultPro appointment scheduling platform",
+        name: "BookNow",
+        image: booking2,
+        alt: "AppointEase appointment management system",
         description:
-          "An appointment management product that helps sales teams qualify prospects, schedule demos, and coordinate follow-up.",
+          "A powerful ticket booking platform that allows users to book movies, events, and travel tickets in just a few clicks.It offers real-time availability, secure payments, and an easy-to-use interface for a smooth and hassle-free booking experience.",
       },
     ],
   }),
@@ -464,20 +462,18 @@ const pages = {
     spotlightHeading: "ERP System Project Spotlights",
     projects: [
       {
-        name: "FinanceCore ERP",
-        // Finance dashboard with charts and graphs on multiple monitors in corporate setting
+        name: "NexaCore ERP",
         image: unsplash1551288049,
-        alt: "FinanceCore ERP dashboard",
+        alt: "NexaCore ERP system dashboard",
         description:
-          "A configurable ERP workspace for finance, approvals, reporting, and multi-role operational control.",
+          "NexaCore is a fully integrated ERP platform built for mid-size businesses managing finance, procurement, and operations across multiple departments. It unifies purchase orders, vendor payments, ledger management, and executive reporting into a single role-based workspace that keeps every team aligned.",
       },
       {
-        name: "OpsPilot ERP Dashboard",
-        // Warehouse / operations management — person with tablet managing inventory
+        name: "OpsGrid",
         image: unsplash1586528116311,
-        alt: "OpsPilot ERP dashboard",
+        alt: "OpsGrid operations and inventory ERP",
         description:
-          "An ERP solution tying together procurement, inventory, process visibility, and executive reporting.",
+          "OpsGrid is an operations-focused ERP solution designed for manufacturing and distribution companies. It connects inventory tracking, warehouse management, and procurement workflows with real-time dashboards so operations managers can monitor stock levels, approve purchase requests, and track fulfillment progress without switching between tools.",
       },
     ],
   }),
@@ -527,20 +523,18 @@ const pages = {
     spotlightHeading: "Custom Software Project Spotlights",
     projects: [
       {
-        name: "Binazy HRMS Suite",
-        // HR software — professional viewing employee management dashboard on screen
+        name: "PeopleDesk HRMS",
         image: unsplash1542744173,
-        alt: "Binazy HRMS dashboard",
+        alt: "PeopleDesk HR management software",
         description:
-          "A tailored HR and payroll product with approvals, employee records, attendance, and admin controls built around internal processes.",
+          "PeopleDesk is a custom HR management system built for a fast-growing services company that outgrew spreadsheet-based people ops. It handles employee onboarding, attendance tracking, leave approvals, payroll processing, and department-level reporting — all within a role-based portal used daily by HR managers and team leads.",
       },
       {
-        name: "OfficeFlow Operations Portal",
-        // Modern open office with team members using custom portal on multiple screens
+        name: "WorkFlow360",
         image: unsplash1497366811353,
-        alt: "OfficeFlow custom business portal",
+        alt: "WorkFlow360 operations management portal",
         description:
-          "A custom operations portal that unifies process tracking, records, dashboards, and team coordination.",
+          "WorkFlow360 is a tailored operations portal designed for a logistics firm that needed to replace disconnected tools with one unified system. It manages job assignments, field agent tracking, client communication logs, invoice generation, and real-time performance dashboards — built entirely around how their operations team actually works.",
       },
     ],
   }),
@@ -590,27 +584,25 @@ const pages = {
     spotlightHeading: "HR & Payroll System Project Spotlights",
     projects: [
       {
-        name: "Binazy HRMS Suite",
-        // HR manager reviewing employee records on a laptop — professional office setting
+        name: "StaffSync",
         image: unsplash1581291518857,
-        alt: "HR and payroll system dashboard",
+        alt: "StaffSync HR and payroll management system",
         description:
-          "An HRMS platform for employee records, leave approvals, attendance, payroll, and role-based administration.",
+          "StaffSync is an integrated HR and payroll platform built for a retail chain managing 200+ employees across multiple branches. It automates monthly payroll calculations, tracks shift-based attendance, manages leave balances, and gives HR managers a real-time view of workforce data — reducing payroll processing time from days to hours.",
       },
       {
-        name: "TeamFlow People Ops Portal",
-        // Diverse team in a bright office — collaborative people operations environment
+        name: "PeopleBase",
         image: unsplash1522202176988,
-        alt: "People operations portal",
+        alt: "PeopleBase people operations portal",
         description:
-          "A people operations workspace built to simplify onboarding, policy workflows, and payroll coordination.",
+          "PeopleBase is a people operations platform designed for a growing tech company that needed a single source of truth for employee data. It supports digital onboarding, department-wise org charts, performance review cycles, payslip distribution, and an employee self-service portal — giving both HR and staff full visibility into their own records.",
       },
     ],
   }),
 
   "24-7-helpdesk-support": createPage({
     label: "Support Desks Built for Faster Resolution",
-        image: unsplash1497366811353,
+    image: unsplash1497366811353,
     titleHighlight: "For Round-The-Clock Service Teams",
     subtitle:
       "Binazy helps support organizations manage tickets, escalations, communication, and service quality through structured helpdesk platforms.",
@@ -653,27 +645,25 @@ const pages = {
     spotlightHeading: "Helpdesk Project Spotlights",
     projects: [
       {
-        name: "SupportDesk 24/7 Command Center",
-        // Customer support center — agents at workstations with multiple monitors, headsets
+        name: "ResolveDesk",
         image: unsplash1553877522,
-        alt: "24/7 helpdesk support dashboard",
+        alt: "ResolveDesk 24/7 helpdesk platform",
         description:
-          "A helpdesk platform built for continuous support, ticket routing, escalations, and SLA visibility.",
+          "ResolveDesk is a 24/7 helpdesk platform built for a B2B SaaS company that needed to scale its support operations without increasing headcount. It centralizes tickets from email, chat, and web forms into a single queue, auto-routes by issue type and priority, and gives team leads a live SLA dashboard to catch breaches before they escalate.",
       },
       {
-        name: "ResolveOne Service Hub",
-        // Support agent on headset working at desktop with ticketing software visible
+        name: "ClearLine Support Hub",
         image: unsplash1596524430615,
-        alt: "Customer service ticketing workspace",
+        alt: "ClearLine customer support operations platform",
         description:
-          "A support operations workspace combining ticket management, knowledge resources, and team coordination.",
+          "ClearLine is a support operations platform designed for a telecom provider managing high daily ticket volumes across multiple shifts. It features intelligent ticket assignment, a searchable knowledge base for agents, escalation paths for critical issues, and performance reports that help managers identify bottlenecks and improve resolution speed.",
       },
     ],
   }),
 
   "remote-monitoring": createPage({
     label: "Monitoring Systems That Surface Issues Early",
-        image: unsplash1558494949,
+    image: unsplash1558494949,
     titleHighlight: "For More Reliable Operations",
     subtitle:
       "Binazy develops remote monitoring systems that help teams observe assets, detect anomalies, and respond to issues before they grow.",
@@ -716,27 +706,25 @@ const pages = {
     spotlightHeading: "Remote Monitoring Project Spotlights",
     projects: [
       {
-        name: "InfraWatch Monitoring Console",
-        // Server room / data center with monitoring screens showing network health
+        name: "WatchGrid",
         image: unsplash1558494949,
-        alt: "Remote monitoring console",
+        alt: "WatchGrid infrastructure monitoring console",
         description:
-          "A monitoring dashboard that surfaces asset health, live alerts, and trend data for technical teams.",
+          "WatchGrid is a remote infrastructure monitoring platform built for a managed IT services provider overseeing 500+ client endpoints. It gives technicians a live view of server health, uptime, and network performance across all accounts — with instant alerts for outages and a built-in incident timeline to coordinate faster resolutions.",
       },
       {
-        name: "OpsSignal Response Board",
-        // NOC-style operations center with large display boards showing system status
+        name: "PulseOps",
         image: unsplash1504384308090,
-        alt: "Remote monitoring incident response portal",
+        alt: "PulseOps operations monitoring and response platform",
         description:
-          "A response-focused monitoring portal built to coordinate issue triage, ownership, and resolution progress.",
+          "PulseOps is a centralized operations monitoring platform designed for a facility management company tracking equipment and utility systems across multiple sites. It surfaces anomalies through threshold-based alerts, assigns incidents to field teams, and generates trend reports that help maintenance managers schedule preventive work before failures occur.",
       },
     ],
   }),
 
   "social-media-management": createPage({
     label: "Social Programs Managed With Consistency",
-        image: unsplash1504384308090,
+    image: unsplash1504384308090,
     titleHighlight: "That Keeps Brands Active And Relevant",
     subtitle:
       "Binazy supports social growth with content planning, publishing, audience engagement, and reporting that connects activity to business goals.",
@@ -779,20 +767,18 @@ const pages = {
     spotlightHeading: "Social Media Project Spotlights",
     projects: [
       {
-        name: "BrandWave Social Calendar",
-        // Marketing team around a table planning social content with sticky notes and calendar
+        name: "BrandPulse",
         image: unsplash1611926653458,
-        alt: "Social media campaign calendar",
+        alt: "BrandPulse social media management platform",
         description:
-          "A structured social media delivery setup combining monthly planning, content rollouts, and engagement reporting.",
+          "BrandPulse is a social media management setup built for a D2C lifestyle brand that needed consistent content output across Instagram, Facebook, and LinkedIn. We created a 30-day content calendar system, handled creative coordination, and set up a scheduling workflow — helping the brand grow from 3 posts a week to daily publishing with measurable engagement improvements.",
       },
       {
-        name: "CommunityPulse Reporting Desk",
-        // Social media analytics dashboard on screen showing engagement graphs and metrics
+        name: "SocialSync",
         image: unsplash1460925895917,
-        alt: "Social media performance dashboard",
+        alt: "SocialSync social performance reporting dashboard",
         description:
-          "A reporting workspace built to track social reach, engagement trends, and campaign outcomes across channels.",
+          "SocialSync is a social performance reporting and community management solution built for a coaching business managing multiple brand handles. It tracks follower growth, post reach, engagement rates, and DM response times across channels — giving the founder a weekly scorecard to review what content is working and where to focus next.",
       },
     ],
   }),
@@ -842,27 +828,25 @@ const pages = {
     spotlightHeading: "Online Learning Project Spotlights",
     projects: [
       {
-        name: "LearnSphere LMS",
-        // Student on laptop taking an online course — e-learning dashboard visible on screen
+        name: "EduNest",
         image: unsplash1501504905252,
-        alt: "LearnSphere online learning platform",
+        alt: "EduNest online learning management system",
         description:
-          "A learning platform with course catalogs, dashboards, quizzes, certificates, and admin visibility for training programs.",
+          "EduNest is an online learning platform built for a professional training institute offering certification courses in digital marketing and data analytics. It supports course catalogs with video lessons, quizzes, and assignments, gives learners a personalized progress dashboard, and lets instructors track completion rates and issue certificates automatically on course completion.",
       },
       {
-        name: "SkillBridge Learning Hub",
-        // Group of professionals in a bright room with laptops doing online collaborative learning
+        name: "LearnPath",
         image: unsplash1524178232363,
-        alt: "SkillBridge e-learning portal",
+        alt: "LearnPath e-learning and course delivery platform",
         description:
-          "A structured learning product that supports enrollments, modular content, and progress tracking for distributed learners.",
+          "LearnPath is a structured e-learning platform developed for a coaching business that delivers upskilling programs to corporate teams. It handles batch enrollments, module-wise content delivery, assessment scoring, and generates completion reports for HR teams — making it easy to run multiple cohorts simultaneously without manual tracking.",
       },
     ],
   }),
 
   "student-staff-training-portal": createPage({
     label: "Training Portals Built for Mixed Audiences",
-        image: unsplash1524178232363,
+    image: unsplash1524178232363,
     titleHighlight: "For Students, Staff, And Teams",
     subtitle:
       "Binazy creates role-based training portals that support onboarding, internal learning, compliance tracking, and course delivery across different user groups.",
@@ -905,20 +889,18 @@ const pages = {
     spotlightHeading: "Training Portal Project Spotlights",
     projects: [
       {
-        name: "ClassLive Training Portal",
-        // Virtual classroom — instructor on video call with students, training session in progress
+        name: "TrainHub",
         image: unsplash1588196749597,
-        alt: "Student and staff training portal",
+        alt: "TrainHub staff and student training portal",
         description:
-          "A role-based training portal with live sessions, assignments, attendance views, and recorded content access.",
+          "TrainHub is a role-based training portal built for a hospital group that needed to manage compliance training across clinical staff, administrative teams, and new joiners simultaneously. It delivers mandatory training modules, tracks completion per department, sends automated reminders for overdue courses, and gives HR managers a real-time compliance dashboard.",
       },
       {
-        name: "CampusFlow Learning Workspace",
-        // University campus computer lab — students working on training modules on desktop computers
+        name: "CampusReady",
         image: unsplash1562774053,
-        alt: "Campus learning and training workspace",
+        alt: "CampusReady student and faculty learning workspace",
         description:
-          "A multi-audience learning environment designed for internal staff training and student learning programs.",
+          "CampusReady is a multi-audience learning portal built for a vocational education institute managing both full-time students and part-time faculty. It creates separate dashboards for each role, supports live session scheduling, assignment submissions, and attendance tracking — giving academic coordinators a unified view of all batches and learning progress across departments.",
       },
     ],
   }),
@@ -968,27 +950,25 @@ const pages = {
     spotlightHeading: "EdTech Product Project Spotlights",
     projects: [
       {
-        name: "EduSpark Product Suite",
-        // EdTech product team working on a whiteboard with product roadmap in a startup office
+        name: "SkillForge",
         image: unsplash1509062522246,
-        alt: "EdTech product platform",
+        alt: "SkillForge EdTech product platform",
         description:
-          "A scalable EdTech product with course delivery, instructor workflows, learner dashboards, and engagement features.",
+          "SkillForge is a full-stack EdTech product built for a startup offering career-focused skill programs to college students and early professionals. We led the product discovery, defined the feature roadmap, and built the platform — covering course delivery, instructor dashboards, learner progress tracking, badge-based gamification, and a mobile-responsive experience used by thousands of active learners.",
       },
       {
-        name: "MentorLoop Learning App",
-        // Student using mobile app to learn — phone screen showing course interface in hand
+        name: "MindStep",
         image: unsplash1434030216411,
-        alt: "EdTech mobile learning application",
+        alt: "MindStep mobile EdTech learning app",
         description:
-          "A mobile-first learning product designed for lesson access, assessments, and progress visibility.",
+          "MindStep is a mobile-first EdTech app built for a K-12 tutoring company that wanted to extend learning beyond classroom hours. It delivers bite-sized lessons, daily practice quizzes, and streak-based engagement to keep students motivated — while giving teachers a simple dashboard to assign content, review scores, and send announcements to individual batches.",
       },
     ],
   }),
 
   "business-dashboard": createPage({
     label: "Dashboards Built for Faster Decisions",
-        image: unsplash1434030216411,
+    image: unsplash1434030216411,
     titleHighlight: "That Keep Leadership Informed",
     subtitle:
       "Binazy creates dashboards that turn fragmented business data into focused operational and executive visibility for day-to-day decision-making.",
@@ -1031,20 +1011,18 @@ const pages = {
     spotlightHeading: "Business Dashboard Project Spotlights",
     projects: [
       {
-        name: "InsightBoard Executive Console",
-        // Executive looking at a large business analytics dashboard on an ultrawide monitor
+        name: "CommandView",
         image: unsplash1543286386,
-        alt: "Business dashboard interface",
+        alt: "CommandView executive business intelligence dashboard",
         description:
-          "A dashboard product that combines KPI monitoring, drilldowns, and leadership-ready visibility across operations.",
+          "CommandView is an executive business intelligence dashboard built for a retail group managing 12 stores across three cities. It pulls data from their POS, inventory, and finance systems into one real-time view — giving leadership daily visibility into revenue by branch, top and bottom performing SKUs, and flagged anomalies so decisions are based on current data, not end-of-month reports.",
       },
       {
-        name: "OpsView Daily Control Room",
-        // Operations manager in open office reviewing daily metrics dashboard on screen
+        name: "OpsLens",
         image: unsplash1531403009284,
-        alt: "Operations dashboard project",
+        alt: "OpsLens daily operations performance dashboard",
         description:
-          "A daily-use dashboard built to help managers track activity, exceptions, and performance at a glance.",
+          "OpsLens is a daily operations dashboard built for a logistics company that needed better ground-level visibility across dispatch, delivery, and customer feedback. It tracks order completion rates, on-time delivery percentages, and agent performance — with threshold alerts that notify managers when SLAs are at risk and drilldowns that help team leads identify where delays are happening.",
       },
     ],
   }),
@@ -1094,20 +1072,18 @@ const pages = {
     spotlightHeading: "Sales & Inventory Project Spotlights",
     projects: [
       {
-        name: "StockSense Reporting Hub",
-        // Warehouse worker with barcode scanner checking inventory against a tablet dashboard
+        name: "StockIQ",
         image: unsplash1553413077,
-        alt: "Sales and inventory reporting dashboard",
+        alt: "StockIQ sales and inventory reporting platform",
         description:
-          "A reporting workspace built to track stock movement, sales trends, and replenishment priorities across operations.",
+          "StockIQ is a sales and inventory reporting platform built for a wholesale distributor managing thousands of SKUs across five warehouses. It tracks daily sales movement, flags products approaching reorder thresholds, surfaces slow-moving stock before it becomes a write-off risk, and delivers automated weekly summaries to procurement and finance teams — replacing hours of manual spreadsheet work.",
       },
       {
-        name: "RetailFlow Branch Insights",
-        // Retail store manager reviewing sales performance reports on laptop behind counter
+        name: "RetailRadar",
         image: unsplash1441986300917,
-        alt: "Retail sales and inventory analytics project",
+        alt: "RetailRadar branch-level sales analytics platform",
         description:
-          "A branch-level reporting setup that helped leadership compare sales efficiency, product turnover, and stock risk.",
+          "RetailRadar is a branch performance analytics tool built for a fashion retail chain that needed better visibility across its 20+ outlets. It compares sales efficiency, basket sizes, category turnover, and stock availability by location — giving the merchandising team clear signals on where to push promotions, reallocate inventory, and prioritize replenishment.",
       },
     ],
   }),
@@ -1157,20 +1133,18 @@ const pages = {
     spotlightHeading: "Marketing Performance Tracking Project Spotlights",
     projects: [
       {
-        name: "CampaignSight Reporting Suite",
-        // Marketing analyst reviewing multi-channel attribution dashboard on large screen
+        name: "TrackIQ",
         image: unsplash1533750516457,
-        alt: "Marketing performance dashboard",
+        alt: "TrackIQ multi-channel marketing attribution dashboard",
         description:
-          "A multi-channel reporting setup used to track attribution, funnel metrics, and channel efficiency in one place.",
+          "TrackIQ is a multi-channel marketing attribution platform built for a D2C brand spending across Google, Meta, and email. It pulls campaign data into one reporting workspace, maps the full customer acquisition journey, and surfaces ROAS and CAC by channel — giving the marketing team a clear view of which budgets are working and where they were over- or under-investing.",
       },
       {
-        name: "GrowthOps Weekly Scorecard",
-        // Growth team in a meeting room reviewing a weekly scorecard on a projected screen
+        name: "GrowthBoard",
         image: unsplash1552664730,
-        alt: "Marketing scorecard reporting project",
+        alt: "GrowthBoard weekly marketing performance scorecard",
         description:
-          "A decision-focused scorecard system that helps teams review campaign performance and optimize faster.",
+          "GrowthBoard is a weekly marketing performance scorecard tool built for a SaaS company that needed a faster way to review campaign results across paid, organic, and lifecycle channels. It auto-generates a structured weekly summary with funnel metrics, channel comparisons, and highlighted anomalies — replacing a manual slide-building process that was taking the growth team half a day every Friday.",
       },
     ],
   }),
@@ -1220,20 +1194,18 @@ const pages = {
     spotlightHeading: "AI Support Agent Project Spotlights",
     projects: [
       {
-        name: "AssistNow AI Helpdesk",
-        // Chat interface on laptop showing AI bot conversation with a customer — clean UI
+        name: "AskNova",
         image: unsplash1677442135703,
-        alt: "AI customer support agent dashboard",
+        alt: "AskNova AI customer support agent",
         description:
-          "A conversational support agent with knowledge grounding, escalation rules, and reporting for 24/7 customer assistance.",
+          "AskNova is an AI-powered support agent built for a fintech company that was handling thousands of repetitive customer queries across onboarding, transactions, and account issues. It resolves common questions instantly using grounded knowledge base content, collects issue context before escalating to human agents, and gives the support team a dashboard to review conversation trends and identify gaps in coverage.",
       },
       {
-        name: "SupportBot Resolution Flow",
-        // AI chatbot widget open on a website on a desktop screen — modern dark UI
+        name: "HelpMate AI",
         image: unsplash1531746790731,
-        alt: "AI support handoff portal",
+        alt: "HelpMate AI support and handoff workflow",
         description:
-          "An AI-assisted service workflow that handles common requests and passes complex cases to support teams with context.",
+          "HelpMate AI is a conversational support solution built for an e-commerce brand receiving high volumes of order, return, and delivery queries on their website. It handles tier-1 support autonomously with policy-grounded responses, routes unresolved issues to the right human queue with full conversation context, and tracks which question types are driving the most handoffs — helping the team improve self-service coverage over time.",
       },
     ],
   }),
@@ -1283,20 +1255,18 @@ const pages = {
     spotlightHeading: "Smart Document Processing Project Spotlights",
     projects: [
       {
-        name: "DocFlow Processing Engine",
-        // Business person scanning documents with a scanner connected to document processing software
+        name: "DocParse",
         image: unsplash1568667256549,
-        alt: "Smart document processing portal",
+        alt: "DocParse intelligent document processing engine",
         description:
-          "A document workflow platform that extracts information, validates records, and routes items into operational queues.",
+          "DocParse is a smart document processing platform built for an insurance company that receives hundreds of claim forms, medical reports, and supporting documents daily. It uses OCR and structured extraction to pull key fields from mixed-format uploads, validates data against business rules, and routes each claim into the correct review queue — cutting manual data entry by over 70% and reducing processing time from days to hours.",
       },
       {
-        name: "PaperlessOps Review Desk",
-        // Clean office desk with tablet showing digital document review queue — paperless workflow
+        name: "ClearDocs",
         image: unsplash1450101499163,
-        alt: "Document review and automation dashboard",
+        alt: "ClearDocs document review and automation workflow",
         description:
-          "A document operations setup for faster review, searchable retrieval, and exception management.",
+          "ClearDocs is a document operations platform designed for a legal services firm managing high volumes of client agreements, compliance filings, and onboarding paperwork. It digitizes incoming documents, extracts key clauses and metadata, flags exceptions for manual review, and maintains a searchable archive — giving the operations team instant access to any document without hunting through email threads or shared drives.",
       },
     ],
   }),
@@ -1346,20 +1316,18 @@ const pages = {
     spotlightHeading: "AI Sales Assistant Project Spotlights",
     projects: [
       {
-        name: "RevenuePilot AI Assistant",
-        // Sales rep at desk with CRM pipeline dashboard on screen — AI suggestions panel visible
+        name: "PipelineAI",
         image: unsplash1600880292203,
-        alt: "AI sales assistant dashboard",
+        alt: "PipelineAI sales qualification and CRM automation assistant",
         description:
-          "A sales support workflow combining lead qualification, CRM automation, and team-ready pipeline insights.",
+          "PipelineAI is an AI sales assistant built for a B2B software company that was losing deals to slow follow-up and inconsistent lead qualification. It scores inbound leads using intent signals, guides sales reps through discovery questions, auto-updates the CRM after each interaction, and generates a prioritized daily pipeline view — helping the team focus on the right deals without the admin overhead.",
       },
       {
-        name: "DealFlow Meeting Prep Hub",
-        // Sales team in a meeting room reviewing deal pipeline and prep notes on laptop before a call
+        name: "DealBrief",
         image: unsplash1557804506,
-        alt: "AI sales prep workspace",
+        alt: "DealBrief AI meeting preparation and sales workflow tool",
         description:
-          "An AI-assisted sales operations workspace built to prepare reps faster and improve follow-through.",
+          "DealBrief is an AI-assisted meeting prep and deal management tool built for an enterprise sales team closing long-cycle contracts. Before every client call, it compiles a concise account summary with deal history, stakeholder context, open action items, and suggested talking points — giving reps everything they need in two minutes instead of digging through CRM notes and email threads.",
       },
     ],
   }),
@@ -1371,7 +1339,8 @@ export const servicesData = {
   // Backward-compatible aliases for older internal links.
   "software-and-app-development": pages["custom-software-development"],
   "it-support-and-managed-services": pages["24-7-helpdesk-support"],
-  "digital-marketing-and-growth-services": pages["marketing-performance-tracking"],
+  "digital-marketing-and-growth-services":
+    pages["marketing-performance-tracking"],
   "cloud-and-infrastructure-services": pages["remote-monitoring"],
   "data-and-analytics-solutions": pages["business-dashboard"],
   "web-development": pages["business-website-development"],
