@@ -108,28 +108,11 @@ const Footer = () => {
           <div className="relative h-80 overflow-hidden rounded-[1.75rem] border border-slate-200 bg-slate-100 shadow-lg lg:h-96">
             <iframe
               title="Binazy office location"
-              src="https://www.google.com/maps?q=Near%20Engineering%20College%20Chauraha%2C%20JSV%20Hyundai%20Building%2C%202nd%20Floor%2C%20CP-53%2C%20near%20CNG%20Petrol%20Pump%2C%20Lucknow%2C%20Uttar%20Pradesh%20226021&z=15&output=embed"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3557.776503447378!2d80.94414187522425!3d26.910587276648425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3999570056116fa9%3A0x95db1b5f9246f4d8!2sBinazy%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1777963922999!5m2!1sen!2sin"
               className="h-full w-full border-0"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             />
-
-            <div className="absolute inset-x-4 bottom-4 rounded-2xl border border-white/70 bg-white/92 px-5 py-4 text-slate-700 shadow-xl backdrop-blur-sm sm:inset-x-auto sm:right-4 sm:max-w-xs">
-              <h3 className="font-semibold text-sm text-slate-900">INDIA</h3>
-              <p className="mt-1.5 text-xs leading-relaxed text-slate-500">
-                Near Engineering College Chauraha, JSV Hyundai Building, 2nd
-                Floor, CP-53, near CNG Petrol Pump
-                <br />
-                Lucknow, Uttar Pradesh 226021
-              </p>
-              <a
-                href="https://www.google.com/maps/search/?api=1&query=Near%20Engineering%20College%20Chauraha%2C%20JSV%20Hyundai%20Building%2C%202nd%20Floor%2C%20CP-53%2C%20near%20CNG%20Petrol%20Pump%2C%20Lucknow%2C%20Uttar%20Pradesh%20226021"
-                target="_blank"
-                rel="noreferrer"
-                className="mt-3 inline-flex text-xs font-semibold uppercase tracking-[0.16em] text-brand-600 transition-colors hover:text-brand-700">
-                Open In Google Maps
-              </a>
-            </div>
           </div>
         </div>
       </section>
