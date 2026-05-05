@@ -4,6 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 import { fileURLToPath } from "url";
 import sitemap from "vite-plugin-sitemap";
+import viteImagemin from "vite-plugin-imagemin";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -12,6 +13,13 @@ export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
+    viteImagemin({
+      gifsicle: { optimizationLevel: 7 },
+      mozjpeg: { quality: 75 }, // JPGs → 75% quality
+      pngquant: { quality: [0.6, 0.8] }, // PNGs → 60-80%
+      webp: { quality: 75 }, // Convert to WebP
+    }),
+
     sitemap({
       hostname: "https://binazy.org",
       routes: [
