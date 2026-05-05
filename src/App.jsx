@@ -11,12 +11,16 @@ import BlogPage from "@/pages/blog/BlogPage";
 import BlogDetailsPage from "@/pages/blog/BlogDetailsPage";
 import ScrollToTop from "./components/ScrollToTop";
 import ScrollToTopButton from "./components/ScrollToTopButton";
+import WhatsappButton from "./components/WhatsappButton";
+import CallButton from "./components/CallButton";
 
 const App = () => {
   return (
     <>
+      <WhatsappButton />
+      <CallButton />
       <ScrollToTop />
-      <ScrollToTopButton />
+      {/* <ScrollToTopButton /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
