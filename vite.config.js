@@ -15,18 +15,13 @@ export default defineConfig({
     sitemap({
       hostname: "https://binazy.org",
       routes: [
-        // Static pages
         "/",
         "/about",
         "/contact-us",
         "/blog",
-
-        // Blog posts
         "/blog/why-growing-businesses-need-better-websites",
         "/blog/ecommerce-development-build-your-own-online-store",
         "/blog/custom-ott-app-development-build-your-streaming-platform",
-
-        // Services
         "/services/business-website-development",
         "/services/online-store",
         "/services/ott-platform-development",
@@ -47,8 +42,6 @@ export default defineConfig({
         "/services/ai-customer-support-agent",
         "/services/smart-document-processing",
         "/services/ai-sales-assistant",
-
-        // Industries
         "/industries/real-estate",
         "/industries/education",
         "/industries/ecommerce",
@@ -56,8 +49,6 @@ export default defineConfig({
         "/industries/fintech",
         "/industries/travel",
         "/industries/manufacturing",
-
-        // Locations
         "/locations/australia",
         "/locations/qatar",
         "/locations/uae",
@@ -68,6 +59,25 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
+    },
+  },
+  build: {
+    assetsInlineLimit: 4096,
+    chunkSizeWarningLimit: 600,
+    rollupOptions: {
+      output: {
+        manualChunks: (id) => {
+          if (
+            id.includes("node_modules/react/") ||
+            id.includes("node_modules/react-dom/")
+          ) {
+            return "vendor";
+          }
+          if (id.includes("node_modules/react-router")) {
+            return "router";
+          }
+        },
+      },
     },
   },
 });
