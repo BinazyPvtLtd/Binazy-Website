@@ -1,6 +1,6 @@
 import React from "react";
 import { Quote } from "lucide-react";
-import founderPortrait from "@/assets/founder-portrait.jpg";
+import founderPortrait from "@/assets/founder-portrait.png";
 
 const Founder = () => {
   return (

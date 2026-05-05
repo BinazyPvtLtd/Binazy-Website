@@ -25,10 +25,8 @@ const Home = () => {
         <TechStackSection />
         <Testimonials />
         <Features />
-
         <ProjectPortfolio />
         <WhyChooseUs />
-
         <FAQSection />
         <CTASection />
         <LocationTemplate />
