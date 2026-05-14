@@ -2,11 +2,11 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import { Mail, Phone, MapPin, CheckCircle, AlertCircle } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import Navbar from "../components/common/Navbar";
 import FAQSection from "@/components/common/FAQSection";
 import Footer from "../components/common/Footer";
 import SocialLinks from "../components/common/SocialLinks";
-import Swal from "sweetalert2";
 
 const EMAILJS_SERVICE_ID = "service_yyz7lde";
 const EMAILJS_TEMPLATE_ID = "template_tupyprm";
@@ -27,6 +27,7 @@ const fieldClassName =
 
 const ContactPage = () => {
   const [submitMessage, setSubmitMessage] = useState(null);
+  const navigate = useNavigate();
 
   const {
     register,
@@ -59,26 +60,12 @@ const ContactPage = () => {
         EMAILJS_PUBLIC_KEY,
       );
 
-      setSubmitMessage({
-        type: "success",
-        text: "Message sent successfully.",
-      });
-      Swal.fire({
-        icon: "success",
-        title: "Message sent successfully.",
-        timer: 2000,
-      });
-
       reset();
+      navigate("/submitSuccess");
     } catch (err) {
       setSubmitMessage({
         type: "error",
         text: err?.text || err?.message || "Something went wrong.",
-      });
-      Swal.fire({
-        icon: "error",
-        title: "Something went wrong.",
-        timer: 2000,
       });
     }
   };

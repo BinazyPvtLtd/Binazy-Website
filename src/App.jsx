@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import { Routes, Route, Navigate } from "react-router-dom";
 import About from "./pages/About";
 import ContactPage from "./pages/ContactPage";
+import SubmitSuccess from "./pages/SubmitSuccess";
 import NotFound from "./pages/NotFound";
 import ServiceDetailsPage from "./pages/services/ServiceDetailsPage";
 import IndustryDetailsPage from "./pages/industries/IndustryDetailsPage";
@@ -10,7 +11,7 @@ import LocationDetailsPage from "@/pages/Locations/LocationDetailPage";
 import BlogPage from "@/pages/blog/BlogPage";
 import BlogDetailsPage from "@/pages/blog/BlogDetailsPage";
 import ScrollToTop from "./components/ScrollToTop";
-import ScrollToTopButton from "./components/ScrollToTopButton";
+// import ScrollToTopButton from "./components/ScrollToTopButton";
 import WhatsappButton from "./components/WhatsappButton";
 import CallButton from "./components/CallButton";
 
@@ -25,6 +26,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact-us" element={<ContactPage />} />
+        <Route path="/submitSuccess" element={<SubmitSuccess />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/:blogId" element={<BlogDetailsPage />} />
         <Route path="/services/:serviceId" element={<ServiceDetailsPage />} />
