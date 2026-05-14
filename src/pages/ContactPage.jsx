@@ -366,7 +366,7 @@ const ContactPage = () => {
                     "Better user experience for your product",
                     "Improved engagement and retention",
                     "Faster onboarding and growth",
-                    "Aligned business and user goals",
+                    "Aligned business and user's goals",
                   ].map((item, i) => (
                     <li
                       key={i}
