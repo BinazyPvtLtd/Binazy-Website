@@ -30,7 +30,7 @@ const SubmitSuccess = () => {
           <div className="mt-8">
             <Link
               to="/"
-              className="inline-flex min-h-11 items-center justify-center rounded-lg bg-brand-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-brand-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-300"
+              className="inline-flex min-h-11 items-center justify-center rounded-lg bg-brand-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-brand-500 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-300"
             >
               Back to Home
             </Link>
