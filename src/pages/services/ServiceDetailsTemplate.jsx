@@ -2,8 +2,10 @@ import Navbar from "../../components/common/Navbar";
 import Footer from "../../components/common/Footer";
 import FAQSection from "@/components/common/FAQSection";
 import WhyChooseSection from "@/components/common/WhyChooseSection";
+import SEO from "@/components/common/SEO";
 
 const ServiceDetailsTemplate = ({
+  serviceId,
   title,
   titleHighlight,
   subtitle,
@@ -16,6 +18,11 @@ const ServiceDetailsTemplate = ({
 }) => {
   return (
     <div className="min-h-screen overflow-x-hidden bg-background">
+      <SEO
+        title={`${techHeading || `${title} ${titleHighlight}`} | Binazy Services`}
+        description={subtitle || techDescription}
+        path={`/services/${serviceId}`}
+      />
       <Navbar />
       <main id="main-content">
         {/* HERO SECTION */}
@@ -47,6 +54,7 @@ const ServiceDetailsTemplate = ({
                     <img
                       src={project.image}
                       alt={project.alt}
+                      loading="lazy"
                       className="w-full h-56 sm:h-72 md:h-85 lg:h-105 object-cover"
                     />
                   </div>
@@ -66,9 +74,9 @@ const ServiceDetailsTemplate = ({
         <section className="section-padding">
           <div className="section-container">
             <div className="max-w-4xl mb-10 md:mb-16">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900 leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900 leading-tight">
                 {techHeading}
-              </h1>
+              </h2>
               <p className="mt-4 text-base sm:text-lg md:text-xl font-medium text-blue-600">
                 {techTagline}
               </p>

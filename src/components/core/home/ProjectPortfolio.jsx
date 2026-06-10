@@ -85,6 +85,7 @@ export default function ProjectPortfolio() {
                 <img
                   src={item.img}
                   alt={item.title}
+                  loading="lazy"
                   className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-700"
                 />
 

@@ -44,6 +44,7 @@ export default function WhyChooseSection() {
               <img
                 src={whyus}
                 alt="Team planning a web application development project"
+                loading="lazy"
                 className="h-72 w-full object-cover sm:h-80 lg:h-[26rem]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/35 to-transparent" />

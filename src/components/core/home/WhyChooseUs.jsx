@@ -120,6 +120,7 @@ const WhyChooseUs = () => {
               <img
                 src={highlights[activeIndex].img}
                 alt={`${highlights[activeIndex].title} visual`}
+                loading="lazy"
                 className="w-full rounded-3xl object-cover transition-all duration-500"
               />
             </div>

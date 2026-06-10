@@ -102,6 +102,7 @@ const DigitalJourney = () => {
               <img
                 src={items[active].img}
                 alt={`${items[active].title} preview`}
+                loading="lazy"
                 className="relative z-10 rounded-xl shadow-2xl w-full h-full object-cover transition-all duration-500"
               />
             </div>

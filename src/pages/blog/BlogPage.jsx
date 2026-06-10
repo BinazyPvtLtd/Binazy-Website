@@ -4,10 +4,16 @@ import Navbar from "@/components/common/Navbar";
 import Footer from "@/components/common/Footer";
 import FAQSection from "@/components/common/FAQSection";
 import { blogPosts } from "@/data/blogData";
+import SEO from "@/components/common/SEO";
 
 const BlogPage = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Binazy Blog | Websites, Software, Growth, and Automation"
+        description="Read practical articles from Binazy on website development, ecommerce, OTT apps, business software, automation, and digital growth."
+        path="/blog"
+      />
       <Navbar />
 
       <main id="main-content">
@@ -55,6 +61,7 @@ const BlogPage = () => {
                     <img
                       src={post.image}
                       alt={post.imageAlt}
+                      loading="lazy"
                       className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-linear-to-t from-slate-950/70 via-transparent to-transparent" />

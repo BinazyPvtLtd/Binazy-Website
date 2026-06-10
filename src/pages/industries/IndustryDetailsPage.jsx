@@ -8,7 +8,7 @@ const IndustryDetailsPage = () => {
 
   if (!data) return <Navigate to="/" replace />;
 
-  return <IndustryDetailsTemplate {...data} />;
+  return <IndustryDetailsTemplate {...data} industryId={industriesId} />;
 };
 
 export default IndustryDetailsPage;

@@ -8,8 +8,7 @@ export default function Hero() {
       className="relative flex min-h-[calc(100svh-4rem)] w-full items-center justify-center overflow-hidden bg-cover bg-center px-5 py-20 sm:px-8 lg:px-12"
       style={{
         backgroundImage: `url(${heroBackground})`,
-      }}
-    >
+      }}>
       <div className="relative z-10 mx-auto max-w-5xl text-center">
         {/* Heading */}
         <h1 className="mx-auto max-w-5xl text-4xl font-semibold leading-[1.08] tracking-normal text-white drop-shadow-2xl sm:text-5xl lg:text-6xl xl:text-7xl">
@@ -27,8 +26,7 @@ export default function Hero() {
         <div className="mt-9 flex justify-center sm:mt-10">
           <Link
             to="/contact-us"
-            className="inline-flex min-h-12 items-center justify-center rounded-lg bg-brand-600 px-7 py-3.5 text-base font-semibold text-white shadow-xl shadow-slate-950/30 transition duration-300 hover:-translate-y-0.5 hover:bg-brand-500 sm:px-8 sm:text-lg"
-          >
+            className="inline-flex min-h-12 items-center justify-center rounded-lg bg-brand-600 px-7 py-3.5 text-base font-semibold text-white shadow-xl shadow-slate-950/30 transition duration-300 hover:-translate-y-0.5 hover:bg-brand-500 sm:px-8 sm:text-lg">
             Start Your Free Demo
           </Link>
         </div>

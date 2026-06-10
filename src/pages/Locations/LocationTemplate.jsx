@@ -13,6 +13,7 @@ import { locationServices } from "@/data/LocationData";
 import Navbar from "@/components/common/Navbar";
 import Footer from "@/components/common/Footer";
 import FAQSection from "@/components/common/FAQSection";
+import SEO from "@/components/common/SEO";
 
 const iconMap = {
   Globe: <Globe size={18} />,
@@ -33,6 +34,11 @@ export default function LocationTemplate({ data }) {
 
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
+      <SEO
+        title={`IT Services in ${data.city}, ${data.country} | Binazy`}
+        description={data.heroSubheading}
+        path={`/locations/${data.id}`}
+      />
       <Navbar />
 
       <main id="main-content">

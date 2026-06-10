@@ -3,10 +3,17 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Home } from "lucide-react";
 import Navbar from "../components/common/Navbar";
 import Footer from "../components/common/Footer";
+import SEO from "@/components/common/SEO";
 
 const NotFound = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Page Not Found | Binazy"
+        description="The page you are looking for could not be found."
+        path="/404"
+        robots="noindex, follow"
+      />
       <Navbar />
 
       <main id="main-content">

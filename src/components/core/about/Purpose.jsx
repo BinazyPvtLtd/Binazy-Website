@@ -34,6 +34,7 @@ const PurposeCard = ({ title, description, image, points }) => {
         <img
           src={image}
           alt={title}
+          loading="lazy"
           className="w-full h-[400px] lg:h-[500px] object-cover rounded-2xl transition-transform duration-700 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-navy-900/10 group-hover:bg-transparent transition-colors duration-500"></div>

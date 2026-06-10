@@ -78,6 +78,7 @@ const Footer = () => {
               <img
                 src={Logo}
                 alt="Binazy Logo"
+                loading="lazy"
                 className="w-10 h-10 rounded-full object-contain"
               />
               <div className="text-xl font-bold tracking-tight text-slate-900">

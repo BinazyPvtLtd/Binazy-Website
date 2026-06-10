@@ -77,6 +77,7 @@ export default function SolutionsSection() {
                   <img
                     src={item.img}
                     alt={item.title}
+                    loading="lazy"
                     className="w-full h-64 object-cover"
                     style={{
                       clipPath:

@@ -9,7 +9,7 @@ const ServiceDetailsPage = () => {
   // If the URL doesn't match any service, redirect to home.
   if (!data) return <Navigate to="/" replace />;
 
-  return <ServiceDetailsTemplate {...data} />;
+  return <ServiceDetailsTemplate {...data} serviceId={serviceId} />;
 };
 
 export default ServiceDetailsPage;

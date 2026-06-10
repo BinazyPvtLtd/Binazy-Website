@@ -14,8 +14,7 @@ export default defineConfig({
     tailwindcss(),
     sitemap({
       hostname: "https://binazy.org",
-      routes: [
-        "/",
+      dynamicRoutes: [
         "/about",
         "/contact-us",
         "/blog",
@@ -54,6 +53,8 @@ export default defineConfig({
         "/locations/uae",
         "/locations/saudi-arabia",
       ],
+      exclude: ["/google2727c53547cd2fe5"],
+      readable: true,
     }),
   ],
   resolve: {

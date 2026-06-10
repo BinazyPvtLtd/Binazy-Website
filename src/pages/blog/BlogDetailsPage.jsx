@@ -1,10 +1,10 @@
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import { useEffect } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
 import Navbar from "@/components/common/Navbar";
 import Footer from "@/components/common/Footer";
 import FAQSection from "@/components/common/FAQSection";
 import { blogPosts, blogPostsById } from "@/data/blogData";
+import SEO from "@/components/common/SEO";
 
 const BlogDetailsPage = () => {
   const { blogId } = useParams();
@@ -13,37 +13,19 @@ const BlogDetailsPage = () => {
     ? blogPosts.filter((item) => item.id !== post.id).slice(0, 3)
     : [];
 
-  useEffect(() => {
-    if (!post) return undefined;
-
-    const previousTitle = document.title;
-    const metaDescription = document.querySelector('meta[name="description"]');
-    const previousDescription = metaDescription?.getAttribute("content") ?? "";
-
-    document.title = post.seoTitle ?? `${post.title} | Binazy Blog`;
-
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        post.metaDescription ?? post.description,
-      );
-    }
-
-    return () => {
-      document.title = previousTitle;
-
-      if (metaDescription) {
-        metaDescription.setAttribute("content", previousDescription);
-      }
-    };
-  }, [post]);
-
   if (!post) {
     return <Navigate to="/blog" replace />;
   }
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title={post.seoTitle ?? `${post.title} | Binazy Blog`}
+        description={post.metaDescription ?? post.description}
+        path={`/blog/${post.id}`}
+        type="article"
+        image={post.image}
+      />
       <Navbar />
 
       <main id="main-content">
@@ -87,6 +69,7 @@ const BlogDetailsPage = () => {
                 <img
                   src={post.image}
                   alt={post.imageAlt}
+                  loading="lazy"
                   className="h-72 w-full object-cover sm:h-96"
                 />
 

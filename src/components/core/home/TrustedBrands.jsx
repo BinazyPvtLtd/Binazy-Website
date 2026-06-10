@@ -71,6 +71,7 @@ function LogoItem({ logo }) {
       <img
         src={logo.logo}
         alt={`${logo.name} placeholder logo`}
+        loading="lazy"
         className="w-7 h-7 sm:w-8 sm:h-8 object-contain transition-all duration-300"
       />
       <span className="font-medium text-sm sm:text-base group-hover:text-slate-700 transition-colors duration-300">

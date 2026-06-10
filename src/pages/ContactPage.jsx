@@ -7,6 +7,7 @@ import Navbar from "../components/common/Navbar";
 import FAQSection from "@/components/common/FAQSection";
 import Footer from "../components/common/Footer";
 import SocialLinks from "../components/common/SocialLinks";
+import SEO from "@/components/common/SEO";
 
 const EMAILJS_SERVICE_ID = "service_yyz7lde";
 const EMAILJS_TEMPLATE_ID = "template_tupyprm";
@@ -72,6 +73,11 @@ const ContactPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Contact Binazy | Discuss Your Website, App, or Software Project"
+        description="Contact Binazy to discuss website development, mobile app development, custom software, ERP, AI automation, and digital product requirements."
+        path="/contact-us"
+      />
       <Navbar />
 
       <main id="main-content">
@@ -81,9 +87,9 @@ const ContactPage = () => {
             <p className="text-xs sm:text-sm font-medium uppercase tracking-[0.22em] text-gray-500">
               Contact Us
             </p>
-            <h2 className="section-heading text-gray-900 mt-2">
+            <h1 className="section-heading text-gray-900 mt-2">
               Get in Touch with Our Team
-            </h2>
+            </h1>
             <p className="section-subheading text-gray-500 mt-3">
               Fill out the form and our team will prepare your inquiry right
               away. You can also connect with us directly using the details

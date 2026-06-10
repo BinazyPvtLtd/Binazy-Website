@@ -2,10 +2,17 @@ import { CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/common/Navbar";
 import Footer from "@/components/common/Footer";
+import SEO from "@/components/common/SEO";
 
 const SubmitSuccess = () => {
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEO
+        title="Form Submitted | Binazy"
+        description="Your message has been submitted successfully. The Binazy team will contact you soon."
+        path="/submitSuccess"
+        robots="noindex, follow"
+      />
       <Navbar />
 
       <main

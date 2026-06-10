@@ -1,6 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
+import {
+  Menu,
+  X,
+  ChevronDown,
+  ChevronRight,
+  Code,
+  Headphones,
+  Cloud,
+  BarChart3,
+} from "lucide-react";
 import Logo from "@/assets/BinazyLogo.jpg";
 
 const navLinks = [
@@ -40,27 +49,29 @@ const locationMenu = [
 const servicesMenu = [
   {
     id: "software-and-app-development",
-    title: "Software & App Development",
+    title: "Website Development",
+    description: "Websites, apps, platforms, and business software.",
+    icon: Code,
 
     links: [
       {
-        name: "Business Website",
+        name: "Custom Web Applications",
         to: "/services/business-website-development",
       },
       {
-        name: "Ecommerce Webiste",
+        name: "Portal Development",
         to: "/services/online-store",
       },
       {
-        name: "OTT Platform Development",
+        name: "Progressive Web Apps (PWA)",
         to: "/services/ott-platform-development",
       },
       {
-        name: "Mobile App",
+        name: "Enterprise Web Solutions",
         to: "/services/mobile-app-development",
       },
       {
-        name: "Booking & Appointment System",
+        name: "API Development & Integration",
         to: "/services/booking-appointment-system",
       },
 
@@ -77,19 +88,29 @@ const servicesMenu = [
 
   {
     id: "it-support-and-managed-services",
-    title: "IT Support & Managed Services",
+    title: "Mobile App Development Services",
+    description: "Support systems, helpdesk workflows, and monitoring.",
+    icon: Headphones,
     links: [
       {
-        name: "HR & Payroll System",
+        name: "Android App Development",
         to: "/services/hr-payroll-system",
       },
 
       {
-        name: "24/7 Helpdesk Support",
+        name: "iOS App Development",
         to: "/services/24-7-helpdesk-support",
       },
       {
-        name: "Remote Monitoring",
+        name: "Flutter App Development",
+        to: "/services/remote-monitoring",
+      },
+      {
+        name: "React Native App Development",
+        to: "/services/remote-monitoring",
+      },
+      {
+        name: "Cross-Platform Applications",
         to: "/services/remote-monitoring",
       },
     ],
@@ -97,7 +118,10 @@ const servicesMenu = [
 
   {
     id: "cloud-and-infrastructure-services",
-    title: "Cloud & Infrastructure Services",
+    title: " Custom Software Development",
+    description:
+      "Learning platforms, portals, and scalable product foundations.",
+    icon: Cloud,
     links: [
       {
         name: "Online Learning Platform",
@@ -116,7 +140,108 @@ const servicesMenu = [
 
   {
     id: "data-and-analytics-solutions",
-    title: "Data Analytics & AI Automation ",
+    title: " ERP System Development ",
+    description: "Dashboards, automation tools, and AI assistants.",
+    icon: BarChart3,
+    links: [
+      {
+        name: "Business Dashboard",
+        to: "/services/business-dashboard",
+      },
+      {
+        name: "Sales & Inventory Reports",
+        to: "/services/sales-inventory-reports",
+      },
+
+      {
+        name: "Marketing Performance Tracking",
+        to: "/services/marketing-performance-tracking",
+      },
+      {
+        name: "24/7 AI Customer Support Agent",
+        to: "/services/ai-customer-support-agent",
+      },
+      {
+        name: "Smart Document Processing",
+        to: "/services/smart-document-processing",
+      },
+      {
+        name: "AI Sales Assistant",
+        to: "/services/ai-sales-assistant",
+      },
+    ],
+  },
+  {
+    id: "ecommerce-website-development",
+    title: "Ecommerce Website Development",
+    description: "Dashboards, automation tools, and AI assistants.",
+    icon: BarChart3,
+    links: [
+      {
+        name: "Business Dashboard",
+        to: "/services/business-dashboard",
+      },
+      {
+        name: "Sales & Inventory Reports",
+        to: "/services/sales-inventory-reports",
+      },
+
+      {
+        name: "Marketing Performance Tracking",
+        to: "/services/marketing-performance-tracking",
+      },
+      {
+        name: "24/7 AI Customer Support Agent",
+        to: "/services/ai-customer-support-agent",
+      },
+      {
+        name: "Smart Document Processing",
+        to: "/services/smart-document-processing",
+      },
+      {
+        name: "AI Sales Assistant",
+        to: "/services/ai-sales-assistant",
+      },
+    ],
+  },
+  {
+    id: "ott-platform-development",
+    title: "OTT Platform Development",
+    description: "Dashboards, automation tools, and AI assistants.",
+    icon: BarChart3,
+    links: [
+      {
+        name: "Business Dashboard",
+        to: "/services/business-dashboard",
+      },
+      {
+        name: "Sales & Inventory Reports",
+        to: "/services/sales-inventory-reports",
+      },
+
+      {
+        name: "Marketing Performance Tracking",
+        to: "/services/marketing-performance-tracking",
+      },
+      {
+        name: "24/7 AI Customer Support Agent",
+        to: "/services/ai-customer-support-agent",
+      },
+      {
+        name: "Smart Document Processing",
+        to: "/services/smart-document-processing",
+      },
+      {
+        name: "AI Sales Assistant",
+        to: "/services/ai-sales-assistant",
+      },
+    ],
+  },
+  {
+    id: "booking-appointment-systems",
+    title: "Booking & Appointment Systems",
+    description: "Dashboards, automation tools, and AI assistants.",
+    icon: BarChart3,
     links: [
       {
         name: "Business Dashboard",
@@ -191,83 +316,71 @@ const industriesMenu = [
 //   }
 //   ];
 
-function ServicesMegaMenu({ currentPath, data, id, onNavigate }) {
-  const [activeSection, setActiveSection] = useState(null);
-
+function ServicesMegaMenu({
+  currentPath,
+  data,
+  id,
+  onNavigate,
+  onMouseEnter,
+  onMouseLeave,
+}) {
   return (
     <div
       id={id}
-      className="absolute top-full left-1/2 -translate-x-1/2 pt-4 z-50"
-      aria-label="Services menu">
-      <div className="min-w-68 overflow-visible rounded-2xl border border-gray-100 bg-white p-3 shadow-2xl">
-        <div className="space-y-1">
-          {data.map((section) =>
-            section.links?.length ? (
-              <div
-                key={section.id}
-                className="relative"
-                onMouseEnter={() => setActiveSection(section.id)}
-                onFocus={() => setActiveSection(section.id)}>
-                <button
-                  type="button"
-                  onClick={() =>
-                    setActiveSection((current) =>
-                      current === section.id ? null : section.id,
-                    )
-                  }
-                  className={`flex w-full items-center justify-between rounded-xl px-3 py-3 text-left text-sm font-medium transition ${
-                    activeSection === section.id
-                      ? "bg-brand-50 text-brand-700"
-                      : "text-slate-700 hover:bg-slate-50 hover:text-brand-600"
-                  }`}>
-                  <span>{section.title}</span>
-                  <ChevronRight className="h-4 w-4" aria-hidden="true" />
-                </button>
+      className="fixed left-1/2 top-16 z-50 w-[min(76rem,calc(100vw-2rem))] -translate-x-1/2 pt-3"
+      aria-label="Services menu"
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}>
+      <div className="max-h-[calc(100vh-5.5rem)] overflow-y-auto rounded-2xl border border-white/20 bg-white shadow-2xl shadow-brand-950/25 ring-1 ring-slate-950/5">
+        <div className="bg-slate-50 p-4">
+          <div className="grid grid-cols-2 gap-3 xl:grid-cols-4">
+            {data.map((section) => {
+              const Icon = section.icon;
 
-                {activeSection === section.id && (
-                  <div className="absolute left-full top-0 z-20 ml-2 min-w-[18rem] rounded-2xl border border-gray-100 bg-white p-3 shadow-2xl">
-                    <div className="mb-2 px-3 pt-1 text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">
-                      {section.title}
-                    </div>
+              return (
+                <div
+                  key={section.id}
+                  className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:border-brand-200 hover:shadow-lg hover:shadow-brand-950/10">
+                  <div className="flex min-h-12 items-start gap-3">
+                    {Icon && (
+                      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-brand-50 text-brand-700">
+                        <Icon className="h-4 w-4" aria-hidden="true" />
+                      </span>
+                    )}
 
-                    <div className="space-y-1">
-                      {section.links.map((item) => (
-                        <Link
-                          key={item.to}
-                          to={item.to}
-                          onClick={onNavigate}
-                          aria-current={
-                            currentPath === item.to ? "page" : undefined
-                          }
-                          className={`block rounded-xl px-3 py-2.5 text-sm transition ${
-                            currentPath === item.to
-                              ? "bg-brand-50 text-brand-700"
-                              : "text-slate-700 hover:bg-slate-50 hover:text-brand-600"
-                          }`}>
-                          {item.name}
-                        </Link>
-                      ))}
+                    <div className="min-w-0">
+                      <h3 className="text-sm font-semibold leading-5 text-slate-950">
+                        {section.title}
+                      </h3>
                     </div>
                   </div>
-                )}
-              </div>
-            ) : (
-              <Link
-                key={section.id}
-                to={section.to}
-                onMouseEnter={() => setActiveSection(null)}
-                onFocus={() => setActiveSection(null)}
-                onClick={onNavigate}
-                aria-current={currentPath === section.to ? "page" : undefined}
-                className={`flex items-center justify-between rounded-xl px-3 py-3 text-sm font-medium transition ${
-                  currentPath === section.to
-                    ? "bg-brand-50 text-brand-700"
-                    : "text-slate-700 hover:bg-slate-50 hover:text-brand-600"
-                }`}>
-                <span>{section.title}</span>
-              </Link>
-            ),
-          )}
+
+                  <div className="mt-4 space-y-1">
+                    {section.links.map((item) => (
+                      <Link
+                        key={`${section.id}-${item.name}-${item.to}`}
+                        to={item.to}
+                        onClick={onNavigate}
+                        aria-current={
+                          currentPath === item.to ? "page" : undefined
+                        }
+                        className={`group flex min-h-9 items-center justify-between gap-2 rounded-lg px-3 py-2 text-sm leading-5 transition ${
+                          currentPath === item.to
+                            ? "bg-brand-50 font-semibold text-brand-700"
+                            : "text-slate-600 hover:bg-brand-50 hover:text-brand-700"
+                        }`}>
+                        <span>{item.name}</span>
+                        <ChevronRight
+                          className="h-3.5 w-3.5 shrink-0 opacity-0 transition group-hover:translate-x-0.5 group-hover:opacity-100"
+                          aria-hidden="true"
+                        />
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>
@@ -279,12 +392,14 @@ const Navbar = () => {
   const [activeMega, setActiveMega] = useState(null);
   const [mobileDropdown, setMobileDropdown] = useState(null);
   const [mobileServiceGroup, setMobileServiceGroup] = useState(null);
+  const megaCloseTimer = useRef(null);
 
   const location = useLocation();
 
   useEffect(() => {
     const handleEscape = (event) => {
       if (event.key === "Escape") {
+        clearTimeout(megaCloseTimer.current);
         setActiveMega(null);
         setMobileOpen(false);
         setMobileDropdown(null);
@@ -293,23 +408,40 @@ const Navbar = () => {
     };
 
     window.addEventListener("keydown", handleEscape);
-    return () => window.removeEventListener("keydown", handleEscape);
+    return () => {
+      clearTimeout(megaCloseTimer.current);
+      window.removeEventListener("keydown", handleEscape);
+    };
   }, []);
+
+  const openMega = (menuName) => {
+    clearTimeout(megaCloseTimer.current);
+    setActiveMega(menuName);
+  };
+
+  const closeMegaWithDelay = () => {
+    clearTimeout(megaCloseTimer.current);
+    megaCloseTimer.current = setTimeout(() => {
+      setActiveMega(null);
+    }, 180);
+  };
 
   const closeMegaOnBlur = (event) => {
     if (!event.currentTarget.contains(event.relatedTarget)) {
-      setActiveMega(null);
+      closeMegaWithDelay();
     }
   };
 
   const closeMegaOnEscape = (event) => {
     if (event.key === "Escape") {
+      clearTimeout(megaCloseTimer.current);
       setActiveMega(null);
       event.currentTarget.querySelector("button, a")?.focus();
     }
   };
 
   const closeAllMenus = () => {
+    clearTimeout(megaCloseTimer.current);
     setMobileOpen(false);
     setMobileDropdown(null);
     setMobileServiceGroup(null);
@@ -364,9 +496,9 @@ const Navbar = () => {
           {/* Desktop services mega menu trigger */}
           <div
             className="relative cursor-pointer"
-            onMouseEnter={() => setActiveMega("services")}
-            onMouseLeave={() => setActiveMega(null)}
-            onFocus={() => setActiveMega("services")}
+            onMouseEnter={() => openMega("services")}
+            onMouseLeave={closeMegaWithDelay}
+            onFocus={() => openMega("services")}
             onBlur={closeMegaOnBlur}
             onKeyDown={closeMegaOnEscape}>
             <button
@@ -395,6 +527,8 @@ const Navbar = () => {
                 data={servicesMenu}
                 id="services-mega-menu"
                 onNavigate={closeAllMenus}
+                onMouseEnter={() => openMega("services")}
+                onMouseLeave={closeMegaWithDelay}
               />
             )}
           </div>
@@ -638,7 +772,7 @@ const Navbar = () => {
                           <div className="space-y-1 pb-2 pl-3">
                             {section.links.map((item) => (
                               <Link
-                                key={item.to}
+                                key={`${section.id}-${item.name}-${item.to}`}
                                 to={item.to}
                                 onClick={closeAllMenus}
                                 aria-current={

@@ -4,6 +4,7 @@ import Footer from "../../components/common/Footer";
 import FAQSection from "@/components/common/FAQSection";
 import StatsSection from "@/components/common/StatsSection";
 import WhyChooseSection from "@/components/common/WhyChooseSection";
+import SEO from "@/components/common/SEO";
 import industryRealEstateOne from "@/assets/industry-realestate-1.jpg";
 import industryEcommerceOne from "@/assets/industry-ecommerce-1.jpg";
 import industryEcommerceTwo from "@/assets/industry-ecommerce-2.jpg";
@@ -62,6 +63,7 @@ function getSolutionImage(industryLabel, index) {
 }
 
 export default function IndustryDetailsTemplate({
+  industryId,
   label,
   title,
   titleHighlight,
@@ -76,6 +78,11 @@ export default function IndustryDetailsTemplate({
   return (
     
     <div className="min-h-screen overflow-x-hidden bg-background">
+      <SEO
+        title={`${title} ${titleHighlight} | Binazy Industry Solutions`}
+        description={subtitle}
+        path={`/industries/${industryId}`}
+      />
       <Navbar />
 
       <main id="main-content">
@@ -118,6 +125,7 @@ export default function IndustryDetailsTemplate({
                     <img
                       src={project.image}
                       alt={project.alt}
+                      loading="lazy"
                       className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 group-focus-visible:scale-105"
                     />
 
@@ -202,6 +210,7 @@ export default function IndustryDetailsTemplate({
                       <img
                         src={solutionImage}
                         alt={solution.title}
+                        loading="lazy"
                         className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 group-focus-visible:scale-105"
                       />
                       <div className="absolute inset-0 bg-linear-to-t from-slate-950 via-slate-950/45 to-slate-950/10" />

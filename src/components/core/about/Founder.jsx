@@ -13,6 +13,7 @@ const Founder = () => {
               <img
                 src={founderPortrait}
                 alt="Binazy Founder"
+                loading="lazy"
                 className="w-full h-125 object-cover hover: transition duration-500"
               />
             </div>
