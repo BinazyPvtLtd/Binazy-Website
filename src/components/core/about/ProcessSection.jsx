@@ -50,20 +50,20 @@ const ProcessSection = () => {
           {processes.map((step, index) => (
             <div
               key={index}
-              className="group relative bg-white border-2 rounded-3xl p-7 lg:p-8 hover:shadow-xl  hover:-translate-y-2 transition-all duration-400">
+              className="group relative bg-white border-2 rounded-2xl sm:rounded-3xl p-6 sm:p-7 lg:p-8 hover:shadow-xl hover:-translate-y-2 transition-all duration-400">
               {/* Number */}
-              <span className="absolute top-6 right-6 text-5xl font-black text-slate-100 group-hover:text-slate-200 transition-all duration-500">
+              <span className="absolute top-5 sm:top-6 right-5 sm:right-6 text-4xl sm:text-5xl font-black text-slate-100 group-hover:text-slate-200 transition-all duration-500">
                 0{index + 1}
               </span>
 
               {/* Icon */}
               <div
-                className={`w-16 h-16 rounded-2xl  flex items-center justify-center mb-7 shadow-sm`}>
+                className={`w-14 h-14 sm:w-16 sm:h-16 rounded-2xl flex items-center justify-center mb-6 sm:mb-7 shadow-sm`}>
                 <step.icon className="w-7 h-7" />
               </div>
 
               {/* Content */}
-              <h3 className="text-xl lg:text-2xl font-bold text-slate-900 mb-4 pr-10">
+              <h3 className="text-xl lg:text-2xl font-bold text-slate-900 mb-3 sm:mb-4 pr-10">
                 {step.title}
               </h3>
 

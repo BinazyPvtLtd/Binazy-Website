@@ -1,6 +1,6 @@
-import businessWebsiteImage from "@/assets/webimgg.jpg";
-import aiAutomationImage from "@/assets/ott2.jpg";
-import ecommerceImage from "@/assets/ecommerce.jpg";
+import businessWebsiteImage from "../assets/blog1.jpg";
+import aiAutomationImage from "../assets/blog2.jpg";
+import ecommerceImage from "../assets/blog3.jpg";
 
 export const blogPosts = [
   {
@@ -170,6 +170,7 @@ export const blogPosts = [
     closing:
       "Choosing the right web design & development company is not about finding the fanciest pitch. It is about finding a partner who understands local business goals, explains technology clearly, and builds a website that works on mobile, loads fast, stays secure, and helps generate real inquiries. When you ask the right questions and insist on clear ownership, support, and process, you greatly reduce the chance of wasting money on the wrong agency.",
   },
+
   {
     id: "ecommerce-development-build-your-own-online-store",
     category: "E-commerce Development",

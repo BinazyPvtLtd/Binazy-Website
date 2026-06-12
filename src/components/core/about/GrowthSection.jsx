@@ -55,10 +55,10 @@ export default function GrowthSection() {
             From MVP launch to expansion, we move with your vision.
           </p>
 
-          <div className="mt-10 flex flex-wrap gap-4">
+          <div className="mt-8 sm:mt-10 flex flex-wrap gap-4">
                <Link
             to="/contact-us"
-            className="inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-white px-8 py-4 rounded-xl font-semibold transition">
+            className="inline-flex w-full sm:w-auto items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-white px-6 sm:px-8 py-4 rounded-xl font-semibold transition">
           Book a Free Consultation
             {/* <ArrowRight className="w-4 h-4" /> */}
           </Link>
@@ -84,10 +84,10 @@ export default function GrowthSection() {
                   onClick={() => toggleAccordion(index)}
                   aria-expanded={isOpen}
                   aria-controls={`growth-panel-${index}`}
-                  className="w-full flex items-center justify-between text-left px-5 py-4 group"
+                  className="w-full flex items-center justify-between gap-4 text-left px-4 sm:px-5 py-4 group"
                 >
                   <span
-                    className={`text-xl font-bold transition-colors ${
+                    className={`text-lg sm:text-xl font-bold transition-colors ${
                       isOpen ? "text-brand-600" : "text-navy-900"
                     }`}
                   >
@@ -95,7 +95,7 @@ export default function GrowthSection() {
                   </span>
 
                   <span
-                    className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
+                    className={`w-8 h-8 rounded-full flex-shrink-0 flex items-center justify-center transition-all duration-300 ${
                       isOpen
                         ? "bg-brand-600 text-white"
                         : "bg-slate-200 text-slate-500"
@@ -118,7 +118,7 @@ export default function GrowthSection() {
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <p className="px-5 pb-5 text-slate-600 leading-relaxed text-lg">
+                    <p className="px-4 sm:px-5 pb-5 text-slate-600 leading-relaxed text-base sm:text-lg">
                       {item.content}
                     </p>
                   </div>

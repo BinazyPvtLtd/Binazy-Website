@@ -19,34 +19,13 @@ import industryEducationOne from "@/assets/digital-journey-elearning.jpg";
 import industryEducationTwo from "@/assets/digital-journey-elearning.jpg";
 
 const industrySolutionImages = {
-  "real estate": [
-    industryRealEstateOne,
-    industryRealEstateOne,
-  ],
-  education: [
-    industryEducationOne,
-    industryEducationTwo,
-  ],
-  ecommerce: [
-    industryEcommerceOne,
-    industryEcommerceTwo,
-  ],
-  healthcare: [
-    industryHealthcareOne,
-    industryHealthcareTwo,
-  ],
-  fintech: [
-    industryFintechOne,
-    industryFintechOne,
-  ],
-  travel: [
-    industryTravelOne,
-    industryTravelTwo,
-  ],
-  manufacturing: [
-    industryManufacturingOne,
-    industryManufacturingTwo,
-  ],
+  "real estate": [industryRealEstateOne, industryRealEstateOne],
+  education: [industryEducationOne, industryEducationTwo],
+  ecommerce: [industryEcommerceOne, industryEcommerceTwo],
+  healthcare: [industryHealthcareOne, industryHealthcareTwo],
+  fintech: [industryFintechOne, industryFintechOne],
+  travel: [industryTravelOne, industryTravelTwo],
+  manufacturing: [industryManufacturingOne, industryManufacturingTwo],
 };
 
 function getSolutionImage(industryLabel, index) {
@@ -68,15 +47,10 @@ export default function IndustryDetailsTemplate({
   title,
   titleHighlight,
   subtitle,
-  spotlightHeading,
-  projects,
   solutionsHeading,
-  solutionsTagline,
-  solutionsDescription,
   solutions,
 }) {
   return (
-    
     <div className="min-h-screen overflow-x-hidden bg-background">
       <SEO
         title={`${title} ${titleHighlight} | Binazy Industry Solutions`}
@@ -86,7 +60,6 @@ export default function IndustryDetailsTemplate({
       <Navbar />
 
       <main id="main-content">
-        
         <section className="bg-[#0f2070]  text-white">
           <div className="section-container pt-28 pb-16 sm:pt-32 sm:pb-20 lg:pt-40 lg:pb-24">
             <div className="max-w-4xl">
@@ -102,97 +75,17 @@ export default function IndustryDetailsTemplate({
           </div>
         </section>
 
-        <section className="section-padding bg-white">
-          <div className="section-container">
-            <div className="max-w-3xl">
-              <div className="max-w-3xl">
-                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-brand-600">
-                  Project Spotlights
-                </p>
-                <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
-                  {spotlightHeading}
-                </h2>
-              </div>
-            </div>
-
-            <div className="mt-10 grid gap-6 md:grid-cols-2 lg:mt-14 xl:gap-8">
-              {projects.map((project, index) => (
-                <article
-                  key={project.name || index}
-                  tabIndex={0}
-                  className="group relative overflow-hidden rounded-[2rem] border border-slate-200 bg-slate-950 shadow-[0_20px_60px_rgba(15,23,42,0.12)] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-brand-200">
-                  <div className="relative min-h-[320px] sm:min-h-[380px]">
-                    <img
-                      src={project.image}
-                      alt={project.alt}
-                      loading="lazy"
-                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 group-focus-visible:scale-105"
-                    />
-
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/35 to-transparent" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#08123a]/90 via-transparent to-transparent opacity-0 transition-opacity duration-300 md:group-hover:opacity-100 md:group-focus-visible:opacity-100" />
-
-                    <div className="absolute inset-x-0 top-0 flex items-start justify-between p-5 sm:p-6">
-                      <p className="rounded-full border border-white/15 bg-black/25 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-blue-100 backdrop-blur-sm">
-                        Project {String(index + 1).padStart(2, "0")}
-                      </p>
-                    </div>
-
-                    <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
-                      <div className="space-y-4">
-                        <h3 className="max-w-[16rem] text-2xl font-semibold leading-tight tracking-tight text-white sm:text-3xl">
-                          {project.name || project.alt}
-                        </h3>
-
-                        <div className="space-y-4 md:max-h-0 md:translate-y-6 md:overflow-hidden md:opacity-0 md:transition-all md:duration-300 md:group-hover:max-h-64 md:group-hover:translate-y-0 md:group-hover:opacity-100 md:group-focus-visible:max-h-64 md:group-focus-visible:translate-y-0 md:group-focus-visible:opacity-100">
-                          <p className="max-w-xl text-sm leading-7 text-slate-100 sm:text-base">
-                            {project.description}
-                          </p>
-
-                          <div className="flex flex-wrap items-center gap-3 text-sm font-medium text-slate-200">
-                            <span className="inline-flex rounded-full border border-white/15 bg-white/10 px-3 py-1 backdrop-blur-sm">
-                              Industry-ready flow
-                            </span>
-                            <span className="inline-flex rounded-full border border-white/15 bg-white/10 px-3 py-1 backdrop-blur-sm">
-                              UX + Operations
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
         <section className="section-padding bg-slate-50">
           <div className="section-container">
             <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_380px] lg:items-end">
               <div className="max-w-4xl">
-                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-brand-600">
-                  Solution System
-                </p>
-                <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-6xl">
+                <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-3xl">
                   {solutionsHeading}
                 </h2>
               </div>
-
-              <div className="rounded-[1.75rem] bg-[#0d1d56] p-6 text-white shadow-xl shadow-blue-950/20">
-                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-blue-200">
-                  Solutions Tagline
-                </p>
-                <p className="mt-3 text-2xl font-semibold tracking-tight text-white">
-                  {solutionsTagline}
-                </p>
-                <p className="mt-4 text-sm leading-relaxed text-blue-100">
-                  {solutionsDescription}
-                </p>
-              </div>
             </div>
 
-            <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 xl:mt-14 xl:grid-cols-3">
+            <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 xl:mt-12 xl:grid-cols-3">
               {solutions.map((solution, index) => {
                 const Icon = solution.icon;
                 const solutionImage = getSolutionImage(label, index);
@@ -201,43 +94,33 @@ export default function IndustryDetailsTemplate({
                   <article
                     key={solution.title}
                     tabIndex={0}
-                    className="group relative overflow-hidden rounded-[1.75rem] border border-slate-200 bg-slate-950 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-200/70 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-brand-200">
-                    <div className="absolute right-5 top-5 text-xs font-semibold uppercase tracking-[0.24em] text-slate-300">
-                      {String(index + 1).padStart(2, "0")}
-                    </div>
-
-                    <div className="relative min-h-75 sm:min-h-[340px]">
+                    className="group flex h-full flex-col overflow-hidden border border-slate-200 bg-white">
+                    <div className="relative h-44 overflow-hidden sm:h-48">
                       <img
                         src={solutionImage}
                         alt={solution.title}
                         loading="lazy"
-                        className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 group-focus-visible:scale-105"
+                        className="absolute inset-0 h-full w-full object-cover  "
                       />
-                      <div className="absolute inset-0 bg-linear-to-t from-slate-950 via-slate-950/45 to-slate-950/10" />
-                      <div className="absolute inset-0 bg-linear-to-t from-[#08123a]/95 via-[#08123a]/65 to-[#08123a]/25 opacity-0 transition-opacity duration-300 md:group-hover:opacity-100 md:group-focus-visible:opacity-100" />
+                      <div className="absolute inset-0 bg-linear-to-t from-slate-950/30 via-transparent to-transparent" />
+                    </div>
 
-                      <div className="relative z-10 flex h-full flex-col justify-between p-6 sm:p-7">
+                    <div className="flex flex-1 flex-col p-5 sm:p-6">
+                      <div className="mb-5 flex items-start justify-between gap-4">
                         <div
-                          className={`inline-flex h-16 w-16 items-center justify-center rounded-[1.35rem] ${solution.iconBg} shadow-lg shadow-slate-950/20 backdrop-blur-sm transition-transform duration-300 group-hover:scale-105 group-focus-visible:scale-105`}>
-                          <Icon className="h-8 w-8" />
+                          className={`inline-flex h-11 w-11 shrink-0 items-center justify-center ${solution.iconBg}`}>
+                          <Icon className="h-5 w-5" />
                         </div>
+                      </div>
 
-                        <div className="space-y-4">
-                          <h3 className="max-w-[18rem] text-xl font-semibold leading-snug tracking-tight text-white sm:text-2xl">
-                            {solution.title}
-                          </h3>
+                      <div className="flex flex-1 flex-col">
+                        <h3 className="text-lg font-semibold leading-snug tracking-tight text-slate-950 transition-colors duration-300 group-hover:text-brand-700 sm:text-xl">
+                          {solution.title}
+                        </h3>
 
-                          <div className="space-y-4 md:max-h-0 md:translate-y-5 md:overflow-hidden md:opacity-0 md:transition-all md:duration-300 md:group-hover:max-h-48 md:group-hover:translate-y-0 md:group-hover:opacity-100 md:group-focus-visible:max-h-48 md:group-focus-visible:translate-y-0 md:group-focus-visible:opacity-100">
-                            <p className="text-sm leading-7 text-slate-100 sm:text-base">
-                              {solution.description}
-                            </p>
-
-                            <div className="flex items-center gap-2 text-sm font-medium text-blue-200">
-                              <span>Solution-ready module</span>
-                              <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-focus-visible:translate-x-1 group-focus-visible:-translate-y-1" />
-                            </div>
-                          </div>
-                        </div>
+                        <p className="mt-3 text-sm leading-6 text-slate-600">
+                          {solution.description}
+                        </p>
                       </div>
                     </div>
                   </article>
@@ -248,7 +131,6 @@ export default function IndustryDetailsTemplate({
         </section>
 
         <StatsSection />
-        <WhyChooseSection />
         <FAQSection />
       </main>
       <Footer />

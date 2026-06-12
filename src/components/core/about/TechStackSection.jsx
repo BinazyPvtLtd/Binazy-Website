@@ -43,9 +43,9 @@ const row2 = [
 ];
 
 const TechCard = ({ item }) => (
-  <div className="min-w-45 bg-white rounded-xl shadow-sm px-6 py-5 flex items-center gap-3 hover:shadow-md transition-all duration-300">
-    <div className="text-4xl">{item.icon}</div>
-    <p className="font-semibold text-gray-700 whitespace-nowrap">{item.name}</p>
+  <div className="min-w-36 sm:min-w-45 bg-white rounded-xl shadow-sm px-4 sm:px-6 py-4 sm:py-5 flex items-center gap-3 hover:shadow-md transition-all duration-300">
+    <div className="text-3xl sm:text-4xl">{item.icon}</div>
+    <p className="font-semibold text-sm sm:text-base text-gray-700 whitespace-nowrap">{item.name}</p>
   </div>
 );
 

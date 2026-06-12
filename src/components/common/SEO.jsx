@@ -17,6 +17,7 @@ const SEO = ({
   path = "/",
   type = "website",
   image,
+
   robots = "index, follow",
 }) => {
   const canonicalUrl = getAbsoluteUrl(path);

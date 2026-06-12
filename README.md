@@ -3,7 +3,7 @@
 A modern marketing website frontend for Binazy Pvt Ltd built with Vite and React.
 
 ## Features
-- Component-based UI organized under `frontend/src/components`
+- Component-based UI organized under `src/components`
 - Pages for Home, About, Services, Industries, Locations, and Blog
 - Fast dev server with Vite
 
@@ -14,11 +14,10 @@ A modern marketing website frontend for Binazy Pvt Ltd built with Vite and React
 - Node.js & npm
 
 ## Quick start
-1. Open a terminal in the project root (this repo).
+1. Open a terminal in the project root.
 2. Install dependencies:
 
 ```bash
-cd frontend
 npm install
 ```
 
@@ -41,10 +40,8 @@ npm run preview
 ```
 
 ## Project structure (important files)
-- [frontend/src/main.jsx](frontend/src/main.jsx#L1) — app entry
-- [frontend/src/App.jsx](frontend/src/App.jsx#L1) — main app component
-- [frontend/src/components](frontend/src/components) — UI components
-- [frontend/data](frontend/data) — sample content and data files
-- [frontend/public](frontend/public) — static public assets
-
-
+- [src/main.jsx](src/main.jsx#L1) - app entry
+- [src/App.jsx](src/App.jsx#L1) - main app component
+- [src/components](src/components) - UI components
+- [src/data](src/data) - content and data files
+- [public](public) - static public assets

@@ -74,7 +74,7 @@ const ContactPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Contact Binazy | Discuss Your Website, App, or Software Project"
+        title="Contact Binazy | Discuss Your Website, App, or Software Project."
         description="Contact Binazy to discuss website development, mobile app development, custom software, ERP, AI automation, and digital product requirements."
         path="/contact-us"
       />

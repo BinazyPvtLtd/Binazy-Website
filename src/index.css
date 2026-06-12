@@ -640,6 +640,37 @@
   animation: trusted-brands-scroll 25s linear infinite;
 }
 
+.offering-swiper .swiper-button-prev,
+.offering-swiper .swiper-button-next {
+  top: auto;
+  bottom: 0;
+  width: 44px;
+  height: 44px;
+  margin-top: 0;
+  border-radius: 9999px;
+  background: #2030a8;
+  color: #ffffff;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.16);
+}
+
+.offering-swiper .swiper-button-prev {
+  left: calc(50% - 54px);
+}
+
+.offering-swiper .swiper-button-next {
+  right: calc(50% - 54px);
+}
+
+.offering-swiper .swiper-button-prev::after,
+.offering-swiper .swiper-button-next::after {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.offering-swiper .swiper-button-disabled {
+  opacity: 0.45;
+}
+
 @media (max-width: 640px) {
   .animate-scroll {
     animation: trusted-brands-scroll 18s linear infinite;

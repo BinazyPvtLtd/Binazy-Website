@@ -1,6 +1,5 @@
 import Navbar from "../components/common/Navbar";
 import Hero from "../components/core/home/Hero";
-import TrustedBrands from "../components/core/home/TrustedBrands";
 import Features from "../components/core/home/Features";
 import Footer from "../components/common/Footer";
 import WhyChooseUs from "@/components/core/home/WhyChooseUs";
@@ -25,7 +24,7 @@ const Home = () => {
       <Navbar />
       <main id="main-content" className="pt-16 ">
         <Hero />
-        <TrustedBrands />
+
         <DigitalJourney />
         <SolutionsSection />
         <TechStackSection />

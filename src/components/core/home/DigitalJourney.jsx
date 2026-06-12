@@ -49,7 +49,6 @@ const DigitalJourney = () => {
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight leading-tight text-slate-900">
             Solutions Built for Every
             <br />
-
             <span className="text-brand-600"> Industry Need</span>
           </h2>
         </div>

@@ -51,41 +51,38 @@ const BlogPage = () => {
               </p>
             </div>
 
-            <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
               {blogPosts.map((post) => (
                 <Link
                   key={post.id}
                   to={`/blog/${post.id}`}
-                  className="group overflow-hidden rounded-[1.75rem] border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_80px_rgba(15,23,42,0.12)] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-brand-200">
-                  <div className="relative h-60 overflow-hidden">
+                  className="group flex h-full flex-col overflow-hidden border border-slate-200 bg-white focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-brand-200">
+                  <div className="relative h-44 overflow-hidden sm:h-48">
                     <img
                       src={post.image}
                       alt={post.imageAlt}
                       loading="lazy"
-                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="h-full w-full object-cover "
                     />
                     <div className="absolute inset-0 bg-linear-to-t from-slate-950/70 via-transparent to-transparent" />
-                    <div className="absolute left-5 top-5 rounded-full border border-white/25 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-white backdrop-blur-sm">
-                      {post.category}
-                    </div>
                   </div>
 
-                  <div className="space-y-4 p-6">
-                    <div className="flex flex-wrap items-center gap-3 text-xs font-medium uppercase tracking-[0.18em] text-slate-500">
+                  <div className="flex flex-1 flex-col space-y-3 p-5">
+                    <div className="flex flex-wrap items-center gap-2 text-[11px] font-medium uppercase tracking-[0.14em] text-slate-500">
                       <span>{post.publishedAt}</span>
                       <span className="h-1 w-1 rounded-full bg-slate-300" />
                       <span>{post.readTime}</span>
                     </div>
 
-                    <h3 className="text-2xl font-semibold leading-snug tracking-tight text-slate-900 transition-colors group-hover:text-brand-700">
+                    <h3 className="text-xl font-semibold leading-snug tracking-tight text-slate-900 transition-colors group-hover:text-brand-700">
                       {post.title}
                     </h3>
 
-                    <p className="text-sm leading-7 text-slate-600 sm:text-base">
+                    <p className="text-sm leading-6 text-slate-600">
                       {post.description}
                     </p>
 
-                    <div className="inline-flex items-center gap-2 text-sm font-semibold text-brand-600">
+                    <div className="mt-auto inline-flex items-center gap-2 pt-1 text-sm font-semibold text-brand-600">
                       Read article
                       <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                     </div>

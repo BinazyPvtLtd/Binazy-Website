@@ -14,11 +14,11 @@ const ImageGallery = () => {
         </p>
       </div>
       <div className="section-container">
-        <div className="relative group overflow-hidden rounded-[2rem] shadow-2xl">
+        <div className="relative group overflow-hidden rounded-2xl sm:rounded-[2rem] shadow-2xl">
           <img 
             src={OFFICE} 
             loading="lazy"
-            className="w-full h-100 md:h-auto object-cover md:object-contain rounded-[2rem] transition-transform duration-1000 group-hover:scale-105" 
+            className="w-full h-[260px] sm:h-[360px] md:h-auto object-cover md:object-contain rounded-2xl sm:rounded-[2rem] transition-transform duration-1000 group-hover:scale-105" 
             alt="Binazy Office" 
           />
         </div>

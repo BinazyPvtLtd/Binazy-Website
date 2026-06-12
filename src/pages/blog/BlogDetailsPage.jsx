@@ -65,7 +65,7 @@ const BlogDetailsPage = () => {
         <section className="section-padding">
           <div className="section-container">
             <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_320px] lg:items-start">
-              <article className="overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-sm">
+              <article className="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm">
                 <img
                   src={post.image}
                   alt={post.imageAlt}
@@ -165,11 +165,11 @@ const BlogDetailsPage = () => {
             </div>
           </div>
         </section>
-        <FAQSection/>
+        <FAQSection />
       </main>
 
       <Footer />
-    </div >
+    </div>
   );
 };
 

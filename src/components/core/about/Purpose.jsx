@@ -5,21 +5,21 @@ import purposeValues from "@/assets/purpose-values.jpg";
 
 const PurposeCard = ({ title, description, image, points }) => {
   return (
-    <div className="grid lg:grid-cols-2 gap-12 items-center mt-12">
+    <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center mt-8 lg:mt-12">
       <div className="order-2 lg:order-1">
-        <h3 className="text-3xl md:text-4xl font-bold text-navy-900 mb-6 leading-tight">
+        <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-navy-900 mb-4 sm:mb-6 leading-tight">
           {title}
         </h3>
 
-        <p className="text-slate-600 text-lg leading-relaxed whitespace-pre-line">
+        <p className="text-slate-600 text-base sm:text-lg leading-relaxed whitespace-pre-line">
           {description}
         </p>
 
         {points && (
-          <ul className="mt-8 space-y-4">
+          <ul className="mt-6 sm:mt-8 space-y-4">
             {points.map((item, i) => (
-              <li key={i} className="flex items-start gap-4 text-slate-700 text-lg">
-                <span className="flex-shrink-0 w-8 h-8 rounded-full bg-brand-100 text-brand-600 flex items-center justify-center font-bold text-sm">
+              <li key={i} className="flex items-start gap-3 sm:gap-4 text-slate-700 text-base sm:text-lg">
+                <span className="flex-shrink-0 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-brand-100 text-brand-600 flex items-center justify-center font-bold text-sm">
                   {i + 1}
                 </span>
                 <span>{item}</span>
@@ -35,7 +35,7 @@ const PurposeCard = ({ title, description, image, points }) => {
           src={image}
           alt={title}
           loading="lazy"
-          className="w-full h-[400px] lg:h-[500px] object-cover rounded-2xl transition-transform duration-700 group-hover:scale-105"
+          className="w-full h-[260px] sm:h-[360px] lg:h-[500px] object-cover rounded-2xl transition-transform duration-700 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-navy-900/10 group-hover:bg-transparent transition-colors duration-500"></div>
       </div>
@@ -89,7 +89,7 @@ const CompanyTabsSection = () => {
         <div
           role="tablist"
           aria-label="Company information"
-          className="flex flex-wrap gap-4 md:gap-8 border-b border-slate-200 mb-8">
+          className="flex flex-wrap gap-x-5 gap-y-3 md:gap-x-8 border-b border-slate-200 mb-8">
           {tabs.map((tab) => (
             <button
               type="button"
@@ -98,7 +98,7 @@ const CompanyTabsSection = () => {
               role="tab"
               aria-selected={activeTab === tab.id}
               aria-controls={`${tab.id}-panel`}
-              className={`pb-4 text-lg md:text-xl font-semibold transition-all duration-300 relative ${
+              className={`pb-3 sm:pb-4 text-base sm:text-lg md:text-xl font-semibold transition-all duration-300 relative ${
                 activeTab === tab.id
                   ? "text-brand-600"
                   : "text-slate-400 hover:text-navy-900"

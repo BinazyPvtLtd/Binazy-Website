@@ -1,15 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
-import {
-  Menu,
-  X,
-  ChevronDown,
-  ChevronRight,
-  Code,
-  Headphones,
-  Cloud,
-  BarChart3,
-} from "lucide-react";
+import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
 import Logo from "@/assets/BinazyLogo.jpg";
 
 const navLinks = [
@@ -48,225 +39,72 @@ const locationMenu = [
 
 const servicesMenu = [
   {
-    id: "software-and-app-development",
-    title: "Website Development",
-    description: "Websites, apps, platforms, and business software.",
-    icon: Code,
-
+    id: "website-development",
+    title: "Website Development Services",
     links: [
       {
-        name: "Custom Web Applications",
+        name: "Website Development Services",
         to: "/services/business-website-development",
       },
+    ],
+  },
+  {
+    id: "mobile-app-development",
+    title: "Mobile App Development Services",
+    links: [
       {
-        name: "Portal Development",
-        to: "/services/online-store",
-      },
-      {
-        name: "Progressive Web Apps (PWA)",
-        to: "/services/ott-platform-development",
-      },
-      {
-        name: "Enterprise Web Solutions",
+        name: "Mobile App Development Services",
         to: "/services/mobile-app-development",
       },
-      {
-        name: "API Development & Integration",
-        to: "/services/booking-appointment-system",
-      },
-
-      {
-        name: "ERP System Development",
-        to: "/services/erp-system-development",
-      },
+    ],
+  },
+  {
+    id: "custom-software-development",
+    title: "Custom Software Development",
+    links: [
       {
         name: "Custom Software Development",
         to: "/services/custom-software-development",
       },
     ],
   },
-
   {
-    id: "it-support-and-managed-services",
-    title: "Mobile App Development Services",
-    description: "Support systems, helpdesk workflows, and monitoring.",
-    icon: Headphones,
+    id: "erp-system-development",
+    title: "ERP System Development",
     links: [
       {
-        name: "Android App Development",
-        to: "/services/hr-payroll-system",
-      },
-
-      {
-        name: "iOS App Development",
-        to: "/services/24-7-helpdesk-support",
-      },
-      {
-        name: "Flutter App Development",
-        to: "/services/remote-monitoring",
-      },
-      {
-        name: "React Native App Development",
-        to: "/services/remote-monitoring",
-      },
-      {
-        name: "Cross-Platform Applications",
-        to: "/services/remote-monitoring",
-      },
-    ],
-  },
-
-  {
-    id: "cloud-and-infrastructure-services",
-    title: " Custom Software Development",
-    description:
-      "Learning platforms, portals, and scalable product foundations.",
-    icon: Cloud,
-    links: [
-      {
-        name: "Online Learning Platform",
-        to: "/services/online-learning-platform",
-      },
-      {
-        name: "Student & Staff Training Portal",
-        to: "/services/student-staff-training-portal",
-      },
-      {
-        name: "EdTech Product",
-        to: "/services/edtech-product",
-      },
-    ],
-  },
-
-  {
-    id: "data-and-analytics-solutions",
-    title: " ERP System Development ",
-    description: "Dashboards, automation tools, and AI assistants.",
-    icon: BarChart3,
-    links: [
-      {
-        name: "Business Dashboard",
-        to: "/services/business-dashboard",
-      },
-      {
-        name: "Sales & Inventory Reports",
-        to: "/services/sales-inventory-reports",
-      },
-
-      {
-        name: "Marketing Performance Tracking",
-        to: "/services/marketing-performance-tracking",
-      },
-      {
-        name: "24/7 AI Customer Support Agent",
-        to: "/services/ai-customer-support-agent",
-      },
-      {
-        name: "Smart Document Processing",
-        to: "/services/smart-document-processing",
-      },
-      {
-        name: "AI Sales Assistant",
-        to: "/services/ai-sales-assistant",
+        name: "ERP System Development",
+        to: "/services/erp-system-development",
       },
     ],
   },
   {
     id: "ecommerce-website-development",
     title: "Ecommerce Website Development",
-    description: "Dashboards, automation tools, and AI assistants.",
-    icon: BarChart3,
     links: [
       {
-        name: "Business Dashboard",
-        to: "/services/business-dashboard",
-      },
-      {
-        name: "Sales & Inventory Reports",
-        to: "/services/sales-inventory-reports",
-      },
-
-      {
-        name: "Marketing Performance Tracking",
-        to: "/services/marketing-performance-tracking",
-      },
-      {
-        name: "24/7 AI Customer Support Agent",
-        to: "/services/ai-customer-support-agent",
-      },
-      {
-        name: "Smart Document Processing",
-        to: "/services/smart-document-processing",
-      },
-      {
-        name: "AI Sales Assistant",
-        to: "/services/ai-sales-assistant",
+        name: "Ecommerce Website Development",
+        to: "/services/online-store",
       },
     ],
   },
   {
     id: "ott-platform-development",
     title: "OTT Platform Development",
-    description: "Dashboards, automation tools, and AI assistants.",
-    icon: BarChart3,
     links: [
       {
-        name: "Business Dashboard",
-        to: "/services/business-dashboard",
-      },
-      {
-        name: "Sales & Inventory Reports",
-        to: "/services/sales-inventory-reports",
-      },
-
-      {
-        name: "Marketing Performance Tracking",
-        to: "/services/marketing-performance-tracking",
-      },
-      {
-        name: "24/7 AI Customer Support Agent",
-        to: "/services/ai-customer-support-agent",
-      },
-      {
-        name: "Smart Document Processing",
-        to: "/services/smart-document-processing",
-      },
-      {
-        name: "AI Sales Assistant",
-        to: "/services/ai-sales-assistant",
+        name: "OTT Platform Development",
+        to: "/services/ott-platform-development",
       },
     ],
   },
   {
     id: "booking-appointment-systems",
     title: "Booking & Appointment Systems",
-    description: "Dashboards, automation tools, and AI assistants.",
-    icon: BarChart3,
     links: [
       {
-        name: "Business Dashboard",
-        to: "/services/business-dashboard",
-      },
-      {
-        name: "Sales & Inventory Reports",
-        to: "/services/sales-inventory-reports",
-      },
-
-      {
-        name: "Marketing Performance Tracking",
-        to: "/services/marketing-performance-tracking",
-      },
-      {
-        name: "24/7 AI Customer Support Agent",
-        to: "/services/ai-customer-support-agent",
-      },
-      {
-        name: "Smart Document Processing",
-        to: "/services/smart-document-processing",
-      },
-      {
-        name: "AI Sales Assistant",
-        to: "/services/ai-sales-assistant",
+        name: "Booking & Appointment Systems",
+        to: "/services/booking-appointment-system",
       },
     ],
   },
@@ -310,100 +148,27 @@ const industriesMenu = [
   },
 ];
 
-// const locationMenu = [
-//   { name: "Melbourne",
-//     path: "/locations/melbourne"
-//   }
-//   ];
-
-function ServicesMegaMenu({
-  currentPath,
-  data,
-  id,
-  onNavigate,
-  onMouseEnter,
-  onMouseLeave,
-}) {
-  return (
-    <div
-      id={id}
-      className="fixed left-1/2 top-16 z-50 w-[min(76rem,calc(100vw-2rem))] -translate-x-1/2 pt-3"
-      aria-label="Services menu"
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}>
-      <div className="max-h-[calc(100vh-5.5rem)] overflow-y-auto rounded-2xl border border-white/20 bg-white shadow-2xl shadow-brand-950/25 ring-1 ring-slate-950/5">
-        <div className="bg-slate-50 p-4">
-          <div className="grid grid-cols-2 gap-3 xl:grid-cols-4">
-            {data.map((section) => {
-              const Icon = section.icon;
-
-              return (
-                <div
-                  key={section.id}
-                  className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:border-brand-200 hover:shadow-lg hover:shadow-brand-950/10">
-                  <div className="flex min-h-12 items-start gap-3">
-                    {Icon && (
-                      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-brand-50 text-brand-700">
-                        <Icon className="h-4 w-4" aria-hidden="true" />
-                      </span>
-                    )}
-
-                    <div className="min-w-0">
-                      <h3 className="text-sm font-semibold leading-5 text-slate-950">
-                        {section.title}
-                      </h3>
-                    </div>
-                  </div>
-
-                  <div className="mt-4 space-y-1">
-                    {section.links.map((item) => (
-                      <Link
-                        key={`${section.id}-${item.name}-${item.to}`}
-                        to={item.to}
-                        onClick={onNavigate}
-                        aria-current={
-                          currentPath === item.to ? "page" : undefined
-                        }
-                        className={`group flex min-h-9 items-center justify-between gap-2 rounded-lg px-3 py-2 text-sm leading-5 transition ${
-                          currentPath === item.to
-                            ? "bg-brand-50 font-semibold text-brand-700"
-                            : "text-slate-600 hover:bg-brand-50 hover:text-brand-700"
-                        }`}>
-                        <span>{item.name}</span>
-                        <ChevronRight
-                          className="h-3.5 w-3.5 shrink-0 opacity-0 transition group-hover:translate-x-0.5 group-hover:opacity-100"
-                          aria-hidden="true"
-                        />
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeMega, setActiveMega] = useState(null);
   const [mobileDropdown, setMobileDropdown] = useState(null);
-  const [mobileServiceGroup, setMobileServiceGroup] = useState(null);
+  const [activeServiceCategory, setActiveServiceCategory] = useState(null);
+  const [mobileServiceCategory, setMobileServiceCategory] = useState(null);
   const megaCloseTimer = useRef(null);
 
   const location = useLocation();
+  const activeServiceMenu =
+    servicesMenu.find((item) => item.id === activeServiceCategory) || null;
 
   useEffect(() => {
     const handleEscape = (event) => {
       if (event.key === "Escape") {
         clearTimeout(megaCloseTimer.current);
         setActiveMega(null);
+        setActiveServiceCategory(null);
         setMobileOpen(false);
         setMobileDropdown(null);
-        setMobileServiceGroup(null);
+        setMobileServiceCategory(null);
       }
     };
 
@@ -413,11 +178,6 @@ const Navbar = () => {
       window.removeEventListener("keydown", handleEscape);
     };
   }, []);
-
-  const openMega = (menuName) => {
-    clearTimeout(megaCloseTimer.current);
-    setActiveMega(menuName);
-  };
 
   const closeMegaWithDelay = () => {
     clearTimeout(megaCloseTimer.current);
@@ -444,7 +204,8 @@ const Navbar = () => {
     clearTimeout(megaCloseTimer.current);
     setMobileOpen(false);
     setMobileDropdown(null);
-    setMobileServiceGroup(null);
+    setActiveServiceCategory(null);
+    setMobileServiceCategory(null);
     setActiveMega(null);
   };
 
@@ -496,9 +257,16 @@ const Navbar = () => {
           {/* Desktop services mega menu trigger */}
           <div
             className="relative cursor-pointer"
-            onMouseEnter={() => openMega("services")}
-            onMouseLeave={closeMegaWithDelay}
-            onFocus={() => openMega("services")}
+            onMouseEnter={() => {
+              setActiveMega("services");
+            }}
+            onMouseLeave={() => {
+              setActiveMega(null);
+              setActiveServiceCategory(null);
+            }}
+            onFocus={() => {
+              setActiveMega("services");
+            }}
             onBlur={closeMegaOnBlur}
             onKeyDown={closeMegaOnEscape}>
             <button
@@ -522,14 +290,63 @@ const Navbar = () => {
             </button>
 
             {activeMega === "services" && (
-              <ServicesMegaMenu
-                currentPath={location.pathname}
-                data={servicesMenu}
+              <div
                 id="services-mega-menu"
-                onNavigate={closeAllMenus}
-                onMouseEnter={() => openMega("services")}
-                onMouseLeave={closeMegaWithDelay}
-              />
+                className="absolute top-full left-1/2 -translate-x-1/2 pt-4 z-50"
+                aria-label="Services menu">
+                <div className="relative">
+                  <div className="w-72 overflow-visible rounded-2xl border border-gray-100 bg-white p-3 shadow-2xl">
+                    <div className="space-y-1">
+                      {servicesMenu.map((item) => (
+                        <button
+                          key={item.id}
+                          type="button"
+                          onMouseEnter={() => setActiveServiceCategory(item.id)}
+                          onFocus={() => setActiveServiceCategory(item.id)}
+                          className={`flex w-full items-center justify-between gap-3 rounded-xl px-3 py-2.5 text-left text-sm transition ${
+                            activeServiceMenu?.id === item.id
+                              ? "bg-brand-50 text-brand-700"
+                              : "text-slate-700 hover:bg-slate-50 hover:text-brand-600"
+                          }`}>
+                          <span>{item.title}</span>
+                          <ChevronRight
+                            className="h-4 w-4 shrink-0"
+                            aria-hidden="true"
+                          />
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  {activeServiceMenu && (
+                    <div className="absolute left-full top-0 w-72 overflow-visible rounded-2xl border border-gray-100 bg-white p-3 shadow-2xl">
+                      <div className="mb-2 px-3 py-1.5 text-xs font-semibold uppercase tracking-wide text-slate-400">
+                        {activeServiceMenu.title}
+                      </div>
+                      <div className="space-y-1">
+                        {activeServiceMenu.links.map((item) => (
+                          <Link
+                            key={`${activeServiceMenu.id}-${item.name}`}
+                            to={item.to}
+                            onClick={closeAllMenus}
+                            aria-current={
+                              location.pathname === item.to
+                                ? "page"
+                                : undefined
+                            }
+                            className={`block rounded-xl px-3 py-2.5 text-sm transition ${
+                              location.pathname === item.to
+                                ? "bg-brand-50 text-brand-700"
+                                : "text-slate-700 hover:bg-slate-50 hover:text-brand-600"
+                            }`}>
+                            {item.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
             )}
           </div>
 
@@ -746,60 +563,48 @@ const Navbar = () => {
                 <div
                   id="mobile-services-menu"
                   className="pl-3 sm:pl-4 pt-2 flex flex-col gap-2">
-                  {servicesMenu.map((section) =>
-                    section.links?.length ? (
-                      <div key={section.id}>
-                        <button
-                          type="button"
-                          onClick={() =>
-                            setMobileServiceGroup((current) =>
-                              current === section.id ? null : section.id,
-                            )
-                          }
-                          className="flex w-full items-center justify-between py-2 text-left font-semibold text-white">
-                          <span>{section.title}</span>
-                          <ChevronDown
-                            aria-hidden="true"
-                            className={`h-4 w-4 transition ${
-                              mobileServiceGroup === section.id
-                                ? "rotate-180"
-                                : ""
-                            }`}
-                          />
-                        </button>
-
-                        {mobileServiceGroup === section.id && (
-                          <div className="space-y-1 pb-2 pl-3">
-                            {section.links.map((item) => (
-                              <Link
-                                key={`${section.id}-${item.name}-${item.to}`}
-                                to={item.to}
-                                onClick={closeAllMenus}
-                                aria-current={
-                                  location.pathname === item.to
-                                    ? "page"
-                                    : undefined
-                                }
-                                className="block py-1 text-sm text-white/70">
-                                {item.name}
-                              </Link>
-                            ))}
-                          </div>
-                        )}
-                      </div>
-                    ) : (
-                      <Link
-                        key={section.id}
-                        to={section.to}
-                        onClick={closeAllMenus}
-                        aria-current={
-                          location.pathname === section.to ? "page" : undefined
+                  {servicesMenu.map((section) => (
+                    <div key={section.id}>
+                      <button
+                        type="button"
+                        onClick={() =>
+                          setMobileServiceCategory((current) =>
+                            current === section.id ? null : section.id,
+                          )
                         }
-                        className="block py-2 font-semibold text-white">
-                        {section.title}
-                      </Link>
-                    ),
-                  )}
+                        aria-expanded={mobileServiceCategory === section.id}
+                        className="flex w-full items-center justify-between py-2 text-left text-sm font-semibold text-white">
+                        <span>{section.title}</span>
+                        <ChevronDown
+                          aria-hidden="true"
+                          className={`h-4 w-4 transition ${
+                            mobileServiceCategory === section.id
+                              ? "rotate-180"
+                              : ""
+                          }`}
+                        />
+                      </button>
+
+                      {mobileServiceCategory === section.id && (
+                        <div className="space-y-1 pb-2 pl-3">
+                          {section.links.map((item) => (
+                            <Link
+                              key={`${section.id}-${item.name}`}
+                              to={item.to}
+                              onClick={closeAllMenus}
+                              aria-current={
+                                location.pathname === item.to
+                                  ? "page"
+                                  : undefined
+                              }
+                              className="block text-white/70 text-sm py-1">
+                              {item.name}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ))}
                 </div>
               )}
             </div>
