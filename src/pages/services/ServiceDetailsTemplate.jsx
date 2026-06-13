@@ -26,15 +26,15 @@ const ServiceDetailsTemplate = ({
       <Navbar />
       <main id="main-content">
         {/* HERO SECTION */}
-        <section className="bg-[#0f2070]  text-white">
-          <div className="section-container pt-28 pb-16 sm:pt-32 sm:pb-20 lg:pt-40 lg:pb-24">
+        <section className="flex h-[350px] items-center bg-[#0f2070] text-white md:h-[450px] lg:h-[600px]">
+          <div className="section-container py-10">
             <div className="max-w-4xl">
-              <h1 className="mt-6 text-4xl font-bold leading-[1.02] tracking-tight sm:text-5xl lg:text-7xl">
+              <h1 className="text-3xl font-bold leading-[1.02] tracking-tight sm:text-5xl lg:text-7xl">
                 {title}
                 <br />
                 <span className="text-blue-300">{titleHighlight}</span>
               </h1>
-              <p className="mt-6 max-w-2xl text-base leading-relaxed text-slate-200 sm:text-lg lg:text-xl">
+              <p className="mt-4 max-w-2xl text-sm leading-relaxed text-slate-200 sm:mt-6 sm:text-lg lg:text-xl">
                 {subtitle}
               </p>
             </div>

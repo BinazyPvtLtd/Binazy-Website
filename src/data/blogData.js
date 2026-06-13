@@ -1,10 +1,10 @@
 import businessWebsiteImage from "../assets/blog1.jpg";
-import aiAutomationImage from "../assets/blog2.jpg";
-import ecommerceImage from "../assets/blog3.jpg";
+import aiAutomationImage from "../assets/blog3.jpg";
+import ecommerceImage from "../assets/ecom.jpg";
 
 export const blogPosts = [
   {
-    id: "why-growing-businesses-need-better-websites",
+    id: "web-development",
     category: "Web Design & Development",
     title:
       "How to Choose a Trustworthy Web Design & Development Company for Your Local Business",
@@ -172,7 +172,7 @@ export const blogPosts = [
   },
 
   {
-    id: "ecommerce-development-build-your-own-online-store",
+    id: "e-commerce",
     category: "E-commerce Development",
     title:
       "E-commerce Development: How to Build Your Own Online Store and Escape Marketplace Dependency",

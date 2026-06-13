@@ -43,55 +43,34 @@ export default function LocationTemplate({ data }) {
 
       <main id="main-content">
         {/* HERO */}
-        <section className="relative overflow-hidden min-h-screen bg-slate-950">
-          {/* Background Image */}
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url(${data.herobg})` }}
-          />
-          {/* Softer Dark Overlay */}
-          <div className="absolute inset-0 bg-linear-to-l from-slate-950/30 via-slate-950/50 to-slate-950/40" />
-
+        <section
+          className="relative h-[350px] overflow-hidden bg-[#0f2070] md:h-[450px] lg:h-[600px]"
+          style={{ paddingInline: 0 }}>
           {/* Content */}
-          <div className="relative max-w-7xl mx-auto px-6 lg:px-10 pt-28 pb-20 flex items-center min-h-screen">
-            <div className="max-w-3xl text-white">
+          <div className="section-container relative z-10 flex h-full items-center px-5 py-8 sm:px-6 lg:px-10">
+            <div className="max-w-[42rem] text-white">
               {/* Tagline */}
-              <p className="inline-block text-sm font-semibold uppercase tracking-[0.25em] text-blue-400 mb-5">
+              <p className="mb-3 inline-block text-xs font-semibold uppercase tracking-[0.22em] text-blue-300 sm:mb-5 sm:text-sm">
                 {data.heroTagline}
               </p>
 
               {/* Heading */}
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight">
+              <h1 className="text-2xl font-bold leading-[1.1] tracking-tight min-[380px]:text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
                 {data.heroHeading}
               </h1>
 
               {/* Subheading */}
-              <p className="mt-6 text-base sm:text-lg md:text-xl text-slate-300 leading-8 max-w-2xl">
+              <p className="mt-3 max-w-xl text-sm leading-6 text-slate-200 sm:mt-5 sm:text-base sm:leading-7 md:text-lg">
                 {data.heroSubheading}
               </p>
 
               {/* Buttons */}
-              <div className="mt-10 flex flex-wrap gap-4">
+              <div className="mt-4 flex flex-wrap gap-3 sm:mt-7 sm:gap-4">
                 <Link
                   to="/contact-us"
-                  className="px-7 py-4 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-semibold transition duration-300 shadow-lg">
-                  Book Consultation
+                  className="inline-flex min-h-11 items-center justify-center rounded-lg bg-blue-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-slate-950/25 transition duration-300 hover:bg-blue-700 sm:min-h-12 sm:px-7 sm:py-4 sm:text-base">
+                  {data.heroCtaPrimary}
                 </Link>
-
-                <button className="px-7 py-4 rounded-full border border-white/20 bg-white/5 hover:bg-white/10 text-white font-semibold transition duration-300 backdrop-blur-md">
-                  Learn More
-                </button>
-              </div>
-
-              {/* Areas */}
-              <div className="mt-12 flex flex-wrap gap-3">
-                {data.areas.map((item, i) => (
-                  <span
-                    key={i}
-                    className="px-4 py-2 rounded-full text-sm font-medium bg-white/10 border border-white/10 text-slate-100 backdrop-blur-md">
-                    {item}
-                  </span>
-                ))}
               </div>
             </div>
           </div>
@@ -99,17 +78,17 @@ export default function LocationTemplate({ data }) {
 
         {/* PROBLEM */}
         <section className="border-b border-gray-100">
-          <div className="section-container px-6 py-24 grid lg:grid-cols-2 gap-16 items-start">
+          <div className="section-container grid items-start gap-8 px-5 py-14 sm:px-6 sm:py-16 md:gap-12 lg:grid-cols-2 lg:gap-16 lg:px-10 lg:py-24">
             <div>
-              <p className="text-sm uppercase tracking-[0.25em] text-blue-600 font-semibold">
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-blue-600 sm:text-sm sm:tracking-[0.25em]">
                 The Problem
               </p>
-              <h2 className="mt-5 text-4xl md:text-5xl font-bold leading-tight">
+              <h2 className="mt-4 text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
                 {data.problemHeading}
               </h2>
             </div>
 
-            <div className="space-y-6 text-gray-600 leading-8 text-lg">
+            <div className="space-y-4 text-base leading-7 text-gray-600 sm:space-y-6 sm:text-lg sm:leading-8">
               {data.problemBody.map((para, i) => (
                 <p key={i}>{para}</p>
               ))}
@@ -119,32 +98,34 @@ export default function LocationTemplate({ data }) {
 
         {/* SERVICES */}
         <section className="bg-gray-50">
-          <div className="section-container px-6 py-24">
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-600 mb-4">
+          <div className="section-container px-5 py-14 sm:px-6 sm:py-16 lg:px-10 lg:py-24">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-blue-600 sm:mb-4 sm:text-sm sm:tracking-[0.25em]">
               What We Offer
             </p>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <h2 className="mb-4 text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
               {data.servicesHeading}
             </h2>
-            <p className="text-gray-500 text-lg mb-14 max-w-2xl">
+            <p className="mb-8 max-w-2xl text-base leading-7 text-gray-500 sm:mb-14 sm:text-lg">
               {data.servicesSubheading}
             </p>
 
-            <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-7">
+            <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3 xl:gap-7">
               {services.map((service, i) => (
                 <div
                   key={i}
-                  className="bg-white border border-gray-200 rounded-3xl p-7 hover:shadow-2xl hover:-translate-y-1 transition duration-300">
-                  <div className="w-14 h-14 rounded-2xl bg-blue-100 text-blue-700 flex items-center justify-center">
+                  className="rounded-2xl border border-gray-200 bg-white p-5 transition duration-300 hover:-translate-y-1 hover:shadow-2xl sm:p-7">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-100 text-blue-700 sm:h-14 sm:w-14">
                     {service.icon}
                   </div>
-                  <h3 className="mt-6 text-2xl font-bold">{service.title}</h3>
-                  <ul className="mt-5 space-y-3">
+                  <h3 className="mt-5 text-xl font-bold sm:mt-6 sm:text-2xl">
+                    {service.title}
+                  </h3>
+                  <ul className="mt-4 space-y-3 sm:mt-5">
                     {service.items.map((item, index) => (
                       <li
                         key={index}
-                        className="flex items-center gap-3 text-gray-600">
-                        <span className="w-2 h-2 rounded-full bg-blue-600" />
+                        className="flex items-start gap-3 text-sm leading-6 text-gray-600 sm:text-base">
+                        <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-blue-600" />
                         {item}
                       </li>
                     ))}
@@ -157,14 +138,18 @@ export default function LocationTemplate({ data }) {
 
         {/* WHO WE HELP */}
         <section>
-          <div className="section-container px-6 py-24">
-            <h2 className="text-4xl md:text-5xl font-bold">Who We Help</h2>
-            <div className="mt-12 grid md:grid-cols-3 gap-6">
+          <div className="section-container px-5 py-14 sm:px-6 sm:py-16 lg:px-10 lg:py-24">
+            <h2 className="text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
+              Who We Help
+            </h2>
+            <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:mt-12 lg:grid-cols-3 lg:gap-6">
               {data.whoWeHelp.map((item, i) => (
                 <div
                   key={i}
-                  className="p-8 rounded-3xl border border-gray-200 bg-white shadow-sm hover:shadow-xl transition">
-                  <p className="text-lg leading-8 text-gray-700">{item}</p>
+                  className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition hover:shadow-xl sm:p-8">
+                  <p className="text-base leading-7 text-gray-700 sm:text-lg sm:leading-8">
+                    {item}
+                  </p>
                 </div>
               ))}
             </div>
@@ -173,20 +158,22 @@ export default function LocationTemplate({ data }) {
 
         {/* BENEFITS */}
         <section>
-          <div className="section-container px-6 py-24">
-            <h2 className="text-4xl md:text-5xl font-bold max-w-4xl leading-tight">
+          <div className="section-container px-5 py-14 sm:px-6 sm:py-16 lg:px-10 lg:py-24">
+            <h2 className="max-w-4xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
               {data.benefitsHeading}
             </h2>
-            <div className="mt-14 bg-white rounded-3xl border border-gray-200 p-8 md:p-10 shadow-sm">
-              <div className="grid md:grid-cols-2 gap-8">
+            <div className="mt-8 rounded-2xl border border-gray-200 bg-white p-5 shadow-sm sm:mt-14 sm:p-8 md:p-10">
+              <div className="grid gap-6 md:grid-cols-2 md:gap-8">
                 {data.benefits.map((item, i) => (
                   <div
                     key={i}
-                    className="flex gap-5 items-start pb-6 border-b border-gray-100 last:border-b-0">
-                    <span className="text-4xl font-bold text-blue-200">
+                    className="flex items-start gap-4 border-b border-gray-100 pb-6 last:border-b-0 md:gap-5">
+                    <span className="text-3xl font-bold text-blue-200 sm:text-4xl">
                       0{i + 1}
                     </span>
-                    <p className="text-gray-700 text-lg leading-8">{item}</p>
+                    <p className="text-base leading-7 text-gray-700 sm:text-lg sm:leading-8">
+                      {item}
+                    </p>
                   </div>
                 ))}
               </div>
@@ -198,17 +185,17 @@ export default function LocationTemplate({ data }) {
 
         {/* CTA */}
         <section>
-          <div className="section-container px-6 py-24 text-center">
-            <h2 className="text-4xl md:text-6xl font-bold leading-tight max-w-4xl mx-auto text-gray-900">
+          <div className="section-container px-5 py-14 text-center sm:px-6 sm:py-16 lg:px-10 lg:py-24">
+            <h2 className="mx-auto max-w-4xl text-3xl font-bold leading-tight text-gray-900 sm:text-4xl md:text-6xl">
               {data.ctaHeading}
             </h2>
-            <p className="mt-6 text-gray-600 text-lg max-w-2xl mx-auto leading-8">
+            <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-gray-600 sm:mt-6 sm:text-lg sm:leading-8">
               {data.ctaSubheading}
             </p>
-            <div className="mt-10 flex justify-center flex-wrap gap-4">
+            <div className="mt-8 flex flex-wrap justify-center gap-4 sm:mt-10">
               <Link
                 to="/contact-us"
-                className="px-8 py-4 rounded-full bg-[#0f2070] text-white font-semibold hover:bg-[#162c8c] hover:scale-105 transition">
+                className="inline-flex min-h-12 items-center justify-center rounded-lg bg-[#0f2070] px-6 py-3 text-sm font-semibold text-white transition hover:scale-105 hover:bg-[#162c8c] sm:px-8 sm:py-4 sm:text-base">
                 {data.ctaButton}
               </Link>
             </div>

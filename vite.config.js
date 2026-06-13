@@ -18,8 +18,8 @@ export default defineConfig({
         "/about",
         "/contact-us",
         "/blog",
-        "/blog/why-growing-businesses-need-better-websites",
-        "/blog/ecommerce-development-build-your-own-online-store",
+        "/blog/web-development",
+        "/blog/e-commerce",
         "/blog/custom-ott-app-development-build-your-streaming-platform",
         "/services/business-website-development",
         "/services/online-store",
@@ -57,10 +57,7 @@ export default defineConfig({
       readable: true,
     }),
   ],
-  server: {
-    host: true,
-    allowedHosts: ["all", ".ngrok-free.dev", ".ngrok-free.app", ".ngrok.io"],
-  },
+
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

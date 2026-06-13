@@ -12,7 +12,6 @@ import DigitalJourney from "@/components/core/home/DigitalJourney";
 import TechStackSection from "@/components/core/about/TechStackSection";
 import LocationTemplate from "@/pages/Locations/LocationTemplate";
 import SEO from "@/components/common/SEO";
-
 const Home = () => {
   return (
     <>

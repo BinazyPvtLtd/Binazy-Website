@@ -5,14 +5,14 @@ import About2 from "../../../assets/About2.jpg";
 const AboutHeader = () => {
   return (
     <>
-      <section className="relative min-h-80 sm:min-h-95 lg:min-h-105 bg-[#0f2070] flex items-center justify-center overflow-hidden">
+      <section className="relative flex h-[350px] items-center overflow-hidden bg-[#0f2070] md:h-[450px] lg:h-[600px]">
         {/* Content */}
-        <div className="relative z-10 text-center text-white px-4 sm:px-6">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 leading-tight">
+        <div className="section-container relative z-10 text-left text-white">
+          <h1 className="mb-4 text-3xl font-bold leading-tight sm:text-5xl md:text-6xl">
             About <span className="text-blue-400">Binazy</span>
           </h1>
 
-          <p className="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-gray-200 leading-7 sm:leading-8">
+          <p className="max-w-2xl text-sm leading-6 text-gray-200 sm:text-lg sm:leading-8 md:text-xl">
             Empowering businesses worldwide with innovative digital solutions,
             custom software, mobile applications, and cutting-edge technology.
           </p>
