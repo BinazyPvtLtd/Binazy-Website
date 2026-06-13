@@ -11,8 +11,6 @@ const navLinks = [
 const NAVBAR_THEME_CLASS =
   "bg-brand-950/95 backdrop-blur-xl border-b border-white/10 shadow-lg shadow-slate-950/10";
 
-// locations menu
-
 const locationMenu = [
   {
     id: "australia",
@@ -39,72 +37,139 @@ const locationMenu = [
 
 const servicesMenu = [
   {
-    id: "website-development",
-    title: "Website Development Services",
+    id: "web-commerce",
+    title: " Website Development Services",
     links: [
       {
-        name: "Website Development Services",
+        name: "Business Website Development",
         to: "/services/business-website-development",
       },
-    ],
-  },
-  {
-    id: "mobile-app-development",
-    title: "Mobile App Development Services",
-    links: [
-      {
-        name: "Mobile App Development Services",
-        to: "/services/mobile-app-development",
-      },
-    ],
-  },
-  {
-    id: "custom-software-development",
-    title: "Custom Software Development",
-    links: [
-      {
-        name: "Custom Software Development",
-        to: "/services/custom-software-development",
-      },
-    ],
-  },
-  {
-    id: "erp-system-development",
-    title: "ERP System Development",
-    links: [
-      {
-        name: "ERP System Development",
-        to: "/services/erp-system-development",
-      },
-    ],
-  },
-  {
-    id: "ecommerce-website-development",
-    title: "Ecommerce Website Development",
-    links: [
       {
         name: "Ecommerce Website Development",
         to: "/services/online-store",
       },
-    ],
-  },
-  {
-    id: "ott-platform-development",
-    title: "OTT Platform Development",
-    links: [
       {
         name: "OTT Platform Development",
         to: "/services/ott-platform-development",
       },
-    ],
-  },
-  {
-    id: "booking-appointment-systems",
-    title: "Booking & Appointment Systems",
-    links: [
       {
         name: "Booking & Appointment Systems",
         to: "/services/booking-appointment-system",
+      },
+    ],
+  },
+  {
+    id: "software-apps",
+    title: "Mobile App Development Services",
+    links: [
+      {
+        name: "Mobile App Development",
+        to: "/services/mobile-app-development",
+      },
+      {
+        name: "Custom Software Development",
+        to: "/services/custom-software-development",
+      },
+      {
+        name: "ERP System Development",
+        to: "/services/erp-system-development",
+      },
+      {
+        name: "HR & Payroll System",
+        to: "/services/hr-payroll-system",
+      },
+    ],
+  },
+  {
+    id: "support-infrastructure",
+    title: "ERP System Development",
+    links: [
+      {
+        name: "24/7 Helpdesk Support",
+        to: "/services/24-7-helpdesk-support",
+      },
+      {
+        name: "Remote Monitoring",
+        to: "/services/remote-monitoring",
+      },
+      {
+        name: "Social Media Management",
+        to: "/services/social-media-management",
+      },
+    ],
+  },
+  {
+    id: "learning-edtech",
+    title: "Ecommerce Website Development",
+    links: [
+      {
+        name: "Online Learning Platform",
+        to: "/services/online-learning-platform",
+      },
+      {
+        name: "Student & Staff Training Portal",
+        to: "/services/student-staff-training-portal",
+      },
+      {
+        name: "EdTech Product",
+        to: "/services/edtech-product",
+      },
+    ],
+  },
+  {
+    id: "analytics-ai",
+    title: " OTT Platform Development",
+    links: [
+      {
+        name: "Business Dashboard",
+        to: "/services/business-dashboard",
+      },
+      {
+        name: "Sales & Inventory Reports",
+        to: "/services/sales-inventory-reports",
+      },
+      {
+        name: "Marketing Performance Tracking",
+        to: "/services/marketing-performance-tracking",
+      },
+      {
+        name: "AI Customer Support Agent",
+        to: "/services/ai-customer-support-agent",
+      },
+      {
+        name: "Smart Document Processing",
+        to: "/services/smart-document-processing",
+      },
+      {
+        name: "AI Sales Assistant",
+        to: "/services/ai-sales-assistant",
+      },
+    ],
+  },
+  {
+    id: "booking",
+    title: " Booking & Appointment Systems",
+    links: [
+     
+      {
+        name: "Sales & Inventory Reports",
+        to: "/services/sales-inventory-reports",
+      },
+      {
+        name: "Marketing Performance Tracking",
+        to: "/services/marketing-performance-tracking",
+      },
+      {
+        name: "AI Customer Support Agent",
+        to: "/services/ai-customer-support-agent",
+      },
+      {
+        name: "Smart Document Processing",
+        to: "/services/smart-document-processing",
+      },
+      {
+        name: "AI Sales Assistant",
+        to: "/services/ai-sales-assistant",
       },
     ],
   },
@@ -157,8 +222,15 @@ const Navbar = () => {
   const megaCloseTimer = useRef(null);
 
   const location = useLocation();
+  const currentServiceCategoryId = servicesMenu.find((item) =>
+    item.links.some((link) => link.to === location.pathname),
+  )?.id;
   const activeServiceMenu =
     servicesMenu.find((item) => item.id === activeServiceCategory) || null;
+  const currentServiceMenu =
+    servicesMenu.find((item) => item.id === currentServiceCategoryId) || null;
+  const visibleServiceMenu =
+    activeServiceMenu || currentServiceMenu || servicesMenu[0];
 
   useEffect(() => {
     const handleEscape = (event) => {
@@ -184,6 +256,14 @@ const Navbar = () => {
     megaCloseTimer.current = setTimeout(() => {
       setActiveMega(null);
     }, 180);
+  };
+
+  const openServicesMenu = () => {
+    clearTimeout(megaCloseTimer.current);
+    setActiveMega("services");
+    setActiveServiceCategory(
+      (current) => current || currentServiceCategoryId || servicesMenu[0].id,
+    );
   };
 
   const closeMegaOnBlur = (event) => {
@@ -237,7 +317,7 @@ const Navbar = () => {
           <span className="text-white font-semibold text-lg">Binazy</span>
         </Link>
 
-        {/* Desktop navigation links and mega menu */}
+        {/* Desktop navigation links and dropdowns */}
 
         <div className="hidden lg:flex items-center gap-1 xl:gap-2 relative min-w-0">
           {navLinks.map((link) => (
@@ -254,19 +334,14 @@ const Navbar = () => {
             </Link>
           ))}
 
-          {/* Desktop services mega menu trigger */}
+          {/* Desktop services dropdown trigger */}
           <div
             className="relative cursor-pointer"
-            onMouseEnter={() => {
-              setActiveMega("services");
-            }}
+            onMouseEnter={openServicesMenu}
             onMouseLeave={() => {
-              setActiveMega(null);
-              setActiveServiceCategory(null);
+              closeMegaWithDelay();
             }}
-            onFocus={() => {
-              setActiveMega("services");
-            }}
+            onFocus={openServicesMenu}
             onBlur={closeMegaOnBlur}
             onKeyDown={closeMegaOnEscape}>
             <button
@@ -274,7 +349,14 @@ const Navbar = () => {
               aria-haspopup="true"
               aria-expanded={activeMega === "services"}
               aria-controls="services-mega-menu"
-              onClick={() => setActiveMega("services")}
+              onClick={() => {
+                if (activeMega === "services") {
+                  setActiveMega(null);
+                  return;
+                }
+
+                openServicesMenu();
+              }}
               className={`text-sm px-3 xl:px-4 py-2 rounded-lg transition flex items-center gap-1 ${
                 location.pathname.startsWith("/services")
                   ? "bg-white/10 text-white"
@@ -292,59 +374,65 @@ const Navbar = () => {
             {activeMega === "services" && (
               <div
                 id="services-mega-menu"
-                className="absolute top-full left-1/2 -translate-x-1/2 pt-4 z-50"
+                className="absolute left-0 top-full z-50 pt-4"
                 aria-label="Services menu">
-                <div className="relative">
-                  <div className="w-72 overflow-visible rounded-2xl border border-gray-100 bg-white p-3 shadow-2xl">
-                    <div className="space-y-1">
-                      {servicesMenu.map((item) => (
-                        <button
-                          key={item.id}
-                          type="button"
-                          onMouseEnter={() => setActiveServiceCategory(item.id)}
-                          onFocus={() => setActiveServiceCategory(item.id)}
-                          className={`flex w-full items-center justify-between gap-3 rounded-xl px-3 py-2.5 text-left text-sm transition ${
-                            activeServiceMenu?.id === item.id
-                              ? "bg-brand-50 text-brand-700"
-                              : "text-slate-700 hover:bg-slate-50 hover:text-brand-600"
-                          }`}>
-                          <span>{item.title}</span>
-                          <ChevronRight
-                            className="h-4 w-4 shrink-0"
-                            aria-hidden="true"
-                          />
-                        </button>
-                      ))}
-                    </div>
-                  </div>
+                <div
+                  className="relative w-80 overflow-visible rounded-2xl border border-gray-100 bg-white p-2 shadow-2xl"
+                  onMouseEnter={openServicesMenu}>
+                  <div className="space-y-1">
+                    {servicesMenu.map((item) => {
+                      const isActive = visibleServiceMenu.id === item.id;
 
-                  {activeServiceMenu && (
-                    <div className="absolute left-full top-0 w-72 overflow-visible rounded-2xl border border-gray-100 bg-white p-3 shadow-2xl">
-                      <div className="mb-2 px-3 py-1.5 text-xs font-semibold uppercase tracking-wide text-slate-400">
-                        {activeServiceMenu.title}
-                      </div>
-                      <div className="space-y-1">
-                        {activeServiceMenu.links.map((item) => (
-                          <Link
-                            key={`${activeServiceMenu.id}-${item.name}`}
-                            to={item.to}
-                            onClick={closeAllMenus}
-                            aria-current={
-                              location.pathname === item.to
-                                ? "page"
-                                : undefined
+                      return (
+                        <div key={item.id} className="relative">
+                          <button
+                            type="button"
+                            onMouseEnter={() =>
+                              setActiveServiceCategory(item.id)
                             }
-                            className={`block rounded-xl px-3 py-2.5 text-sm transition ${
-                              location.pathname === item.to
+                            onFocus={() => setActiveServiceCategory(item.id)}
+                            onClick={() => setActiveServiceCategory(item.id)}
+                            aria-expanded={isActive}
+                            className={`flex w-full items-center justify-between gap-3 rounded-xl px-3 py-2.5 text-left text-sm font-medium transition ${
+                              isActive
                                 ? "bg-brand-50 text-brand-700"
                                 : "text-slate-700 hover:bg-slate-50 hover:text-brand-600"
                             }`}>
-                            {item.name}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  )}
+                            <span>{item.title}</span>
+                            <ChevronRight
+                              className="h-4 w-4 shrink-0"
+                              aria-hidden="true"
+                            />
+                          </button>
+
+                          {isActive && (
+                            <div className="absolute left-full top-0 z-50 ml-2 w-80 rounded-2xl border border-gray-100 bg-white p-2 shadow-2xl">
+                              <div className="max-h-[calc(100vh-9rem)] space-y-1 overflow-y-auto pt-2">
+                                {item.links.map((link) => (
+                                  <Link
+                                    key={`${item.id}-${link.name}`}
+                                    to={link.to}
+                                    onClick={closeAllMenus}
+                                    aria-current={
+                                      location.pathname === link.to
+                                        ? "page"
+                                        : undefined
+                                    }
+                                    className={`flex items-center justify-between gap-3 rounded-xl px-3 py-2.5 text-sm transition ${
+                                      location.pathname === link.to
+                                        ? "bg-brand-50 text-brand-700"
+                                        : "text-slate-700 hover:bg-slate-50 hover:text-brand-600"
+                                    }`}>
+                                    <span>{link.name}</span>
+                                  </Link>
+                                ))}
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
                 </div>
               </div>
             )}
