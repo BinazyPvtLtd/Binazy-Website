@@ -74,7 +74,7 @@ const WhyChooseUs = () => {
               <img
                 src={img}
                 alt="Why Choose Us"
-                className="h-72 w-full rounded-xl object-cover sm:h-96 sm:rounded-3xl lg:h-[34rem]"
+                className="h-72 w-full rounded-xl object-cover sm:h-96 sm:rounded-3xl lg:h-136"
               />
             </div>
           </div>
