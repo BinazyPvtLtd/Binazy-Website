@@ -1,4 +1,4 @@
-import {
+ import {
   Activity,
   BarChart3,
   BookOpen,
@@ -18,25 +18,27 @@ import {
   Wallet,
 } from "lucide-react";
 
-import realestateHero from "@/assets/realestate.jpg";
-import educationHero from "@/assets/education.jpg";
-import ecommerceHero from "@/assets/ecommerce.jpg";
-import healthcareHero from "@/assets/healthcare.jpg";
+import realestateHero from "@/assets/industry4.jpg";
+import industry2 from "@/assets/industry2.jpg";
+import ecommerceHero from "@/assets/industry3.jpg";
+import industry1 from "@/assets/industry1.jpg";
 import fintechHero from "@/assets/fintech.jpg";
-import travelHero from "@/assets/travel.jpg";
-import manufacturingHero from "@/assets/manufacturing.jpg";
+import travelHero from "@/assets/industry7.jpg";
+import logisticsHero from "@/assets/industry5.jpg";
+import manufacturingHero from "@/assets/industry6.jpg";
+import healthcareHero from "@/assets/healthcare.jpg";
 import hrmsProjectImage from "@/assets/HRMS.jpg";
-import eventProjectImage from "@/assets/PRoject2.jpg";
+import eventProjectImage from "@/assets/project-2.jpg";
 import operationsProjectImage from "@/assets/project1.jpg";
 import dashboardProjectImage from "@/assets/dashboard-project.jpg";
 import officePortalImage from "@/assets/office4.jpg";
 import officeOpsImage from "@/assets/office2.jpg";
-import office3Image from "@/assets/office 3.jpg";
+import office3Image from "@/assets/office-3.jpg";
 
 export const industriesData = {
   "real-estate": {
     label: "Real Estate Technology That Moves Deals Faster",
-    title: "We Build Real Estate",
+    title: "Real Estate",
     titleHighlight: "Platforms That Convert",
     subtitle:
       "Binazy creates property platforms, broker tools, and operational systems that help real estate businesses manage listings, capture leads, and streamline transactions.",
@@ -111,17 +113,17 @@ export const industriesData = {
   },
   education: {
     label: "Education Platforms Built for Better Learning",
-    title: "We Build Education",
+    title: "E-learning & EdTech",
     titleHighlight: "Products That Engage",
     subtitle:
       "Binazy develops digital learning products for institutions, edtech startups, and training businesses that want stronger learner engagement and smoother operations.",
-    heroImage: educationHero,
+    heroImage: industry2,
 
     spotlightHeading: "Education Project Spotlights",
     projects: [
       {
         name: "LearnSphere LMS",
-        image: educationHero,
+        image: industry2,
         alt: "LearnSphere learning management system",
         description:
           "A learning platform with course catalogs, learner progress, quizzes, certificates, and content management for modern training teams.",
@@ -186,7 +188,7 @@ export const industriesData = {
   },
   ecommerce: {
     label: "Commerce Platforms Designed for Growth",
-    title: "We Build eCommerce",
+    title: "Retail & E-commerce",
     titleHighlight: "Systems That Sell",
     subtitle:
       "Binazy helps brands and marketplaces launch storefronts, transaction flows, and operational tools that improve conversion and retention.",
@@ -261,11 +263,11 @@ export const industriesData = {
   },
   healthcare: {
     label: "Healthcare Software Built for Better Care",
-    title: "We Build Healthcare",
+    title: "Healthcare",
     titleHighlight: "Systems That Scale",
     subtitle:
       "Binazy creates secure healthcare software for providers, hospitals, and health startups focused on patient outcomes, compliance, and operational efficiency.",
-    heroImage: healthcareHero,
+    heroImage: industry1,
 
     spotlightHeading: "Healthcare Project Spotlights",
     projects: [
@@ -336,7 +338,7 @@ export const industriesData = {
   },
   fintech: {
     label: "Fintech Products Built for Trust and Speed",
-    title: "We Build Fintech",
+    title: " Fintech",
     titleHighlight: "Platforms That Perform",
     subtitle:
       "Binazy delivers secure digital finance experiences for fintech teams that need stronger user flows, clearer operations, and dependable architecture.",
@@ -409,9 +411,9 @@ export const industriesData = {
       },
     ],
   },
-  travel: {
+  "hospitality-tourism": {
     label: "Travel Platforms That Simplify Every Journey",
-    title: "We Build Travel",
+    title: "Hospitality & Tourism",
     titleHighlight: "Systems That Book Better",
     subtitle:
       "Binazy develops travel technology for agencies, booking brands, and tourism businesses that want smoother customer journeys and stronger operations.",
@@ -486,7 +488,157 @@ export const industriesData = {
   },
   manufacturing: {
     label: "Manufacturing Systems Built for Operational Clarity",
-    title: "We Build Manufacturing",
+    title: "Manufacturing",
+    titleHighlight: "Platforms That Optimize",
+    subtitle:
+      "Binazy creates industrial software for production, logistics, and supply chain teams that need better visibility and stronger process control.",
+    heroImage: manufacturingHero,
+
+    spotlightHeading: "Manufacturing Project Spotlights",
+    projects: [
+      {
+        name: "PlantOps Command Center",
+        image: manufacturingHero,
+        alt: "PlantOps manufacturing operations platform",
+        description:
+          "A production operations platform for process oversight, status tracking, maintenance workflows, and team coordination across lines.",
+      },
+      {
+        name: "SupplyGrid ERP Workspace",
+        image: office3Image,
+        alt: "SupplyGrid manufacturing ERP workspace",
+        description:
+          "An ERP workspace for procurement, inventory movement, supplier coordination, and manufacturing operations reporting.",
+      },
+    ],
+
+    solutionsHeading: "Industry 4.0 Software for Production and Supply Chains",
+    solutionsTagline: "Control. Throughput. Visibility.",
+    solutionsDescription:
+      "We help manufacturing teams digitize planning, operations, logistics, and performance reporting through dependable internal software.",
+    solutions: [
+      {
+        icon: Factory,
+        iconBg: "bg-blue-100 text-blue-500",
+        title: "Production Operations Systems",
+        description:
+          "Monitor production activity, line status, task ownership, and operational bottlenecks through structured digital workflows.",
+      },
+      {
+        icon: Truck,
+        iconBg: "bg-green-100 text-green-500",
+        title: "Warehouse & Logistics Tools",
+        description:
+          "Track stock movement, dispatch, warehouse coordination, shipping states, and operational handoffs across teams.",
+      },
+      {
+        icon: ShieldCheck,
+        iconBg: "bg-purple-100 text-purple-500",
+        title: "Quality Control Systems",
+        description:
+          "Support inspection workflows, issue logging, process traceability, and quality reporting for operational confidence.",
+      },
+      {
+        icon: Activity,
+        iconBg: "bg-amber-100 text-amber-500",
+        title: "Maintenance & Monitoring Dashboards",
+        description:
+          "Keep teams informed with machine status, planned maintenance, downtime visibility, and alert-driven action flows.",
+      },
+      {
+        icon: Store,
+        iconBg: "bg-pink-100 text-pink-500",
+        title: "Supplier Management Platforms",
+        description:
+          "Coordinate procurement, vendor updates, sourcing processes, and supplier performance data through shared workflows.",
+      },
+      {
+        icon: BarChart3,
+        iconBg: "bg-indigo-100 text-indigo-500",
+        title: "Operations Analytics",
+        description:
+          "Measure throughput, quality, utilization, delays, and inventory health with manufacturing-focused dashboards.",
+      },
+    ],
+  },
+  "logistics-supply-chain": {
+    label: "Logistics Software Built for Clearer Operations",
+    title: "Logistics & Supply Chain",
+    titleHighlight: "Systems That Move Smarter",
+    subtitle:
+      "Binazy builds logistics and supply chain software for teams that need real-time visibility, smoother coordination, and stronger operational control.",
+    heroImage: logisticsHero,
+
+    spotlightHeading: "Logistics & Supply Chain Project Spotlights",
+    projects: [
+      {
+        name: "FleetFlow Operations Hub",
+        image: logisticsHero,
+        alt: "FleetFlow logistics operations platform",
+        description:
+          "A logistics operations platform for shipment tracking, dispatch coordination, route visibility, and team handoffs.",
+      },
+      {
+        name: "SupplyTrack Control Desk",
+        image: office3Image,
+        alt: "SupplyTrack supply chain dashboard",
+        description:
+          "A supply chain workspace for inventory movement, warehouse updates, supplier coordination, and fulfillment reporting.",
+      },
+    ],
+
+    solutionsHeading: "Logistics Software for Movement and Visibility",
+    solutionsTagline: "Tracking. Fulfillment. Control.",
+    solutionsDescription:
+      "We help logistics providers, distributors, and supply chain teams digitize workflows from order movement to delivery coordination.",
+    solutions: [
+      {
+        icon: Truck,
+        iconBg: "bg-blue-100 text-blue-500",
+        title: "Shipment Tracking Systems",
+        description:
+          "Track shipments, delivery states, dispatch activity, and operational exceptions through one clear dashboard.",
+      },
+      {
+        icon: Store,
+        iconBg: "bg-green-100 text-green-500",
+        title: "Warehouse Management Tools",
+        description:
+          "Manage stock movement, picking, packing, storage locations, and warehouse coordination with structured workflows.",
+      },
+      {
+        icon: BarChart3,
+        iconBg: "bg-purple-100 text-purple-500",
+        title: "Supply Chain Analytics",
+        description:
+          "Measure fulfillment speed, inventory health, supplier performance, and logistics bottlenecks with live reporting.",
+      },
+      {
+        icon: CalendarDays,
+        iconBg: "bg-amber-100 text-amber-500",
+        title: "Dispatch Scheduling",
+        description:
+          "Coordinate driver assignments, delivery windows, route plans, and dispatch updates across operations teams.",
+      },
+      {
+        icon: ShieldCheck,
+        iconBg: "bg-pink-100 text-pink-500",
+        title: "Compliance & Documentation",
+        description:
+          "Digitize shipment documents, audit records, approvals, and controlled access for operational accountability.",
+      },
+      {
+        icon: Activity,
+        iconBg: "bg-indigo-100 text-indigo-500",
+        title: "Operations Monitoring",
+        description:
+          "Keep teams aligned with exception alerts, workflow status, and performance visibility across the supply chain.",
+      },
+    ],
+  },
+  new: {
+    label: "Manufacturing Systems Built for Operational Clarity",
+    title: " App Development ",
     titleHighlight: "Platforms That Optimize",
     subtitle:
       "Binazy creates industrial software for production, logistics, and supply chain teams that need better visibility and stronger process control.",
@@ -560,3 +712,37 @@ export const industriesData = {
     ],
   },
 };
+
+export const industryNavItems = [
+  { id: "healthcare", title: "Healthcare", to: "/industries/healthcare" },
+  {
+    id: "education",
+    title: "E-learning & EdTech",
+    to: "/industries/education",
+  },
+  {
+    id: "ecommerce",
+    title: "Retail & E-commerce",
+    to: "/industries/ecommerce",
+  },
+  {
+    id: "real-estate",
+    title: "Real Estate",
+    to: "/industries/real-estate",
+  },
+  {
+    id: "logistics-supply-chain",
+    title: "Logistics & Supply Chain",
+    to: "/industries/logistics-supply-chain",
+  },
+  {
+    id: "manufacturing",
+    title: "Manufacturing",
+    to: "/industries/manufacturing",
+  },
+  {
+    id: "hospitality-tourism",
+    title: "Hospitality & Tourism",
+    to: "/industries/hospitality-tourism",
+  },
+];

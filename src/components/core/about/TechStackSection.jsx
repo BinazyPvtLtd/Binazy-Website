@@ -53,6 +53,19 @@ const OurTechStack = () => {
   return (
     <section className="section-padding overflow-hidden">
       <div className="section-container">
+        <div className="text-center max-w-3xl mx-auto mb-12 lg:mb-16">
+       
+
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tight leading-tight text-slate-900">
+            Our Modern
+           
+            <span className="text-brand-600"> Tech Stack</span>
+          </h2>
+             <p className="text-sm  mt-2 md:text-base font-medium text-slate-500 mb-3">
+            Technologies we use to build reliable digital products.
+          </p>
+        </div>
+
         {/* Row 1 Left */}
         <div className="mb-6 overflow-hidden">
           <div className="tech-stack-marquee mb-4 flex gap-5">

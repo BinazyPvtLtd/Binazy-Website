@@ -1,6 +1,6 @@
 import { useParams, Navigate } from "react-router-dom";
-import { industriesData } from "../../data/industriesData";
-import IndustryDetailsTemplate from "./IndustryDetailsTemplate";
+import { industriesData } from "@/data/industriesData";
+import IndustryDetailsTemplate from "@/pages/industries/IndustryDetailsTemplate";
 
 const IndustryDetailsPage = () => {
   const { industriesId } = useParams();

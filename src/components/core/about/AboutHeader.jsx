@@ -1,23 +1,11 @@
 import React from "react";
-import About from "../../../assets/About1.jpg";
-import About2 from "../../../assets/About2.jpg";
+import About from "@/assets/About1.jpg";
+import About2 from "@/assets/About2.jpg";
 
 const AboutHeader = () => {
   return (
     <>
-      <section className="relative flex h-[350px] items-center overflow-hidden bg-[#0f2070] md:h-[450px] lg:h-[600px]">
-        {/* Content */}
-        <div className="section-container relative z-10 text-left text-white">
-          <h1 className="mb-4 text-3xl font-bold leading-tight sm:text-5xl md:text-6xl">
-            About <span className="text-blue-400">Binazy</span>
-          </h1>
-
-          <p className="max-w-2xl text-sm leading-6 text-gray-200 sm:text-lg sm:leading-8 md:text-xl">
-            Empowering businesses worldwide with innovative digital solutions,
-            custom software, mobile applications, and cutting-edge technology.
-          </p>
-        </div>
-      </section>
+    
 
       <section className="bg-gray-50 py-12 sm:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">

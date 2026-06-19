@@ -1,6 +1,6 @@
-import businessWebsiteImage from "../assets/blog1.jpg";
-import aiAutomationImage from "../assets/blog3.jpg";
-import ecommerceImage from "../assets/ecom.jpg";
+import businessWebsiteImage from "@/assets/blog1.jpg";
+import aiAutomationImage from "@/assets/blog3.jpg";
+import ecommerceImage from "@/assets/ecom.jpg";
 
 export const blogPosts = [
   {

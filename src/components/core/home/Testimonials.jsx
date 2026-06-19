@@ -1,194 +1,202 @@
-import React, { useEffect, useState } from "react";
-import { ArrowLeft, ArrowRight, Quote } from "lucide-react";
+import { useState } from "react";
+import { ChevronLeft, ChevronRight, Star } from "lucide-react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { A11y, Autoplay } from "swiper/modules";
 
-const StarIcon = () => (
-  <svg
-    className="h-4 w-4 fill-amber-400"
-    viewBox="0 0 20 20"
-    aria-hidden="true">
-    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 0 0 .95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 0 0-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 0 0-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 0 0-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 0 0 .951-.69l1.07-3.292z" />
-  </svg>
-);
+import "swiper/css";
 
 const testimonials = [
   {
-    initials: "RS",
-    avatarClassName: "bg-slate-900 text-white",
-    name: "Rahul Sharma",
-    role: "CEO - NovaTech Solutions, Mumbai",
-    tag: "SaaS",
-    text: "Working with this team was one of the best decisions for our product launch. They delivered a scalable platform on time with excellent quality and strong technical expertise.",
+    id: 1,
+    quote:
+      "This is the first tool our entire team agreed on - and we are notoriously hard to please. Onboarding took under a day, and we shipped our first feature the same week.",
+    name: "Priya Menon",
+    role: "Head of Product",
+    company: "Luma Labs",
+    avatar: "https://i.pravatar.cc/96?img=47",
+    rating: 5,
+    featured: true,
   },
   {
-    initials: "PM",
-    avatarClassName: "bg-blue-600 text-white",
-    name: "Priya Mehta",
-    role: "Product Director - FinEdge, Bengaluru",
-    tag: "Fintech",
-    text: "They understood our business goals quickly and transformed our ideas into a polished digital product. Communication was professional, transparent, and highly responsive.",
+    id: 2,
+    quote:
+      "Cut our review cycle from three days to three hours. The diff view alone is worth every rupee of the subscription.",
+    name: "David Osei",
+    role: "Engineering Lead",
+    company: "Parafin",
+    avatar: "https://i.pravatar.cc/96?img=12",
+    rating: 5,
   },
   {
-    initials: "NK",
-    avatarClassName: "bg-emerald-600 text-white",
-    name: "Neha Kapoor",
-    role: "Operations Head - LogiCore, Delhi",
-    tag: "Logistics",
-    text: "We needed a reliable technology partner for automation, and they exceeded expectations. The final solution improved our workflow efficiency significantly.",
+    id: 3,
+    quote:
+      "Finally a product that respects our data privacy constraints without compliance hoops. The SOC 2 report was ready before we even asked.",
+    name: "Nadia Boulanger",
+    role: "VP Security",
+    company: "Vesper Health",
+    avatar: "https://i.pravatar.cc/96?img=32",
+    rating: 5,
   },
   {
-    initials: "AV",
-    avatarClassName: "bg-violet-600 text-white",
-    name: "Arjun Verma",
-    role: "Founder - LearnSphere, Pune",
-    tag: "EdTech",
-    text: "From UI design to backend development, everything was handled with precision. Their balance of creativity and technical skill added real value to our business.",
+    id: 4,
+    quote:
+      "I was skeptical - we've tried six tools this year. This one actually stuck because it fits the way designers think, not just developers.",
+    name: "Sakura Tanaka",
+    role: "Design Systems",
+    company: "Monzo",
+    avatar: "https://i.pravatar.cc/96?img=49",
+    rating: 4,
+  },
+  {
+    id: 5,
+    quote:
+      "Support is shockingly responsive. Opened a ticket at midnight, had a fix deployed by morning. Never felt like a number in a queue.",
+    name: "Alex Rivera",
+    role: "CTO",
+    company: "Bracket Studios",
+    avatar: "https://i.pravatar.cc/96?img=15",
+    rating: 5,
+  },
+  {
+    id: 6,
+    quote:
+      "We replaced three separate tools with this one. Our DevOps overhead dropped by 40% in the first month. Remarkable ROI.",
+    name: "James Whitfield",
+    role: "Platform Architect",
+    company: "Clearbit",
+    avatar: "https://i.pravatar.cc/96?img=59",
+    rating: 5,
   },
 ];
 
-const metrics = [
-  { value: "98%", label: "Client retention" },
-  { value: "120+", label: "Projects delivered" },
-  { value: "4.9/5", label: "Average rating" },
-];
+function StarRating({ count }) {
+  return (
+    <div className="flex gap-0.5" aria-label={`${count} out of 5 stars`}>
+      {Array.from({ length: 5 }).map((_, index) => (
+        <Star
+          key={index}
+          aria-hidden="true"
+          fill="currentColor"
+          className={`h-4 w-4 ${
+            index < count ? "text-yellow-400" : "text-gray-200"
+          }`}
+        />
+      ))}
+    </div>
+  );
+}
 
-const Testimonials = () => {
+function TestimonialCard({ testimonial }) {
+  return (
+    <article className="relative flex  rounded-xl h-full w-full flex-col border bg-white p-6">
+      <StarRating count={testimonial.rating} />
+
+      <span
+        className="mt-3 -mb-2 select-none font-serif text-5xl leading-none text-gray-200"
+        aria-hidden="true">
+        &quot;
+      </span>
+
+      <p className=" flex-1 text-sm leading-relaxed text-gray-600">
+        {testimonial.quote}
+      </p>
+
+      <div className="mt-5 flex items-center gap-3 border-t border-gray-100 pt-4">
+        <img
+          src={testimonial.avatar}
+          alt={testimonial.name}
+          loading="lazy"
+          className="h-10 w-10 shrink-0 rounded-full object-cover"
+        />
+        <div>
+          <p className="text-sm font-semibold leading-tight text-gray-900">
+            {testimonial.name}
+          </p>
+          <p className="mt-0.5 text-xs leading-tight text-gray-400">
+            {testimonial.role} - {testimonial.company}
+          </p>
+        </div>
+      </div>
+    </article>
+  );
+}
+
+export default function Testimonials() {
+  const [swiper, setSwiper] = useState(null);
   const [activeIndex, setActiveIndex] = useState(0);
-  const activeTestimonial = testimonials[activeIndex];
-
-  useEffect(() => {
-    const timer = window.setInterval(() => {
-      setActiveIndex((current) => (current + 1) % testimonials.length);
-    }, 3200);
-
-    return () => window.clearInterval(timer);
-  }, []);
-
-  const showPrevious = () => {
-    setActiveIndex((current) =>
-      current === 0 ? testimonials.length - 1 : current - 1,
-    );
-  };
-
-  const showNext = () => {
-    setActiveIndex((current) => (current + 1) % testimonials.length);
-  };
 
   return (
-    <section className="overflow-hidden bg-[linear-gradient(180deg,#f8fafc_0%,#ffffff_48%,#eff6ff_100%)] py-20 lg:py-28">
-      <div className="section-container">
-        <div className="grid gap-10 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:items-center lg:gap-14">
-          <div className="rounded-[2rem] border border-slate-200 bg-white/85 p-6 shadow-[0_24px_80px_rgba(15,23,42,0.08)] backdrop-blur-sm sm:p-8 lg:p-10">
-            <span className="inline-flex items-center gap-2 rounded-full border border-blue-100 bg-blue-50 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-blue-700">
-              Client Feedback
-            </span>
+    <section className="overflow-hidden bg-gray-50 px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+      <div className="mx-auto max-w-6xl">
+        <div className="mb-10 text-center lg:mb-12">
+          <h2 className="mb-3 text-3xl font-bold text-gray-900 sm:text-4xl lg:text-5xl">
+            Testimonials
+          </h2>
+          <p className="mx-auto max-w-md text-base text-gray-500">
+            From startups to growing businesses our clients trust us to build
+            reliable and impactful digital solutions.
+          </p>
+        </div>
 
-            <h2 className="mt-5 max-w-xl text-3xl font-bold leading-tight tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
-              Trusted by teams building modern digital products
-            </h2>
+        <div className="relative">
+          <Swiper
+            modules={[A11y, Autoplay]}
+            loop
+            autoplay={{
+              delay: 4500,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
+            breakpoints={{
+              0: { slidesPerView: 1, spaceBetween: 20 },
+              640: { slidesPerView: 2, spaceBetween: 20 },
+              1024: { slidesPerView: 3, spaceBetween: 24 },
+            }}
+            className="pb-12"
+            onSwiper={setSwiper}
+            onSlideChange={(instance) => setActiveIndex(instance.realIndex)}
+            a11y={{
+              prevSlideMessage: "Previous testimonial",
+              nextSlideMessage: "Next testimonial",
+            }}>
+            {testimonials.map((testimonial) => (
+              <SwiperSlide key={testimonial.id} className="flex! h-auto!">
+                <TestimonialCard testimonial={testimonial} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
 
-            <p className="mt-5 max-w-2xl text-sm leading-7 text-slate-600 sm:text-base lg:text-lg lg:leading-8">
-              We help startups and growth-focused companies ship faster, scale
-              smarter, and create products people genuinely enjoy using.
-            </p>
+          <button
+            type="button"
+            aria-label="Previous testimonial"
+            onClick={() => swiper?.slidePrev()}
+            className="absolute left-0 top-[42%] z-10 hidden h-11 w-11 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-700 shadow-sm transition hover:border-blue-600 hover:bg-blue-600 hover:text-white md:flex">
+            <ChevronLeft className="h-5 w-5" />
+          </button>
 
-            <div className="mt-8 grid grid-cols-3 gap-4 sm:gap-5">
-              {metrics.map((item) => (
-                <div
-                  key={item.label}
-                  className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-4 sm:px-5">
-                  <p className="text-xl font-bold tracking-tight text-slate-900 sm:text-2xl">
-                    {item.value}
-                  </p>
-                  <p className="mt-1 text-xs uppercase tracking-[0.18em] text-slate-500 sm:text-[11px]">
-                    {item.label}
-                  </p>
-                </div>
-              ))}
-            </div>
+          <button
+            type="button"
+            aria-label="Next testimonial"
+            onClick={() => swiper?.slideNext()}
+            className="absolute right-0 top-[42%] z-10 hidden h-11 w-11 translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-700 shadow-sm transition hover:border-blue-600 hover:bg-blue-600 hover:text-white md:flex">
+            <ChevronRight className="h-5 w-5" />
+          </button>
 
-            <div className="mt-8 flex gap-3">
+          <div className="mt-1 flex justify-center gap-2">
+            {testimonials.map((testimonial, index) => (
               <button
+                key={testimonial.id}
                 type="button"
-                onClick={showPrevious}
-                aria-label="Show previous testimonial"
-                className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-700 transition hover:border-blue-200 hover:bg-blue-600 hover:text-white">
-                <ArrowLeft className="h-4 w-4" />
-              </button>
-
-              <button
-                type="button"
-                onClick={showNext}
-                aria-label="Show next testimonial"
-                className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-700 transition hover:border-blue-200 hover:bg-blue-600 hover:text-white">
-                <ArrowRight className="h-4 w-4" />
-              </button>
-            </div>
-          </div>
-
-          <div className="relative min-w-0">
-            <div className="absolute -left-4 top-8 hidden h-24 w-24 rounded-full bg-blue-100/70 blur-2xl sm:block" />
-            <div className="absolute -right-4 bottom-8 hidden h-28 w-28 rounded-full bg-sky-100/80 blur-2xl sm:block" />
-
-            <article className="relative overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-6 shadow-[0_28px_90px_rgba(15,23,42,0.1)] sm:p-8 lg:p-10">
-              <div className="absolute right-6 top-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 text-blue-600">
-                <Quote className="h-5 w-5" />
-              </div>
-
-              <div className="flex items-center justify-between gap-4 pr-14">
-                <div className="flex gap-1">
-                  {Array.from({ length: 5 }).map((_, index) => (
-                    <StarIcon key={index} />
-                  ))}
-                </div>
-
-                <span className="inline-flex rounded-full border border-blue-100 bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">
-                  {activeTestimonial.tag}
-                </span>
-              </div>
-
-              <p className="mt-8 text-base leading-8 text-slate-700 sm:text-lg">
-                "{activeTestimonial.text}"
-              </p>
-
-              <div className="mt-8 flex items-center gap-4 border-t border-slate-100 pt-6">
-                <div
-                  aria-hidden="true"
-                  className={`flex h-14 w-14 items-center justify-center rounded-full text-sm font-bold tracking-[0.12em] ${activeTestimonial.avatarClassName}`}>
-                  {activeTestimonial.initials}
-                </div>
-
-                <div>
-                  <h4 className="font-semibold text-slate-900">
-                    {activeTestimonial.name}
-                  </h4>
-                  <p className="text-sm leading-6 text-slate-500">
-                    {activeTestimonial.role}
-                  </p>
-                </div>
-              </div>
-
-              <div className="mt-8 flex flex-wrap gap-2">
-                {testimonials.map((testimonial, index) => (
-                  <button
-                    key={testimonial.name}
-                    type="button"
-                    aria-label={`Show testimonial ${index + 1}`}
-                    aria-pressed={activeIndex === index}
-                    onClick={() => setActiveIndex(index)}
-                    className={`h-2.5 rounded-full transition-all duration-300 ${
-                      activeIndex === index
-                        ? "w-10 bg-blue-600"
-                        : "w-2.5 bg-slate-300 hover:bg-slate-400"
-                    }`}
-                  />
-                ))}
-              </div>
-            </article>
+                aria-label={`Go to testimonial ${index + 1}`}
+                onClick={() => swiper?.slideToLoop(index)}
+                className={`h-2 mt-2  rounded-full bg-blue-600 transition-all duration-300 ${
+                  activeIndex === index ? "w-6 opacity-100" : "w-2 opacity-30"
+                }`}
+              />
+            ))}
           </div>
         </div>
       </div>
     </section>
   );
-};
-
-export default Testimonials;
+}

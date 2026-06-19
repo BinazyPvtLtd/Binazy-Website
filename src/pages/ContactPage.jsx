@@ -3,10 +3,10 @@ import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import { Mail, Phone, MapPin, CheckCircle, AlertCircle } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import Navbar from "../components/common/Navbar";
+import Navbar from "@/components/common/Navbar";
 import FAQSection from "@/components/common/FAQSection";
-import Footer from "../components/common/Footer";
-import SocialLinks from "../components/common/SocialLinks";
+import Footer from "@/components/common/Footer";
+import SocialLinks from "@/components/common/SocialLinks";
 import SEO from "@/components/common/SEO";
 
 const EMAILJS_SERVICE_ID = "service_yyz7lde";
@@ -82,7 +82,7 @@ const ContactPage = () => {
 
       <main id="main-content">
         <section className="section-padding bg-gray-50 mt-10">
-          {/* ── Heading ── */}
+          {/* Heading */}
           <div className="text-center max-w-2xl mx-auto mb-12">
             <p className="text-xs sm:text-sm font-medium uppercase tracking-[0.22em] text-gray-500">
               Contact Us
@@ -98,7 +98,7 @@ const ContactPage = () => {
           </div>
 
           <div className="section-container grid lg:grid-cols-2 section-gap">
-            {/* ── Form card ── */}
+            {/* Form card */}
             <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-md">
               <form
                 className="space-y-5"
@@ -320,7 +320,7 @@ const ContactPage = () => {
                 </button>
               </form>
 
-              {/* ── Direct contact ── */}
+              {/* Direct contact */}
               <div className="mt-8 border-t pt-6 space-y-4">
                 <p className="text-sm text-gray-600">Or reach us via</p>
 
@@ -348,7 +348,7 @@ const ContactPage = () => {
               </div>
             </div>
 
-            {/* ── Right column ── */}
+            {/* Right column */}
             <div className="space-y-8">
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">

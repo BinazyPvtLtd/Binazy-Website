@@ -1,27 +1,25 @@
-// src/App.jsx
-import Home from "./pages/Home";
+import Home from "@/pages/Home";
 import { Routes, Route, Navigate } from "react-router-dom";
-import About from "./pages/About";
-import ContactPage from "./pages/ContactPage";
-import SubmitSuccess from "./pages/SubmitSuccess";
-import NotFound from "./pages/NotFound";
-import ServiceDetailsPage from "./pages/services/ServiceDetailsPage";
-import IndustryDetailsPage from "./pages/industries/IndustryDetailsPage";
-import LocationDetailsPage from "@/pages/Locations/LocationDetailPage";
+import About from "@/pages/About";
+import ContactPage from "@/pages/ContactPage";
+import SubmitSuccess from "@/pages/SubmitSuccess";
+import NotFound from "@/pages/NotFound";
+import ServiceDetailsPage from "@/pages/services/ServiceDetailsPage";
+import IndustryDetailsPage from "@/pages/industries/IndustryDetailsPage";
+import LocationDetailsPage from "@/pages/locations/LocationDetailPage";
 import BlogPage from "@/pages/blog/BlogPage";
 import BlogDetailsPage from "@/pages/blog/BlogDetailsPage";
-import ScrollToTop from "./components/ScrollToTop";
-// import ScrollToTopButton from "./components/ScrollToTopButton";
-import WhatsappButton from "./components/WhatsappButton";
-import CallButton from "./components/CallButton";
+import ScrollToTop from "@/components/ScrollToTop";
+import WhatsappButton from "@/components/WhatsappButton";
+import CallButton from "@/components/CallButton";
+import New from "@/components/New";
 
 const App = () => {
   return (
     <>
-      <WhatsappButton />
+      <WhatsappButton />    
       <CallButton />
       <ScrollToTop />
-      {/* <ScrollToTopButton /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -47,6 +45,10 @@ const App = () => {
           element={<Navigate to="/industries/education" replace />}
         />
         <Route
+          path="/industries/travel"
+          element={<Navigate to="/industries/hospitality-tourism" replace />}
+        />
+        <Route
           path="/locations/:locationId"
           element={<LocationDetailsPage />}
         />
@@ -55,6 +57,7 @@ const App = () => {
           element={<Navigate to="/locations/australia" replace />}
         />
         <Route path="*" element={<NotFound />} />
+        <Route path="/new" element={<New />} />
       </Routes>
     </>
   );

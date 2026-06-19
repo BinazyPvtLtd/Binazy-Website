@@ -1,6 +1,6 @@
-// src/pages/Locations/LocationDetailsPage.jsx
+// src/pages/locations/LocationDetailsPage.jsx
 import { useParams, Navigate } from "react-router-dom";
-import LocationTemplate from "./LocationTemplate";
+import LocationTemplate from "@/pages/locations/LocationTemplate";
 import { locationData } from "@/data/LocationData";
 
 const LocationDetailsPage = () => {

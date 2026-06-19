@@ -1,176 +1,86 @@
-import React, { useState } from "react";
-import { Check, Users, Code2, ShieldCheck } from "lucide-react";
-import whyusss from "@/assets/whyusss.jpg";
-import whyChoiceTech from "@/assets/why-choice-tech.jpg";
-import whyChoiceGrowth from "@/assets/why-choice-growth.jpg";
+import React from "react";
+import { BarChart3, ShieldCheck, Target, Workflow } from "lucide-react";
+import img from "@/assets/whyus.jpg";
 
 const features = [
   {
-    title: "Client-Centric Approach",
-    desc: "We prioritize your business goals and tailor our solutions to your needs.",
-    points: [
-      "Personalized strategies",
-      "Transparent communication",
-      "Continuous support",
-    ],
+    icon: Target,
+    title: "Strategy-First Development",
+    desc: "We start with your business goals, users, and workflows so every website, app, or system solves a real problem.",
+    color: "bg-blue-100 text-blue-600",
   },
   {
-    title: "Cutting-Edge Technology",
-    desc: "We leverage the latest tech to deliver robust and scalable solutions.",
-    points: [
-      "Modern frameworks",
-      "Cloud integration",
-      "Security best practices",
-    ],
+    icon: Workflow,
+    title: "Systems Built Around Your Operations",
+    desc: "From ERP and HRMS to dashboards and automation, we create connected tools that reduce manual work and improve visibility.",
+    color: "bg-purple-100 text-purple-600",
   },
   {
-    title: "Proven Track Record",
-    desc: "Our portfolio showcases successful projects across industries.",
-    points: [
-      "Diverse clientele",
-      "Award-winning solutions",
-      "Long-term partnerships",
-    ],
-  },
-];
-
-const highlights = [
-  {
-    icon: <Users className="w-6 h-6 text-white" />,
-    bg: "bg-brand-600",
-    title: "Flexible & Future-Ready Solutions",
-    desc: "We build scalable systems that grow with your business.",
-    img: whyusss,
+    icon: ShieldCheck,
+    title: "Secure, Scalable Architecture",
+    desc: "Our solutions are built for performance, reliability, and long-term maintainability as your business grows.",
+    color: "bg-red-100 text-red-500",
   },
   {
-    icon: <Code2 className="w-6 h-6 text-white" />,
-    bg: "bg-brand-700",
-    title: "Expert Developers, Quality Output",
-    desc: "Clean, efficient code with reliable performance.",
-    img: whyChoiceTech,
-  },
-  {
-    icon: <ShieldCheck className="w-6 h-6 text-white" />,
-    bg: "bg-brand-800",
-    title: "Consistency & Reliability",
-    desc: "Stable, secure, and dependable long-term solutions.",
-    img: whyChoiceGrowth,
+    icon: BarChart3,
+    title: "Focused on Business Outcomes",
+    desc: "We align design, development, SEO, and automation around better leads, smoother operations, and measurable growth.",
+    color: "bg-green-100 text-green-600",
   },
 ];
 
 const WhyChooseUs = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-
   return (
-    <>
-      {/* SECTION 1 */}
-      <section className="py-14 md:py-20 overflow-hidden bg-white">
-        <div className="section-container">
-          {/* Header */}
-          <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 leading-tight mb-5">
-              Built for Modern Business Growth
-            </h2>
+    <section className="section-padding bg-white">
+      <div className="section-container">
+        <div className="mb-10 text-center lg:mb-14">
+          <h2 className="text-3xl font-bold leading-tight text-slate-800 sm:text-4xl">
+            Why Choose Us?
+          </h2>
 
-            <p className="text-slate-500 text-lg leading-relaxed">
-              We combine strategy, technology, and execution to deliver premium
-              digital products that help businesses scale faster.
-            </p>
-          </div>
-
-          {/* Cards */}
-          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
-            {features.map((item, index) => (
-              <div
-                key={index}
-                className="bg-white border border-slate-200 rounded-3xl p-8 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300"
-              >
-                <h3 className="text-xl font-bold text-slate-900 mb-3">
-                  {item.title}
-                </h3>
-
-                <p className="text-slate-500 text-sm leading-relaxed mb-6">
-                  {item.desc}
-                </p>
-
-                <ul className="space-y-3">
-                  {item.points.map((point, i) => (
-                    <li
-                      key={i}
-                      className="flex items-center gap-3 text-sm font-medium text-slate-700"
-                    >
-                      <span className="w-6 h-6 rounded-full bg-brand-50 flex items-center justify-center shrink-0">
-                        <Check className="w-4 h-4 text-brand-600" />
-                      </span>
-                      {point}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
+          <div className="mx-auto mt-3 h-1 w-16 rounded-full bg-orange-500 sm:w-20"></div>
         </div>
-      </section>
 
-      {/* SECTION 2 */}
-      <section className="py-14 md:py-20 bg-slate-50 overflow-hidden">
-        <div className="section-container">
-          <div className="grid lg:grid-cols-2 gap-10 xl:gap-16 items-center">
-            <div>
+        <div className="grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-12">
+          <div className="space-y-4 sm:space-y-5">
+            {features.map((item, index) => {
+              const Icon = item.icon;
+
+              return (
+                <div
+                  key={index}
+                  className="flex flex-col gap-4 rounded-lg border border-slate-100 bg-white p-5 shadow-sm sm:flex-row sm:gap-5 sm:p-6">
+                  <div
+                    className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl sm:h-16 sm:w-16 sm:rounded-2xl ${item.color}`}>
+                    <Icon className="h-6 w-6 sm:h-7 sm:w-7" />
+                  </div>
+
+                  <div>
+                    <h3 className="mb-2 text-lg font-semibold leading-snug text-slate-800 sm:text-xl">
+                      {item.title}
+                    </h3>
+
+                    <p className="text-sm leading-6 text-gray-500 sm:text-base sm:leading-7">
+                      {item.desc}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="flex justify-center">
+            <div className="relative w-full max-w-md overflow-hidden rounded-xl border-4 border-sky-500 bg-white p-2 shadow-xl sm:border-[6px] sm:p-3">
               <img
-                src={highlights[activeIndex].img}
-                alt={`${highlights[activeIndex].title} visual`}
-                loading="lazy"
-                className="w-full rounded-3xl object-cover transition-all duration-500"
+                src={img}
+                alt="Why Choose Us"
+                className="h-72 w-full rounded-xl object-cover sm:h-96 sm:rounded-3xl lg:h-[34rem]"
               />
             </div>
-
-            <div>
-              <span className="inline-block px-4 py-1.5 rounded-full bg-brand-50 text-brand-600 text-sm font-semibold mb-5">
-                Premium Solutions
-              </span>
-
-              <h2 className="text-4xl md:text-5xl font-bold text-slate-900 leading-tight mb-8">
-                Your Trusted Partner For
-                <br />
-                Scalable Digital Success
-              </h2>
-
-              <div className="space-y-5">
-                {highlights.map((item, index) => (
-                  <button
-                    type="button"
-                    key={index}
-                    onClick={() => setActiveIndex(index)}
-                    aria-pressed={activeIndex === index}
-                    className={`w-full text-left flex gap-4 p-5 rounded-2xl bg-white border shadow-sm hover:shadow-md transition duration-300 cursor-pointer ${
-                      activeIndex === index
-                        ? "border-brand-500"
-                        : "border-slate-200"
-                    }`}>
-                    <span
-                      aria-hidden="true"
-                      className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 ${item.bg}`}>
-                      {item.icon}
-                    </span>
-
-                    <span className="block">
-                      <span className="block text-lg font-semibold text-slate-900 mb-1">
-                        {item.title}
-                      </span>
-
-                      <span className="block text-sm text-slate-500 leading-relaxed">
-                        {item.desc}
-                      </span>
-                    </span>
-                  </button>
-                ))}
-              </div>
-            </div>
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 };
 

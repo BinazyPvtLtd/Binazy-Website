@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Logo from "@/assets/BinazyLogo.jpg";
 import React from "react";
-import SocialLinks from "./SocialLinks";
+import SocialLinks from "@/components/common/SocialLinks";
 
 const footerLinks = {
   Services: [

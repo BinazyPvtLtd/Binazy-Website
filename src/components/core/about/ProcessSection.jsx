@@ -1,77 +1,82 @@
 import React from "react";
-import { Search, Lightbulb, Code2, Rocket } from "lucide-react";
+import { ArrowRight, Code2, Lightbulb, Rocket, Search } from "lucide-react";
 
 const ProcessSection = () => {
   const processes = [
     {
       icon: Search,
       title: "Discovery",
-      desc: "We dive deep into your goals, audience, and market to define the perfect roadmap.",
-      color: "bg-blue-50 text-blue-600",
+      desc: "We clarify business goals, user needs, project scope, and success metrics before writing a single line of code.",
+      label: "Research & roadmap",
+      accent: "bg-blue-50 text-blue-600 ring-blue-100",
+      connector: "from-blue-500",
     },
     {
       icon: Lightbulb,
       title: "Strategy & UX",
-      desc: "Crafting intuitive designs and user journeys that resonate with your brand vision.",
-      color: "bg-violet-50 text-violet-600",
+      desc: "We shape user journeys, wireframes, and product decisions so the experience feels clear, useful, and conversion-ready.",
+      label: "Product planning",
+      accent: "bg-amber-50 text-amber-600 ring-amber-100",
+      connector: "from-amber-500",
     },
     {
       icon: Code2,
       title: "Development",
-      desc: "Clean, scalable, and high-performance code built with cutting-edge technology.",
-      color: "bg-cyan-50 text-cyan-600",
+      desc: "We build scalable interfaces, secure APIs, and reliable systems with clean code and practical engineering standards.",
+      label: "Build & integrate",
+      accent: "bg-cyan-50 text-cyan-600 ring-cyan-100",
+      connector: "from-cyan-500",
     },
     {
       icon: Rocket,
       title: "Launch & Support",
-      desc: "Seamless deployment followed by continuous monitoring and iterative growth.",
-      color: "bg-emerald-50 text-emerald-600",
+      desc: "We deploy, monitor, improve, and support the product so your team can keep moving after launch.",
+      label: "Release & growth",
+      accent: "bg-emerald-50 text-emerald-600 ring-emerald-100",
+      connector: "from-emerald-500",
     },
   ];
 
   return (
-    <section className="section-padding overflow-hidden">
+    <section className="section-padding overflow-hidden bg-white">
       <div className="section-container">
-        {/* Heading */}
-        <div className="text-center max-w-3xl mx-auto mb-12 lg:mb-16">
-          <h2 className="section-heading text-navy-900 leading-tight">
-            How We <span className="text-brand-600">Bring Ideas</span> to Life
-          </h2>
-
-          <p className="section-subheading max-w-2xl mx-auto mt-5">
-            A streamlined workflow focused on clarity, speed, and premium
-            execution from concept to launch.
-          </p>
+        <div className="grid gap-8 lg:grid lg:gap-14 lg:items-end mb-12 lg:mb-16">
+          <div>
+            <h2 className="section-heading mt-5 text-center text-navy-900">
+              How We <span className="text-brand-600">Bring Ideas</span> to Life
+            </h2>
+          </div>
         </div>
 
-        {/* Process Grid */}
+        <div className="relative">
+          <div className="absolute left-8 right-8 top-10 hidden h-px  xl:block" />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8 relative">
-          {processes.map((step, index) => (
-            <div
-              key={index}
-              className="group relative bg-white border-2 rounded-2xl sm:rounded-3xl p-6 sm:p-7 lg:p-8 hover:shadow-xl hover:-translate-y-2 transition-all duration-400">
-              {/* Number */}
-              <span className="absolute top-5 sm:top-6 right-5 sm:right-6 text-4xl sm:text-5xl font-black text-slate-100 group-hover:text-slate-200 transition-all duration-500">
-                0{index + 1}
-              </span>
-
-              {/* Icon */}
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:gap-6 xl:grid-cols-4">
+            {processes.map((step, index) => (
               <div
-                className={`w-14 h-14 sm:w-16 sm:h-16 rounded-2xl flex items-center justify-center mb-6 sm:mb-7 shadow-sm`}>
-                <step.icon className="w-7 h-7" />
+                key={index}
+                className="group relative rounded-2xl border bg-white p-6">
+                <div className="mb-7 flex items-start justify-between gap-4">
+                  <div
+                    className={`relative z-10 flex h-16 w-16 items-center justify-center rounded-2xl ring-1 ${step.accent}`}>
+                    <step.icon className="h-7 w-7" aria-hidden="true" />
+                  </div>
+                </div>
+
+                <span className="mb-3 inline-flex text-sm font-semibold text-brand-600">
+                  {step.label}
+                </span>
+
+                <h3 className="mb-3 text-xl font-bold text-slate-900">
+                  {step.title}
+                </h3>
+
+                <p className="text-[15px] leading-relaxed text-slate-600">
+                  {step.desc}
+                </p>
               </div>
-
-              {/* Content */}
-              <h3 className="text-xl lg:text-2xl font-bold text-slate-900 mb-3 sm:mb-4 pr-10">
-                {step.title}
-              </h3>
-
-              <p className="text-slate-500 leading-relaxed text-[15px] lg:text-base">
-                {step.desc}
-              </p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

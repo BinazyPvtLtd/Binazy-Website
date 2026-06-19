@@ -1,5 +1,5 @@
-import Navbar from "../../components/common/Navbar";
-import Footer from "../../components/common/Footer";
+import Navbar from "@/components/common/Navbar";
+import Footer from "@/components/common/Footer";
 import FAQSection from "@/components/common/FAQSection";
 import StatsSection from "@/components/common/StatsSection";
 import SEO from "@/components/common/SEO";
@@ -24,7 +24,23 @@ const industrySolutionImages = {
     unsplashImage("photo-1434030216411-0b793f4b4173"),
     unsplashImage("photo-1460925895917-afdab827c52f"),
   ],
+  "e-learning": [
+    unsplashImage("photo-1516321318423-f06f85e504b3"),
+    unsplashImage("photo-1509062522246-3755977927d7"),
+    unsplashImage("photo-1523240795612-9a054b0db644"),
+    unsplashImage("photo-1512941937669-90a1b58e7e9c"),
+    unsplashImage("photo-1434030216411-0b793f4b4173"),
+    unsplashImage("photo-1460925895917-afdab827c52f"),
+  ],
   ecommerce: [
+    unsplashImage("photo-1556742049-0cfed4f6a45d"),
+    unsplashImage("photo-1556742502-ec7c0e9f34b1"),
+    unsplashImage("photo-1563013544-824ae1b704d3"),
+    unsplashImage("photo-1586528116311-ad8dd3c8310d"),
+    unsplashImage("photo-1522202176988-66273c2fd55f"),
+    unsplashImage("photo-1460925895917-afdab827c52f"),
+  ],
+  retail: [
     unsplashImage("photo-1556742049-0cfed4f6a45d"),
     unsplashImage("photo-1556742502-ec7c0e9f34b1"),
     unsplashImage("photo-1563013544-824ae1b704d3"),
@@ -55,6 +71,22 @@ const industrySolutionImages = {
     unsplashImage("photo-1436491865332-7a61a109cc05"),
     unsplashImage("photo-1469854523086-cc02fe5d8800"),
     unsplashImage("photo-1500530855697-b586d89ba3ee"),
+  ],
+  hospitality: [
+    unsplashImage("photo-1488646953014-85cb44e25828"),
+    unsplashImage("photo-1507525428034-b723cf961d3e"),
+    unsplashImage("photo-1512427691650-1d38c6447a64"),
+    unsplashImage("photo-1436491865332-7a61a109cc05"),
+    unsplashImage("photo-1469854523086-cc02fe5d8800"),
+    unsplashImage("photo-1500530855697-b586d89ba3ee"),
+  ],
+  logistics: [
+    unsplashImage("photo-1586528116311-ad8dd3c8310d"),
+    unsplashImage("photo-1566576721346-d4a3b4eaeb55"),
+    unsplashImage("photo-1581092918056-0c4c3acd3789"),
+    unsplashImage("photo-1519003722824-194d4455a60c"),
+    unsplashImage("photo-1565688534245-05d6b5be184a"),
+    unsplashImage("photo-1460925895917-afdab827c52f"),
   ],
   manufacturing: [
     unsplashImage("photo-1581091226825-a6a2a5aee158"),

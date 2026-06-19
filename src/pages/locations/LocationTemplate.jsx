@@ -1,4 +1,4 @@
-// src/pages/Locations/LocationTemplate.jsx
+// src/pages/locations/LocationTemplate.jsx
 import React from "react";
 import { Link } from "react-router-dom";
 import {
@@ -44,11 +44,11 @@ export default function LocationTemplate({ data }) {
       <main id="main-content">
         {/* HERO */}
         <section
-          className="relative h-[350px] overflow-hidden bg-[#0f2070] md:h-[450px] lg:h-[600px]"
+          className="relative h-87.5 overflow-hidden bg-[#0f2070] md:h-112.5 lg:h-150"
           style={{ paddingInline: 0 }}>
           {/* Content */}
           <div className="section-container relative z-10 flex h-full items-center px-5 py-8 sm:px-6 lg:px-10">
-            <div className="max-w-[42rem] text-white">
+            <div className="max-w-2xl text-white">
               {/* Tagline */}
               <p className="mb-3 inline-block text-xs font-semibold uppercase tracking-[0.22em] text-blue-300 sm:mb-5 sm:text-sm">
                 {data.heroTagline}

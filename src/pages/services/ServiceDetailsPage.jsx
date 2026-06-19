@@ -1,6 +1,6 @@
 import { useParams, Navigate } from "react-router-dom";
-import { servicesData } from "../../data/servicesData";
-import ServiceDetailsTemplate from "./ServiceDetailsTemplate";
+import { servicesData } from "@/data/servicesData";
+import ServiceDetailsTemplate from "@/pages/services/ServiceDetailsTemplate";
 
 const ServiceDetailsPage = () => {
   const { serviceId } = useParams();

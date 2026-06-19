@@ -1,17 +1,15 @@
-import Navbar from "../components/common/Navbar";
-import Hero from "../components/core/home/Hero";
-import Features from "../components/core/home/Features";
-import Footer from "../components/common/Footer";
+import Navbar from "@/components/common/Navbar";
+import Hero from "@/components/core/home/Hero";
+import Footer from "@/components/common/Footer";
 import WhyChooseUs from "@/components/core/home/WhyChooseUs";
-import Testimonials from "@/components/core/home/Testimonials";
-import ProjectPortfolio from "@/components/core/home/ProjectPortfolio";
-import FAQSection from "@/components/common/FAQSection";
 import CTASection from "@/components/core/home/CTASection";
-import SolutionsSection from "@/components/core/home/SolutionsSection";
-import DigitalJourney from "@/components/core/home/DigitalJourney";
+import Services from "@/components/core/home/Services";
+import Industries from "@/components/core/home/Industries";
 import TechStackSection from "@/components/core/about/TechStackSection";
-import LocationTemplate from "@/pages/Locations/LocationTemplate";
+import ProcessSection from "@/components/core/about/ProcessSection";
 import SEO from "@/components/common/SEO";
+import Testimonials from "@/components/core/home/Testimonials";
+
 const Home = () => {
   return (
     <>
@@ -23,17 +21,13 @@ const Home = () => {
       <Navbar />
       <main id="main-content" className="pt-16 ">
         <Hero />
-
-        <DigitalJourney />
-        <SolutionsSection />
+        <Services />
+        <Industries />
+        <WhyChooseUs />
+        <ProcessSection />
         <TechStackSection />
         <Testimonials />
-        <Features />
-        <ProjectPortfolio />
-        <WhyChooseUs />
-        <FAQSection />
         <CTASection />
-        <LocationTemplate />
       </main>
       <Footer />
     </>
