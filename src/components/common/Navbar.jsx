@@ -240,7 +240,7 @@ const Navbar = () => {
                   </div>
 
                   {/* Right Column - Links */}
-                  <div className="w-72 max-h-[400px] space-y-1 overflow-y-auto">
+                  <div className="w-72 max-h-100 space-y-1 overflow-y-auto">
                     {activeServiceMenu.links.map((link) => (
                       <Link
                         key={link.to}

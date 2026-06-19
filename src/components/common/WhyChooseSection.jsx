@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  BarChart3,
-  ShieldCheck,
-  Target,
-  Workflow,
-} from "lucide-react";
+import { BarChart3, ShieldCheck, Target, Workflow } from "lucide-react";
 import img from "@/assets/whyus.jpg";
 
 const features = [
@@ -40,9 +35,7 @@ const WhyChooseUs = () => {
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
         <div className="text-center mb-14">
-          <h2 className="text-4xl font-bold text-slate-800">
-            Why Choose Us?
-          </h2>
+          <h2 className="text-4xl font-bold text-slate-800">Why Choose Us?</h2>
 
           <div className="w-20 h-1 bg-orange-500 mx-auto mt-3 rounded-full"></div>
         </div>
@@ -57,11 +50,9 @@ const WhyChooseUs = () => {
               return (
                 <div
                   key={index}
-                  className="bg-white rounded-3xl p-6 shadow-sm hover:shadow-lg transition duration-300 flex gap-5"
-                >
+                  className="bg-white rounded-3xl p-6 shadow-sm hover:shadow-lg transition duration-300 flex gap-5">
                   <div
-                    className={`w-16 h-16 rounded-2xl flex items-center justify-center ${item.color}`}
-                  >
+                    className={`w-16 h-16 rounded-2xl flex items-center justify-center ${item.color}`}>
                     <Icon size={30} />
                   </div>
 
@@ -70,9 +61,7 @@ const WhyChooseUs = () => {
                       {item.title}
                     </h3>
 
-                    <p className="text-gray-500 leading-7">
-                      {item.desc}
-                    </p>
+                    <p className="text-gray-500 leading-7">{item.desc}</p>
                   </div>
                 </div>
               );
@@ -85,7 +74,7 @@ const WhyChooseUs = () => {
               <img
                 src={img}
                 alt="Why Choose Us"
-                className="w-full h-[550px] object-cover rounded-[30px]"
+                className="w-full h-137.5 object-cover rounded-[30px]"
               />
             </div>
           </div>
