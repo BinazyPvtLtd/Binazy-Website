@@ -54,7 +54,17 @@ import unsplash1596524430615 from "@/assets/services/unsplash-1596524430615.jpg"
 import unsplash1600880292203 from "@/assets/services/unsplash-1600880292203.jpg";
 import unsplash1611926653458 from "@/assets/services/unsplash-1611926653458.jpg";
 import unsplash1677442135703 from "@/assets/services/unsplash-1677442135703.jpg";
-import ServiceDetailsPage from "@/pages/services/ServiceDetailsPage";
+import solutionSoftwareApp from "@/assets/solutions-software-app.jpg";
+import solutionItSupport from "@/assets/solutions-it-support.jpg";
+import solutionCloud from "@/assets/solutions-cloud.jpg";
+import solutionAnalyticsAi from "@/assets/solutions-analytics-ai.jpg";
+import softwareDev from "@/assets/softwareDev.jpg";
+import digital from "@/assets/digital.jpg";
+import web from "@/assets/web.jpg";
+import app from "@/assets/app.jpg";
+import ecom from "@/assets/ecom.jpg";
+import test from "@/assets/test.jpg";
+import blog1 from "@/assets/blog1.jpg";
 
 const serviceStyles = [
   { icon: Building2, iconBg: "bg-blue-100 text-blue-600" },
@@ -73,7 +83,6 @@ const serviceStyles = [
 ];
 
 const createServices = (items) =>
-  
   items.map((item, index) => ({
     ...item,
     ...serviceStyles[index % serviceStyles.length],
@@ -86,6 +95,73 @@ const createPage = ({ title, subtitle, techHeading, services, projects }) => ({
   services: createServices(services),
   projects,
 });
+
+export const serviceMenu = [
+  {
+    id: "software-development",
+    title: "Software Development",
+    desc: "Custom software built around your workflows, users, integrations, and long-term business needs.",
+    img: softwareDev,
+    to: "/services/software-development",
+  },
+  {
+    id: "digital-marketing",
+    title: "Digital Marketing",
+    desc: "Campaigns, content, reporting, and conversion journeys that help your brand attract better leads.",
+    img: digital,
+    to: "/services/digital-marketing",
+  },
+  {
+    id: "website-designing",
+    title: "Website Designing",
+    desc: "Clean, responsive website designs that present your brand clearly and guide visitors to action.",
+    img: web,
+    to: "/services/website-designing",
+  },
+  {
+    id: "web-development",
+    title: "Web Development",
+    desc: "Fast, secure, and maintainable websites with strong performance and lead-focused structure.",
+    img: web,
+    to: "/services/web-development",
+  },
+
+  {
+    id: "e-commerce-development",
+    title: "E-commerce Development",
+    desc: "Online stores with product management, secure checkout, order workflows, and analytics.",
+    img: ecom,
+    to: "/services/e-commerce-development",
+  },
+  {
+    id: "app-maintenance",
+    title: "App Maintenance",
+    desc: "Ongoing bug fixes, updates, monitoring, performance improvements, and feature enhancements.",
+    img: app,
+    to: "/services/app-maintenance",
+  },
+  {
+    id: "software-testing",
+    title: "Software Testing",
+    desc: "Functional, responsive, API, regression, and performance testing for reliable releases.",
+    img: test,
+    to: "/services/software-testing",
+  },
+  {
+    id: "web-app-development",
+    title: "Web App Development",
+    desc: "Secure portals, dashboards, SaaS products, and internal applications for modern teams.",
+    img: blog1,
+    to: "/services/web-app-development",
+  },
+  {
+    id: "mobile-app-development",
+    title: "Mobile App Development",
+    desc: "iOS and Android applications with smooth user flows, backend integration, and launch support.",
+    img: app,
+    to: "/services/mobile-app-development",
+  },
+];
 
 const pages = {
   "business-website-development": createPage({
@@ -1113,8 +1189,521 @@ const pages = {
   }),
 };
 
+const menuServicePages = {
+  "software-development": createPage({
+    title: "Software Development for Growing Businesses",
+    subtitle:
+      "Binazy builds reliable software that fits your workflow, connects your tools, and helps teams work faster with fewer manual steps.",
+    techHeading: "Software Development Services",
+    services: [
+      {
+        title: "Custom Business Software",
+        description:
+          "Build tools around your exact operations, approvals, reporting needs, and user roles.",
+      },
+      {
+        title: "Workflow Automation",
+        description:
+          "Replace repetitive manual work with structured processes, alerts, and dashboards.",
+      },
+      {
+        title: "Backend & API Development",
+        description:
+          "Create secure APIs, data models, and integrations that support your product reliably.",
+      },
+      {
+        title: "Admin Panel Development",
+        description:
+          "Give teams clean dashboards to manage users, content, orders, tasks, and reports.",
+      },
+      {
+        title: "System Integration",
+        description:
+          "Connect CRMs, payment tools, analytics, communication platforms, and internal systems.",
+      },
+      {
+        title: "Maintenance & Improvements",
+        description:
+          "Keep software stable with updates, bug fixes, performance checks, and feature upgrades.",
+      },
+    ],
+    projects: [
+      {
+        name: "WorkFlow360",
+        image: unsplash1497366811353,
+        alt: "Custom workflow software dashboard",
+      },
+      {
+        name: "PeopleDesk",
+        image: unsplash1542744173,
+        alt: "Business software management platform",
+      },
+    ],
+  }),
+
+  "digital-marketing": createPage({
+    title: "Digital Marketing That Turns Attention Into Leads",
+    subtitle:
+      "Binazy helps brands improve visibility, run focused campaigns, and measure growth across organic, paid, and social channels.",
+    techHeading: "Digital Marketing Services",
+    services: [
+      {
+        title: "Marketing Strategy",
+        description:
+          "Plan campaigns around your audience, offer, budget, channels, and conversion goals.",
+      },
+      {
+        title: "Social Media Management",
+        description:
+          "Create and manage consistent content that supports awareness, trust, and engagement.",
+      },
+      {
+        title: "Paid Campaign Setup",
+        description:
+          "Launch targeted ads with clear tracking, landing pages, and performance review cycles.",
+      },
+      {
+        title: "Lead Generation Funnels",
+        description:
+          "Build campaign journeys that move visitors from interest to inquiry or booking.",
+      },
+      {
+        title: "Analytics & Reporting",
+        description:
+          "Track traffic, leads, campaign performance, and channel contribution in one view.",
+      },
+      {
+        title: "Conversion Optimization",
+        description:
+          "Improve landing pages, calls to action, and follow-up flows to increase results.",
+      },
+    ],
+    projects: [
+      {
+        name: "GrowthBoard",
+        image: unsplash1552664730,
+        alt: "Digital marketing performance dashboard",
+      },
+      {
+        name: "TrackIQ",
+        image: unsplash1533750516457,
+        alt: "Campaign tracking and attribution dashboard",
+      },
+    ],
+  }),
+
+  "website-designing": createPage({
+    title: "Website Designing That Builds Trust Quickly",
+    subtitle:
+      "Binazy designs clean, responsive websites that present your brand clearly and guide visitors toward action.",
+    techHeading: "Website Designing Services",
+    services: [
+      {
+        title: "UI/UX Website Design",
+        description:
+          "Create layouts that are easy to scan, simple to navigate, and aligned with your brand.",
+      },
+      {
+        title: "Responsive Page Design",
+        description:
+          "Design pages that look polished across mobile, tablet, laptop, and desktop screens.",
+      },
+      {
+        title: "Landing Page Design",
+        description:
+          "Build focused pages for campaigns, services, offers, and lead generation.",
+      },
+      {
+        title: "Brand Visual Direction",
+        description:
+          "Define colors, typography, spacing, and visual patterns for a consistent website.",
+      },
+      {
+        title: "Conversion-Focused Sections",
+        description:
+          "Structure hero areas, service blocks, proof points, and calls to action for clarity.",
+      },
+      {
+        title: "Design Handoff Support",
+        description:
+          "Prepare clean design specs and assets so development stays accurate and efficient.",
+      },
+    ],
+    projects: [
+      {
+        name: "FreelanceHub",
+        image: business1,
+        alt: "Responsive business website design",
+      },
+      {
+        name: "CityConnect",
+        image: business2,
+        alt: "Modern service website interface",
+      },
+    ],
+  }),
+
+  "web-development": createPage({
+    title: "Web Development Built for Speed and Scale",
+    subtitle:
+      "Binazy develops fast, secure, and maintainable websites that help businesses publish, sell, and grow online.",
+    techHeading: "Web Development Services",
+    services: [
+      {
+        title: "Business Website Development",
+        description:
+          "Develop professional websites with clear pages, forms, service sections, and SEO structure.",
+      },
+      {
+        title: "Frontend Development",
+        description:
+          "Build responsive interfaces using modern React patterns, clean components, and fast loading.",
+      },
+      {
+        title: "CMS Integration",
+        description:
+          "Enable easy updates for blogs, pages, services, images, and marketing content.",
+      },
+      {
+        title: "Performance Optimization",
+        description:
+          "Improve page speed, image loading, Core Web Vitals, and mobile browsing quality.",
+      },
+      {
+        title: "Form & Lead Integration",
+        description:
+          "Connect inquiries to email, CRM, WhatsApp, or internal lead management flows.",
+      },
+      {
+        title: "Website Support",
+        description:
+          "Handle updates, fixes, backups, page additions, and technical improvements over time.",
+      },
+    ],
+    projects: [
+      {
+        name: "MCR Holidays",
+        image: business1,
+        alt: "Business website development project",
+      },
+      {
+        name: "Event Horizon",
+        image: business2,
+        alt: "Service website development project",
+      },
+    ],
+  }),
+
+  "app-development": createPage({
+    title: "App Development for Real Business Use Cases",
+    subtitle:
+      "Binazy builds mobile and web apps with practical features, secure integrations, and smooth user experiences.",
+    techHeading: "App Development Services",
+    services: [
+      {
+        title: "Product Planning",
+        description:
+          "Turn your idea into clear screens, features, user roles, and release priorities.",
+      },
+      {
+        title: "Mobile App Development",
+        description:
+          "Build iOS and Android apps with reliable performance and intuitive user flows.",
+      },
+      {
+        title: "Web App Development",
+        description:
+          "Create browser-based applications for customers, teams, operations, or vendors.",
+      },
+      {
+        title: "Backend Integration",
+        description:
+          "Connect authentication, databases, APIs, payments, notifications, and admin controls.",
+      },
+      {
+        title: "Testing & Launch Support",
+        description:
+          "Validate core flows, fix issues, prepare releases, and support store submission.",
+      },
+      {
+        title: "Post-Launch Iteration",
+        description:
+          "Improve the app with analytics, user feedback, maintenance, and new features.",
+      },
+    ],
+    projects: [
+      {
+        name: "Collaby",
+        image: collaby,
+        alt: "Mobile collaboration app interface",
+      },
+      {
+        name: "Tasklow",
+        image: app22,
+        alt: "Task management mobile app interface",
+      },
+    ],
+  }),
+
+  "e-commerce-development": createPage({
+    title: "E-commerce Development That Helps You Sell Directly",
+    subtitle:
+      "Binazy builds online stores with strong product journeys, secure checkout, and tools to manage orders, inventory, and customers.",
+    techHeading: "E-commerce Development Services",
+    services: [
+      {
+        title: "Custom Store Development",
+        description:
+          "Create branded online stores designed for your catalog, audience, and sales goals.",
+      },
+      {
+        title: "Product & Category Setup",
+        description:
+          "Structure products, variants, filters, collections, and search for easier shopping.",
+      },
+      {
+        title: "Cart & Checkout",
+        description:
+          "Build smooth checkout flows with coupons, shipping rules, taxes, and secure payments.",
+      },
+      {
+        title: "Order Management",
+        description:
+          "Manage orders, customer details, fulfillment updates, returns, and admin workflows.",
+      },
+      {
+        title: "Payment Integration",
+        description:
+          "Connect payment gateways that support safe transactions and reliable confirmations.",
+      },
+      {
+        title: "Store Analytics",
+        description:
+          "Track sales, conversion, abandoned carts, product performance, and customer behavior.",
+      },
+    ],
+    projects: [
+      {
+        name: "ShopSphere",
+        image: ecommerce1,
+        alt: "E-commerce storefront project",
+      },
+      {
+        name: "CartNest",
+        image: ecommerce2,
+        alt: "Online store checkout project",
+      },
+    ],
+  }),
+
+  "app-maintenance": createPage({
+    title: "App Maintenance That Keeps Products Stable",
+    subtitle:
+      "Binazy supports existing apps with bug fixes, updates, monitoring, performance improvements, and feature enhancements.",
+    techHeading: "App Maintenance Services",
+    services: [
+      {
+        title: "Bug Fixing",
+        description:
+          "Resolve crashes, broken flows, UI issues, API errors, and production defects.",
+      },
+      {
+        title: "Version Updates",
+        description:
+          "Keep frameworks, packages, SDKs, and platform requirements current and secure.",
+      },
+      {
+        title: "Performance Improvements",
+        description:
+          "Optimize load time, API response handling, database queries, and app responsiveness.",
+      },
+      {
+        title: "Security Checks",
+        description:
+          "Review authentication, permissions, data handling, dependencies, and common risks.",
+      },
+      {
+        title: "Feature Enhancements",
+        description:
+          "Add practical improvements without disrupting existing users or business workflows.",
+      },
+      {
+        title: "Monitoring & Support",
+        description:
+          "Track errors, uptime, user issues, and release health with ongoing support routines.",
+      },
+    ],
+    projects: [
+      {
+        name: "ResolveDesk",
+        image: unsplash1553877522,
+        alt: "Application maintenance support dashboard",
+      },
+      {
+        name: "PulseOps",
+        image: unsplash1588196749597,
+        alt: "App monitoring and issue tracking platform",
+      },
+    ],
+  }),
+
+  "software-testing": createPage({
+    title: "Software Testing That Protects User Experience",
+    subtitle:
+      "Binazy tests websites, apps, and software products to catch defects early and improve reliability before and after launch.",
+    techHeading: "Software Testing Services",
+    services: [
+      {
+        title: "Functional Testing",
+        description:
+          "Verify that features, forms, dashboards, and user flows work as expected.",
+      },
+      {
+        title: "UI & Responsive Testing",
+        description:
+          "Check layouts, spacing, navigation, and interactions across common screen sizes.",
+      },
+      {
+        title: "API Testing",
+        description:
+          "Validate endpoints, payloads, error handling, authentication, and integration behavior.",
+      },
+      {
+        title: "Regression Testing",
+        description:
+          "Retest critical flows after updates so new changes do not break existing behavior.",
+      },
+      {
+        title: "Performance Testing",
+        description:
+          "Identify slow pages, heavy requests, bottlenecks, and stability issues under load.",
+      },
+      {
+        title: "Bug Reporting",
+        description:
+          "Provide clear reports with reproduction steps, screenshots, priority, and expected results.",
+      },
+    ],
+    projects: [
+      {
+        name: "QualityGrid",
+        image: unsplash1504384308090,
+        alt: "Software testing dashboard",
+      },
+      {
+        name: "ReleaseCheck",
+        image: unsplash1460925895917,
+        alt: "QA testing and release checklist platform",
+      },
+    ],
+  }),
+
+  "web-app-development": createPage({
+    title: "Web App Development for Modern Teams",
+    subtitle:
+      "Binazy builds secure browser-based applications for portals, dashboards, SaaS products, marketplaces, and internal operations.",
+    techHeading: "Web App Development Services",
+    services: [
+      {
+        title: "SaaS Product Development",
+        description:
+          "Build subscription-ready web apps with user accounts, plans, dashboards, and admin tools.",
+      },
+      {
+        title: "Customer Portals",
+        description:
+          "Create secure portals for customers to view data, requests, payments, documents, or status.",
+      },
+      {
+        title: "Admin Dashboards",
+        description:
+          "Give internal teams practical tools to manage workflows, users, reports, and content.",
+      },
+      {
+        title: "Role-Based Access",
+        description:
+          "Control access by user type, department, permissions, and business responsibility.",
+      },
+      {
+        title: "Database & API Design",
+        description:
+          "Design scalable data structures and APIs that keep the application maintainable.",
+      },
+      {
+        title: "Deployment & Scaling",
+        description:
+          "Prepare hosting, environments, monitoring, and release processes for production use.",
+      },
+    ],
+    projects: [
+      {
+        name: "OpsGrid",
+        image: unsplash1586528116311,
+        alt: "Web app operations dashboard",
+      },
+      {
+        name: "NexaCore",
+        image: unsplash1551288049,
+        alt: "Enterprise web application dashboard",
+      },
+    ],
+  }),
+
+  seo: createPage({
+    title: "SEO That Helps Customers Find You",
+    subtitle:
+      "Binazy improves website visibility with technical SEO, keyword-focused content structure, and practical optimization for search performance.",
+    techHeading: "SEO Services",
+    services: [
+      {
+        title: "Technical SEO Audit",
+        description:
+          "Review indexability, metadata, headings, page speed, links, schema, and crawl issues.",
+      },
+      {
+        title: "Keyword Research",
+        description:
+          "Find search terms that match your services, locations, audience, and buying intent.",
+      },
+      {
+        title: "On-Page Optimization",
+        description:
+          "Improve titles, descriptions, headings, internal links, content structure, and CTAs.",
+      },
+      {
+        title: "Local SEO",
+        description:
+          "Optimize service and location pages to support visibility in target markets.",
+      },
+      {
+        title: "Content Planning",
+        description:
+          "Plan blogs, landing pages, and service content around demand and conversion goals.",
+      },
+      {
+        title: "SEO Reporting",
+        description:
+          "Track rankings, traffic, impressions, clicks, technical fixes, and growth opportunities.",
+      },
+    ],
+    projects: [
+      {
+        name: "SearchLift",
+        image: unsplash1524178232363,
+        alt: "SEO analytics dashboard",
+      },
+      {
+        name: "RankPath",
+        image: unsplash1501504905252,
+        alt: "Search performance reporting dashboard",
+      },
+    ],
+  }),
+};
+
 export const servicesData = {
   ...pages,
+  ...menuServicePages,
 
   // Backward-compatible aliases for older internal links.
   "software-and-app-development": pages["custom-software-development"],
@@ -1123,8 +1712,5 @@ export const servicesData = {
     pages["marketing-performance-tracking"],
   "cloud-and-infrastructure-services": pages["remote-monitoring"],
   "data-and-analytics-solutions": pages["business-dashboard"],
-  "web-development": pages["business-website-development"],
-  "app-development": pages["mobile-app-development"],
   "custom-software": pages["custom-software-development"],
 };
-

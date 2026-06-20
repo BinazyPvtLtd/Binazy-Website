@@ -8,6 +8,7 @@ import Industries from "@/components/core/home/Industries";
 import TechStackSection from "@/components/core/about/TechStackSection";
 import ProcessSection from "@/components/core/about/ProcessSection";
 import SEO from "@/components/common/SEO";
+import { Link } from "react-router-dom";
 import Testimonials from "@/components/core/home/Testimonials";
 
 const Home = () => {

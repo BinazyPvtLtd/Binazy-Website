@@ -1,60 +1,54 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import {
-  ArrowRight,
-  BarChart3,
-  CloudCog,
-  Code2,
-  Headphones,
-} from "lucide-react";
-import solutionSoftwareApp from "@/assets/service1.jpg";
-import solutionItSupport from "@/assets/service2.jpg";
-import solutionCloud from "@/assets/service3.jpg";
-import solutionAnalyticsAi from "@/assets/service4.jpg";
+import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { A11y, Autoplay } from "swiper/modules";
+import { serviceMenu } from "@/data/ServiceData";
 
-const services = [
-  {
-    title: "Software & App Development",
-    desc: "Custom web, mobile, and business applications designed around your workflows, users, and growth goals.",
-    outcome: "Product strategy, UI, APIs, and scalable delivery",
-    img: solutionSoftwareApp,
-    to: "/services/custom-software-development",
-    icon: Code2,
-    accent: "bg-blue-50 text-blue-600",
-  },
-  {
-    title: "IT Support & Managed Services",
-    desc: "Reliable support operations that keep teams productive, systems stable, and technical issues under control.",
-    outcome: "Helpdesk, monitoring, security, and maintenance",
-    img: solutionItSupport,
-    to: "/services/24-7-helpdesk-support",
-    icon: Headphones,
-    accent: "bg-emerald-50 text-emerald-600",
-  },
-  {
-    title: "Cloud & Infrastructure Services",
-    desc: "Cloud environments and infrastructure foundations built for performance, reliability, and operational control.",
-    outcome: "Cloud setup, optimization, backups, and uptime",
-    img: solutionCloud,
-    to: "/services/remote-monitoring",
-    icon: CloudCog,
-    accent: "bg-amber-50 text-amber-600",
-  },
-  {
-    title: "Data Analytics & AI Automation",
-    desc: "Dashboards, reporting systems, and automation tools that help teams act faster with better information.",
-    outcome: "BI dashboards, workflow automation, and AI tools",
-    img: solutionAnalyticsAi,
-    to: "/services/business-dashboard",
-    icon: BarChart3,
-    accent: "bg-rose-50 text-rose-600",
-  },
-];
+import "swiper/css";
+
+function ServiceCard({ item }) {
+  return (
+    <Link
+      to={item.to}
+      aria-label={`Explore ${item.title}`}
+      className="group flex h-full min-h-105 flex-col overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brand-200 hover:shadow-xl">
+      <div className="relative h-40 overflow-hidden bg-slate-100 sm:h-44">
+        <img
+          src={item.img}
+          alt={`${item.title} service preview`}
+          loading="lazy"
+          className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+        />
+        <div className="absolute inset-0 bg-linear-to-t from-slate-950/45 via-transparent to-transparent" />
+      </div>
+
+      <div className="flex flex-1 flex-col p-5">
+        <h3 className="text-lg font-bold leading-snug text-slate-950 sm:text-xl">
+          {item.title}
+        </h3>
+        <p className="mt-3 text-sm leading-6 text-slate-600">{item.desc}</p>
+
+        <span className="mt-auto inline-flex items-center gap-2 pt-6 text-sm font-semibold text-brand-600 transition group-hover:text-brand-800">
+          Explore service
+          <ArrowRight
+            className="h-4 w-4 transition group-hover:translate-x-1"
+            aria-hidden="true"
+          />
+        </span>
+      </div>
+    </Link>
+  );
+}
 
 export default function Services() {
+  const [swiper, setSwiper] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+
   return (
     <section
       id="services"
-      className="section-padding bg-white"
+      className="section-padding overflow-hidden bg-white"
       aria-label="Our services">
       <div className="section-container">
         <div className="mb-10 text-center lg:mb-16">
@@ -66,41 +60,64 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-4">
-          {services.map((item) => (
-            <Link
-              to={item.to}
-              key={item.title}
-              aria-label={`Explore ${item.title}`}
-              className="group flex flex-col overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brand-200 hover:shadow-xl sm:min-h-[27rem]">
-              <div className="relative h-40 overflow-hidden bg-slate-100 sm:h-44">
-                <img
-                  src={item.img}
-                  alt={`${item.title} service preview`}
-                  loading="lazy"
-                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-linear-to-t from-slate-950/45 via-transparent to-transparent" />
-              </div>
+        <div className="relative">
+          <Swiper
+            modules={[A11y, Autoplay]}
+            loop
+            autoplay={{
+              delay: 4000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
+            breakpoints={{
+              0: { slidesPerView: 1, spaceBetween: 20 },
+              640: { slidesPerView: 2, spaceBetween: 20 },
+              1024: { slidesPerView: 3, spaceBetween: 24 },
+              1280: { slidesPerView: 4, spaceBetween: 24 },
+            }}
+            className="pb-12"
+            onSwiper={setSwiper}
+            onSlideChange={(instance) => setActiveIndex(instance.realIndex)}
+            a11y={{
+              prevSlideMessage: "Previous service",
+              nextSlideMessage: "Next service",
+            }}>
+            {serviceMenu.map((item) => (
+              <SwiperSlide key={item.id} className="flex! h-auto!">
+                <ServiceCard item={item} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
 
-              <div className="flex flex-1 flex-col p-5">
-                <h3 className="text-lg font-bold leading-snug text-slate-950 sm:text-xl">
-                  {item.title}
-                </h3>
-                <p className="mt-3 text-sm leading-6 text-slate-600">
-                  {item.desc}
-                </p>
+          <button
+            type="button"
+            aria-label="Previous service"
+            onClick={() => swiper?.slidePrev()}
+            className="absolute left-0 top-[42%] z-10 hidden h-11 w-11 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-sm transition hover:border-brand-600 hover:bg-brand-600 hover:text-white md:flex">
+            <ChevronLeft className="h-5 w-5" aria-hidden="true" />
+          </button>
 
-                <span className="mt-auto inline-flex items-center gap-2 pt-6 text-sm font-semibold text-brand-600 transition group-hover:text-brand-800">
-                  Explore service
-                  <ArrowRight
-                    className="h-4 w-4 transition group-hover:translate-x-1"
-                    aria-hidden="true"
-                  />
-                </span>
-              </div>
-            </Link>
-          ))}
+          <button
+            type="button"
+            aria-label="Next service"
+            onClick={() => swiper?.slideNext()}
+            className="absolute right-0 top-[42%] z-10 hidden h-11 w-11 translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-sm transition hover:border-brand-600 hover:bg-brand-600 hover:text-white md:flex">
+            <ChevronRight className="h-5 w-5" aria-hidden="true" />
+          </button>
+
+          <div className="mt-1 flex justify-center gap-2">
+            {serviceMenu.map((item, index) => (
+              <button
+                key={item.id}
+                type="button"
+                aria-label={`Go to ${item.title}`}
+                onClick={() => swiper?.slideToLoop(index)}
+                className={`mt-2 h-2 rounded-full bg-brand-600 transition-all duration-300 ${
+                  activeIndex === index ? "w-6 opacity-100" : "w-2 opacity-30"
+                }`}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>

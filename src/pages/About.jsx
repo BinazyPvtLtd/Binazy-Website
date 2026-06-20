@@ -5,6 +5,8 @@ import SEO from "@/components/common/SEO";
 import img from "@/assets/qq.png";
 import img2 from "@/assets/12.jpg";
 import { Plus, Minus, Circle } from "lucide-react";
+import { Quote } from "lucide-react";
+import founderPortrait from "@/assets/founder-portrait.png";
 
 const specializations = [
   "Accounting & Billing",
@@ -180,38 +182,39 @@ const About = () => {
           </div>
         </section>
 
-        {/* Achievements Section */}
-        <section className="bg-blue-800 py-14 sm:py-16 lg:py-20">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-14">
-              <div>
-                <img
-                  src={img}
-                  alt="Achievements"
-                  className="h-72 w-full rounded-xl object-cover sm:h-96"
-                />
+        <section className="section-padding bg-brand-600 relative overflow-hidden">
+          <div className="section-container relative z-10">
+            <div className="grid lg:grid-cols-[minmax(320px,450px)_1fr] gap-10 lg:gap-20 items-center">
+              {/* Left Card - Image */}
+              <div className="relative">
+                <div>
+                  <img
+                    src={founderPortrait}
+                    alt="Binazy Founder"
+                    loading="lazy"
+                    className="w-full max-h-[520px] h-auto sm:h-[460px] lg:h-[500px] object-cover transition duration-500"
+                  />
+                </div>
               </div>
 
-              <div className="">
-                <h2 className="mb-5 text-3xl font-bold leading-tight text-white/90 sm:mb-6 sm:text-4xl">
-                  Our Achievements
-                </h2>
+              {/* Right Content */}
+              <div className="relative">
+                <Quote className="w-12 h-12 sm:w-16 sm:h-16 text-white/10 absolute -top-7 sm:-top-8 -left-3 sm:-left-4" />
 
-                <div className="space-y-5 text-base leading-7 text-white/90 sm:leading-8">
-                  <p>
-                    Over the years, Binazy has successfully delivered numerous
-                    software solutions and digital products for clients across
-                    different industries. Our achievements are reflected in the
-                    trust and satisfaction of our customers.
-                  </p>
+                <div className="relative z-10">
+                  <blockquote className="text-xl sm:text-3xl md:text-4xl font-bold text-white leading-snug mb-6 sm:mb-8">
+                    "At <span className="text-blue-300">Binazy</span>, we don't
+                    just build products; we architect the growth of our partners
+                    through cutting-edge digital engineering and visionary
+                    design."
+                  </blockquote>
 
-                  <p>
-                    We focus on innovation, quality, and continuous improvement
-                    to provide solutions that create real business value.
-                    Through our talented team and modern technologies, we
-                    continue to expand our capabilities and establish ourselves
-                    as a trusted technology partner for businesses worldwide.
-                  </p>
+                  <div className="flex items-center gap-3 sm:gap-4">
+                    <div className="w-10 sm:w-14 h-0.5 bg-blue-300 flex-shrink-0"></div>
+                    <p className="text-base sm:text-lg text-white/80">
+                      Shaikh Ismaiel, Founder & CEO
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>

@@ -5,6 +5,7 @@ import ContactPage from "@/pages/ContactPage";
 import SubmitSuccess from "@/pages/SubmitSuccess";
 import NotFound from "@/pages/NotFound";
 import ServiceDetailsPage from "@/pages/services/ServiceDetailsPage";
+import { serviceMenu } from "@/data/ServiceData";
 import IndustryDetailsPage from "@/pages/industries/IndustryDetailsPage";
 import LocationDetailsPage from "@/pages/locations/LocationDetailPage";
 import BlogPage from "@/pages/blog/BlogPage";
@@ -12,12 +13,13 @@ import BlogDetailsPage from "@/pages/blog/BlogDetailsPage";
 import ScrollToTop from "@/components/ScrollToTop";
 import WhatsappButton from "@/components/WhatsappButton";
 import CallButton from "@/components/CallButton";
-import New from "@/components/New";
 
 const App = () => {
+  const defaultServicePath = serviceMenu[0]?.to || "/";
+
   return (
     <>
-      <WhatsappButton />    
+      <WhatsappButton />
       <CallButton />
       <ScrollToTop />
       <Routes>
@@ -29,8 +31,8 @@ const App = () => {
         <Route path="/blog/:blogId" element={<BlogDetailsPage />} />
         <Route path="/services/:serviceId" element={<ServiceDetailsPage />} />
         <Route
-          path="/services/web-app-development"
-          element={<Navigate to="/services/web-development" replace />}
+          path="/services"
+          element={<Navigate to={defaultServicePath} replace />}
         />
         <Route
           path="/industries/:industriesId"
@@ -45,6 +47,18 @@ const App = () => {
           element={<Navigate to="/industries/education" replace />}
         />
         <Route
+          path="/industries/retail"
+          element={<Navigate to="/industries/ecommerce" replace />}
+        />
+        <Route
+          path="/industries/finance"
+          element={<Navigate to="/industries/fintech" replace />}
+        />
+        <Route
+          path="/industries/logistics"
+          element={<Navigate to="/industries/logistics-supply-chain" replace />}
+        />
+        <Route
           path="/industries/travel"
           element={<Navigate to="/industries/hospitality-tourism" replace />}
         />
@@ -57,7 +71,6 @@ const App = () => {
           element={<Navigate to="/locations/australia" replace />}
         />
         <Route path="*" element={<NotFound />} />
-        <Route path="/new" element={<New />} />
       </Routes>
     </>
   );
