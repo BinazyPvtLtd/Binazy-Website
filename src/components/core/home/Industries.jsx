@@ -35,7 +35,7 @@ export default function Industries() {
               to={item.to}
               key={item.title}
               aria-label={`Explore ${item.title}`}
-              className="group flex flex-col overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brand-200 hover:shadow-xl sm:min-h-[27rem]">
+              className="group flex flex-col overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brand-200 hover:shadow-xl sm:min-h-108">
               <div className="relative h-40 overflow-hidden bg-slate-100 sm:h-44">
                 <img
                   src={item.img}
