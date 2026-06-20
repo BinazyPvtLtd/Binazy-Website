@@ -192,7 +192,7 @@ const About = () => {
                     src={founderPortrait}
                     alt="Binazy Founder"
                     loading="lazy"
-                    className="w-full max-h-[520px] h-auto sm:h-[460px] lg:h-[500px] object-cover transition duration-500"
+                    className="w-full max-h-130 h-auto sm:h-115 lg:h-125 object-cover transition duration-500"
                   />
                 </div>
               </div>
@@ -210,7 +210,7 @@ const About = () => {
                   </blockquote>
 
                   <div className="flex items-center gap-3 sm:gap-4">
-                    <div className="w-10 sm:w-14 h-0.5 bg-blue-300 flex-shrink-0"></div>
+                    <div className="w-10 sm:w-14 h-0.5 bg-blue-300 shrink-0"></div>
                     <p className="text-base sm:text-lg text-white/80">
                       Shaikh Ismaiel, Founder & CEO
                     </p>
