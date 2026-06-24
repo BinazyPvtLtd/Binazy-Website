@@ -43,20 +43,7 @@
 
       gtag('config', 'G-Z018DEHZTL')
     </script>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=AW-18140750512"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || []
-      function gtag() {
-        dataLayer.push(arguments)
-      }
-      gtag('js', new Date())
 
-      gtag('config', 'AW-18140750512')
-    </script>
     <!-- End Google Tag Manager -->
 
     <!-- Google tag (gtag.js) -->
@@ -73,7 +60,7 @@
     </script> -->
 
     <!-- Meta Pixel Code -->
-    <script>
+    <!-- <script>
       !(function (f, b, e, v, n, t, s) {
         if (f.fbq) return
         n = f.fbq = function () {
@@ -99,8 +86,27 @@
       )
       fbq('init', '1359947992688833')
       fbq('track', 'PageView')
-    </script>
+    </script> -->
     <!-- End Meta Pixel Code -->
+
+    <!-- Event snippet for Click to call conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+    <script>
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof url != 'undefined') {
+            window.location = url
+          }
+        }
+        gtag('event', 'conversion', {
+          send_to: 'AW-18140750512/fDWdCJef28QcELDFl8pD',
+          value: 1.0,
+          currency: 'INR',
+          event_callback: callback
+        })
+        return false
+      }
+    </script>
   </head>
 
   <body>
