@@ -3,19 +3,19 @@ import React from "react";
 const StatsSection = () => {
   const stats = [
     {
-      number: "2+",
-      label: "Years of Experience",
-      desc: "Delivering reliable IT solutions and consultancy services with growing expertise since our inception.",
-    },
-    {
-      number: "70+",
+      number: "100+",
       label: "Projects Delivered",
-      desc: "Successful projects delivered across multiple industries and sectors from Lucknow and beyond.",
+      desc: "Successfully delivered 100+ web, mobile, and software projects across various industries.",
     },
     {
-      number: "60+",
+      number: "50+",
       label: "Happy Clients",
-      desc: "Trusted clients continue to choose Binazy for reliable IT solutions and consultancy services.",
+      desc: "Serving 50+ satisfied clients with reliable, innovative, and high-quality IT solutions.",
+    },
+    {
+      number: "24/7",
+      label: "Support",
+      desc: "Providing round-the-clock technical support and maintenance to ensure uninterrupted business operations.",
     },
   ];
 

@@ -5,7 +5,6 @@ import uaeImg from "@/assets/UAE.jpg";
 import saudiImg from "@/assets/saudi.jpg";
 
 export const locationData = {
-
   australia: {
     id: "australia",
     country: "Australia",
@@ -34,7 +33,7 @@ export const locationData = {
     ],
 
     // PROBLEM SECTION
-    problemTagline: "The Problem",
+    problemTagline: "Thel Problem",
     problemHeading: "Growth shouldn't feel chaotic",
     problemBody: [
       "Most businesses don't struggle because of lack of effort. They struggle because their systems can't keep up.",
@@ -96,7 +95,7 @@ export const locationData = {
       "West Bay",
       "Msheireb Downtown",
       "Al Sadd",
-      "The Pearl-Qatar", 
+      "The Pearl-Qatar",
       "Lusail City",
       "Bin Mahmoud",
       "Al Dafna",
