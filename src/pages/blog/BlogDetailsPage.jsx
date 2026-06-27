@@ -47,7 +47,7 @@ const BlogDetailsPage = () => {
                 <span>{post.readTime}</span>
               </div>
 
-              <h1 className="mt-5 text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-7xl">
+              <h1 className="mt-5 text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-5xl">
                 {post.title}
               </h1>
 
