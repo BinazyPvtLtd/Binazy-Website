@@ -14,12 +14,14 @@ import Portfolio from "@/pages/Portfolio";
 import ScrollToTop from "@/components/ScrollToTop";
 import WhatsappButton from "@/components/WhatsappButton";
 import CallButton from "@/components/CallButton";
+import LeadFormPopup from "@/components/Leadformpopup";
 
 const App = () => {
   const defaultServicePath = serviceMenu[0]?.to || "/";
 
   return (
     <>
+      <LeadFormPopup />
       <WhatsappButton />
       <CallButton />
       <ScrollToTop />
