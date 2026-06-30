@@ -9,6 +9,7 @@ import sholini from "@/assets/sholini.png";
 import manipaal from "@/assets/manipaal.png";
 import collegequestion from "@/assets/collegequestion.png";
 import clo from "@/assets/clo.png";
+import universityAdda from "@/assets/universityAdda.png";
 
 const portfolios = [
   {
@@ -57,7 +58,7 @@ const portfolios = [
     description:
       "Online admission platform for Manipal University's accredited degree programs explore MBA, MCA, and more with expert counseling and easy enrollment.",
 
-    website: "https://onlinembastudy.com/",
+    website: "https://onlinembastudy.com/manipal/",
   },
   {
     id: 6,
@@ -66,7 +67,16 @@ const portfolios = [
     description:
       "India's go-to platform for discovering UGC-entitled online degree programs explore top universities, compare courses, and get expert guidance to find your perfect fit.",
 
-    website: "https://onlinembastudy.com/",
+    website: "https://collegequestion.com/",
+  },
+  {
+    id: 7,
+    title: "Online University Adda 2025",
+    image: universityAdda,
+    description:
+      "India's go-to platform for discovering UGC-entitled online degree programs explore top universities, compare courses, and get expert guidance to find your perfect fit.",
+
+    website: "https://onlineuniversityadda.com/",
   },
 ];
 

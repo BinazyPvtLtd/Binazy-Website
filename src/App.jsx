@@ -11,6 +11,7 @@ import LocationDetailsPage from "@/pages/locations/LocationDetailPage";
 import BlogPage from "@/pages/blog/BlogPage";
 import BlogDetailsPage from "@/pages/blog/BlogDetailsPage";
 import Portfolio from "@/pages/Portfolio";
+import PrivacyPolicy from "@/pages/privacypolicy";
 import ScrollToTop from "@/components/ScrollToTop";
 import WhatsappButton from "@/components/WhatsappButton";
 import CallButton from "@/components/CallButton";
@@ -31,6 +32,8 @@ const App = () => {
         <Route path="/contact-us" element={<ContactPage />} />
         <Route path="/submitSuccess" element={<SubmitSuccess />} />
         <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/privacypolicy" element={<PrivacyPolicy />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/:blogId" element={<BlogDetailsPage />} />
         <Route path="/services/:serviceId" element={<ServiceDetailsPage />} />
