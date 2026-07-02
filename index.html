@@ -73,6 +73,22 @@
         return false;
       }
     </script>
+
+    <!-- Event snippet for Contact conversion page. Renamed fn (ponytail: same name as above would clobber it) -->
+    <script>
+      function gtag_report_contact_conversion(url) {
+        var callback = function () {
+          if (typeof url != "undefined") {
+            window.location = url;
+          }
+        };
+        gtag("event", "conversion", {
+          send_to: "AW-18140750512/cC0SCMSYrskcELDFl8pD",
+          event_callback: callback,
+        });
+        return false;
+      }
+    </script>
   </head>
 
   <body>
