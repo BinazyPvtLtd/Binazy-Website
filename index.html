@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,48 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="google-site-verification"
-      content="PeACfPmAcnpwIavK7qd2NGM8-eCyptNi99CoDcA66qY"
-    />
+      content="PeACfPmAcnpwIavK7qd2NGM8-eCyptNi99CoDcA66qY" />
     <meta
       name="description"
-      content="Binazy - Building scalable web apps, mobile solutions, and AI-powered digital products. Expert IT services for startups and enterprises."
-    />
+      content="Binazy - Building scalable web apps, mobile solutions, and AI-powered digital products. Expert IT services for startups and enterprises." />
     <meta name="theme-color" content="#0F0D2E" />
     <title>Binazy Pvt Ltd</title>
 
     <!-- Google Tag Manager -->
     <script>
-      ;(function (w, d, s, l, i) {
-        w[l] = w[l] || []
-        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' })
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
         var f = d.getElementsByTagName(s)[0],
           j = d.createElement(s),
-          dl = l != 'dataLayer' ? '&l=' + l : ''
-        j.async = true
-        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
-        f.parentNode.insertBefore(j, f)
-      })(window, document, 'script', 'dataLayer', 'GTM-THPJ85PV')
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-THPJ85PV");
     </script>
+    <!-- End Google Tag Manager -->
 
     <!-- Google Analytics -->
     <script
       async
-      src="https://www.googletagmanager.com/gtag/js?id=G-Z018DEHZTL"
-    ></script>
+      src="https://www.googletagmanager.com/gtag/js?id=G-Z018DEHZTL"></script>
     <script>
-      window.dataLayer = window.dataLayer || []
+      window.dataLayer = window.dataLayer || [];
       function gtag() {
-        dataLayer.push(arguments)
+        dataLayer.push(arguments);
       }
-      gtag('js', new Date())
-
-      gtag('config', 'G-Z018DEHZTL')
+      gtag("js", new Date());
+      gtag("config", "G-Z018DEHZTL");
     </script>
+    <!-- End Google Analytics -->
 
-    <!-- End Google Tag Manager -->
-
-    <!-- Google tag (gtag.js) -->
-    <!-- <script
+    <!-- Google Ads -->
+    <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=AW-18140750512"></script>
     <script>
@@ -57,54 +53,48 @@
       }
       gtag("js", new Date());
       gtag("config", "AW-18140750512");
-    </script> -->
+    </script>
+    <!-- End Google Ads -->
 
-    <!-- Meta Pixel Code -->
-    <!-- <script>
-      !(function (f, b, e, v, n, t, s) {
-        if (f.fbq) return
-        n = f.fbq = function () {
-          n.callMethod
-            ? n.callMethod.apply(n, arguments)
-            : n.queue.push(arguments)
-        }
-        if (!f._fbq) f._fbq = n
-        n.push = n
-        n.loaded = !0
-        n.version = '2.0'
-        n.queue = []
-        t = b.createElement(e)
-        t.async = !0
-        t.src = v
-        s = b.getElementsByTagName(e)[0]
-        s.parentNode.insertBefore(t, s)
-      })(
-        window,
-        document,
-        'script',
-        'https://connect.facebook.net/en_US/fbevents.js'
-      )
-      fbq('init', '1359947992688833')
-      fbq('track', 'PageView')
-    </script> -->
-    <!-- End Meta Pixel Code -->
+    <!-- Google Ads #2 - ponytail: reuse gtag/dataLayer above, just load+config new id -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-18157912204"></script>
+    <script>
+      gtag("config", "AW-18157912204");
+    </script>
 
-    <!-- Event snippet for Click to call conversion page
-In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+    <!-- Conversion tracking: call gtag_report_conversion(url) on button/link click -->
     <script>
       function gtag_report_conversion(url) {
         var callback = function () {
-          if (typeof url != 'undefined') {
-            window.location = url
+          if (typeof url != "undefined") {
+            window.location = url;
           }
-        }
-        gtag('event', 'conversion', {
-          send_to: 'AW-18140750512/fDWdCJef28QcELDFl8pD',
+        };
+        gtag("event", "conversion", {
+          send_to: "AW-18140750512/fDWdCJef28QcELDFl8pD",
           value: 1.0,
-          currency: 'INR',
-          event_callback: callback
-        })
-        return false
+          currency: "INR",
+          event_callback: callback,
+        });
+        return false;
+      }
+    </script>
+
+    <!-- Event snippet for Contact conversion page. Renamed fn (ponytail: same name as above would clobber it) -->
+    <script>
+      function gtag_report_contact_conversion(url) {
+        var callback = function () {
+          if (typeof url != "undefined") {
+            window.location = url;
+          }
+        };
+        gtag("event", "conversion", {
+          send_to: "AW-18140750512/cC0SCMSYrskcELDFl8pD",
+          event_callback: callback,
+        });
+        return false;
       }
     </script>
 
@@ -125,19 +115,9 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
         src="https://www.googletagmanager.com/ns.html?id=GTM-THPJ85PV"
         height="0"
         width="0"
-        style="display: none; visibility: hidden"
-      ></iframe
+        style="display: none; visibility: hidden"></iframe
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
-
-    <!-- Meta Pixel noscript fallback -->
-    <noscript
-      ><img
-        height="1"
-        width="1"
-        style="display: none"
-        src="https://www.facebook.com/tr?id=1359947992688833&ev=PageView&noscript=1"
-    /></noscript>
 
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>

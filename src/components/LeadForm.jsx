@@ -1,5 +1,3 @@
-// LeadForm.jsx
-
 import React from "react";
 import { useForm } from "react-hook-form";
 
@@ -118,8 +116,8 @@ const LeadForm = ({ className = "" }) => {
               <option value="Custom" className="text-black">
                 Custom
               </option>
-               <option value="Custom" className="text-black">
-              Other
+              <option value="Custom" className="text-black">
+                Other
               </option>
             </select>
 

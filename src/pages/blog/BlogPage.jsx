@@ -23,7 +23,7 @@ const BlogPage = () => {
               <p className="text-sm font-semibold uppercase tracking-[0.28em] text-blue-200">
                 Insights & Articles
               </p>
-              <h1 className="mt-5 text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-7xl">
+              <h1 className="mt-5 text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-5xl">
                 Practical articles on websites, software, growth, and automation
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-8 text-slate-200 sm:text-lg">
@@ -74,9 +74,9 @@ const BlogPage = () => {
                       <span>{post.readTime}</span>
                     </div>
 
-                    <h3 className="text-xl font-semibold leading-snug tracking-tight text-slate-900 transition-colors group-hover:text-brand-700">
+                    <h1 className="text-xl font-semibold leading-snug tracking-tight text-slate-900 transition-colors group-hover:text-brand-700">
                       {post.title}
-                    </h3>
+                    </h1>
 
                     <p className="text-sm leading-6 text-slate-600">
                       {post.description}

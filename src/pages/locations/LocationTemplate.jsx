@@ -55,7 +55,7 @@ export default function LocationTemplate({ data }) {
               </p>
 
               {/* Heading */}
-              <h1 className="text-2xl font-bold leading-[1.1] tracking-tight min-[380px]:text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+              <h1 className="text-2xl font-bold leading-[1.1] tracking-tight min-[380px]:text-3xl sm:text-4xl md:text-5xl lg:text-5xl">
                 {data.heroHeading}
               </h1>
 

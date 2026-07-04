@@ -18,8 +18,10 @@ import unsplash1434030216411 from "@/assets/services/unsplash-1434030216411.jpg"
 import unsplash1441986300917 from "@/assets/services/unsplash-1441986300917.jpg";
 import unsplash1450101499163 from "@/assets/services/unsplash-1450101499163.jpg";
 import unsplash1460925895917 from "@/assets/services/unsplash-1460925895917.jpg";
-import business1 from "@/assets/business1.png";
-import business2 from "@/assets/business2.png";
+import shoolini from "@/assets/shoolini.png";
+import manipal from "@/assets/manipal.png";
+import cd from "@/assets/cd.png";
+import clo from "@/assets/clo.png";
 import ecommerce1 from "@/assets/ecommerce1.png";
 import ecommerce2 from "@/assets/ecommerce2.png";
 import ott1 from "@/assets/ott1.png";
@@ -54,10 +56,6 @@ import unsplash1596524430615 from "@/assets/services/unsplash-1596524430615.jpg"
 import unsplash1600880292203 from "@/assets/services/unsplash-1600880292203.jpg";
 import unsplash1611926653458 from "@/assets/services/unsplash-1611926653458.jpg";
 import unsplash1677442135703 from "@/assets/services/unsplash-1677442135703.jpg";
-import solutionSoftwareApp from "@/assets/solutions-software-app.jpg";
-import solutionItSupport from "@/assets/solutions-it-support.jpg";
-import solutionCloud from "@/assets/solutions-cloud.jpg";
-import solutionAnalyticsAi from "@/assets/solutions-analytics-ai.jpg";
 import softwareDev from "@/assets/softwareDev.jpg";
 import digital from "@/assets/digital.jpg";
 import web from "@/assets/web.jpg";
@@ -206,13 +204,13 @@ const pages = {
 
     projects: [
       {
-        name: "FreelanceHub",
-        image: business1,
+        name: "Manipal",
+        image: manipal,
         alt: "MCR Holidays business website",
       },
       {
-        name: "CityConnect",
-        image: business2,
+        name: "manipal",
+        image: manipal,
         alt: "Event Horizon business website",
       },
     ],
@@ -1331,13 +1329,13 @@ const menuServicePages = {
     ],
     projects: [
       {
-        name: "FreelanceHub",
-        image: business1,
+        name: "Shoolini University ",
+        image: shoolini,
         alt: "Responsive business website design",
       },
       {
-        name: "CityConnect",
-        image: business2,
+        name: "Manipal University ",
+        image: manipal,
         alt: "Modern service website interface",
       },
     ],
@@ -1382,13 +1380,13 @@ const menuServicePages = {
     ],
     projects: [
       {
-        name: "MCR Holidays",
-        image: business1,
+        name: "College Drishti",
+        image: cd,
         alt: "Business website development project",
       },
       {
-        name: "Event Horizon",
-        image: business2,
+        name: "CLO",
+        image: clo,
         alt: "Service website development project",
       },
     ],

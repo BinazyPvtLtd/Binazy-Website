@@ -38,6 +38,7 @@ const footerLinks = {
     { label: "Industries", to: "/industries/real-estate" },
     { label: "Locations", to: "/locations/australia" },
     { label: "Blog", to: "/blog" },
+    { label: "Privacy Policy", to: "/privacy-policy" },
     { label: "Contact Us", to: "/contact-us" },
   ],
 };

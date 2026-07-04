@@ -2,6 +2,12 @@ import { useState } from "react";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { A11y, Autoplay } from "swiper/modules";
+import logo1 from "@/assets/logo1.png";
+import logo2 from "@/assets/logo2.png";
+import logo3 from "@/assets/logo3.png";
+import logo4 from "@/assets/logo4.png";
+import logo5 from "@/assets/logo5.png";
+import logo6 from "@/assets/logo6.png";
 
 import "swiper/css";
 
@@ -9,62 +15,50 @@ const testimonials = [
   {
     id: 1,
     quote:
-      "This is the first tool our entire team agreed on - and we are notoriously hard to please. Onboarding took under a day, and we shipped our first feature the same week.",
-    name: "Priya Menon",
-    role: "Head of Product",
-    company: "Luma Labs",
-    avatar: "https://i.pravatar.cc/96?img=47",
+      "College Drishti delivered a modern, responsive platform that makes it easy for students to explore colleges, courses, and admission details. The user experience has been outstanding.",
+    name: "College Drishti",
+    avatar: logo1,
     rating: 5,
     featured: true,
   },
   {
     id: 2,
     quote:
-      "Cut our review cycle from three days to three hours. The diff view alone is worth every rupee of the subscription.",
-    name: "David Osei",
-    role: "Engineering Lead",
-    company: "Parafin",
-    avatar: "https://i.pravatar.cc/96?img=12",
+      "Our online fashion store is now faster, visually appealing, and easy to manage. The seamless shopping experience has helped us improve customer engagement and sales.",
+    name: "CLO Fashion Store",
+    avatar: logo2,
     rating: 5,
   },
   {
     id: 3,
     quote:
-      "Finally a product that respects our data privacy constraints without compliance hoops. The SOC 2 report was ready before we even asked.",
-    name: "Nadia Boulanger",
-    role: "VP Security",
-    company: "Vesper Health",
-    avatar: "https://i.pravatar.cc/96?img=32",
+      "The Online LPU portal provides students with a smooth way to access admission information, programs, and resources. It's reliable, responsive, and easy to navigate.",
+    name: "Online LPU",
+    avatar: logo3,
     rating: 5,
   },
   {
     id: 4,
     quote:
-      "I was skeptical - we've tried six tools this year. This one actually stuck because it fits the way designers think, not just developers.",
-    name: "Sakura Tanaka",
-    role: "Design Systems",
-    company: "Monzo",
-    avatar: "https://i.pravatar.cc/96?img=49",
-    rating: 4,
+      "Our Online MBA Study platform offers a clean learning experience with intuitive navigation and well-organized content. Students can access everything they need without hassle.",
+    name: "Online MBA Study",
+    avatar: logo4,
+    rating: 5,
   },
   {
     id: 5,
     quote:
-      "Support is shockingly responsive. Opened a ticket at midnight, had a fix deployed by morning. Never felt like a number in a queue.",
-    name: "Alex Rivera",
-    role: "CTO",
-    company: "Bracket Studios",
-    avatar: "https://i.pravatar.cc/96?img=15",
+      "The Online Manipal University Admission Portal streamlined the entire admission process. From applications to document submission, everything works smoothly and efficiently.",
+    name: "Online Manipal University Admission Portal",
+    avatar: logo6,
     rating: 5,
   },
   {
     id: 6,
     quote:
-      "We replaced three separate tools with this one. Our DevOps overhead dropped by 40% in the first month. Remarkable ROI.",
-    name: "James Whitfield",
-    role: "Platform Architect",
-    company: "Clearbit",
-    avatar: "https://i.pravatar.cc/96?img=59",
+      "College Question has become a valuable platform for students searching for online degree programs. The powerful search and comparison features make finding the right course effortless.",
+    name: "College Question Online Degree Search Platform",
+    avatar: logo5,
     rating: 5,
   },
 ];
@@ -111,9 +105,6 @@ function TestimonialCard({ testimonial }) {
         <div>
           <p className="text-sm font-semibold leading-tight text-gray-900">
             {testimonial.name}
-          </p>
-          <p className="mt-0.5 text-xs leading-tight text-gray-400">
-            {testimonial.role} - {testimonial.company}
           </p>
         </div>
       </div>

@@ -10,6 +10,7 @@ import ProcessSection from "@/components/core/about/ProcessSection";
 import SEO from "@/components/common/SEO";
 import { Link } from "react-router-dom";
 import Testimonials from "@/components/core/home/Testimonials";
+import VideoTestimonials from "@/components/core/home/VideoTestimonials";
 
 const Home = () => {
   return (
@@ -27,6 +28,7 @@ const Home = () => {
         <WhyChooseUs />
         <ProcessSection />
         <TechStackSection />
+        <VideoTestimonials />
         <Testimonials />
         <CTASection />
       </main>
